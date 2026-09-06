@@ -1,0 +1,332 @@
+{
+  "_comment": "The swap table. TWO mechanisms: (1) `groups` = sets of interchangeable ingredients, any member can stand in for any other. (2) `rules` = one-directional swaps (`from` -> one of `to`). The app uses this to mark a recipe cookable even when you are missing an ingredient, and to rewrite the ingredient line with what you actually have.",
+  "_functions": "A recipe ingredient can declare `function` (e.g. sweetness, binding, bulk, browning, fat, acid, richness). A swap is CLEAN when the stand-in provides every function the recipe needs, and FLAGGED (with a `compensate` tip) when it does not. That is what stops the app from telling you to bind a granola bar with 8 drops of stevia.",
+
+  "groups": [
+    {
+      "id": "sweeteners",
+      "name": "Sweeteners",
+      "reference": "1 tbsp honey",
+      "note": "Liquid sweeteners are interchangeable by volume. Zero-calorie ones give sweetness only, so watch out for recipes where the syrup was also doing the sticking, the bulk or the browning.",
+      "members": [
+        { "ingredient": "honey", "amount": "1 tbsp", "provides": ["sweetness", "bulk", "binding", "browning", "moisture"] },
+        { "ingredient": "maple_syrup", "amount": "1 tbsp", "provides": ["sweetness", "bulk", "binding", "browning", "moisture"] },
+        { "ingredient": "dates", "amount": "2 medjool dates, blended with 1 tsp warm water", "provides": ["sweetness", "bulk", "binding", "moisture", "fibre"], "notes": "Blend into a paste first, or soak 10 min if dry." },
+        { "ingredient": "jaggery", "amount": "1 tbsp grated", "provides": ["sweetness", "bulk", "browning"], "notes": "Melt with a splash of warm water for liquid recipes." },
+        { "ingredient": "sugar", "amount": "1 tbsp + 1 tsp", "provides": ["sweetness", "bulk", "browning"], "notes": "Honey is sweeter than sugar, so you need slightly more sugar. Add 1 tsp extra liquid to the recipe." },
+        { "ingredient": "brown_sugar", "amount": "1 tbsp + 1 tsp", "provides": ["sweetness", "bulk", "browning", "moisture"] },
+        {
+          "ingredient": "stevia",
+          "amount": "6-8 drops liquid, or a scant 1/4 tsp powder",
+          "provides": ["sweetness"],
+          "lacks": ["bulk", "binding", "browning", "moisture"],
+          "compensate": "Replace the missing volume: for each tbsp of syrup swapped out, add ~1 tbsp of the recipe's own liquid (milk/water) for batters, or ~1 tbsp extra nut butter / date paste where the syrup was holding things together.",
+          "notes": "Taste as you go - brands vary a lot in strength, and too much reads bitter."
+        },
+        {
+          "ingredient": "monk_fruit",
+          "amount": "8-10 drops liquid, or 1 tbsp + 1 tsp granulated",
+          "provides": ["sweetness"],
+          "lacks": ["binding", "moisture"],
+          "compensate": "Granulated monk fruit keeps the bulk, so only liquid drops need a volume top-up. Nothing replaces the stickiness - add nut butter or date paste if the recipe relied on it.",
+          "notes": "Cleanest tasting of the zero-calorie options; blends usually measure 1:1 against sugar."
+        },
+        {
+          "ingredient": "erythritol",
+          "amount": "1.5 tbsp",
+          "provides": ["sweetness", "bulk"],
+          "lacks": ["binding", "browning"],
+          "compensate": "Keeps volume but will not caramelise. Erythritol also has a cooling aftertaste and can recrystallise when cold - allulose behaves better in anything chilled or chewy.",
+          "notes": "About 70% as sweet as sugar, so use a bit more."
+        }
+      ]
+    },
+
+    {
+      "id": "cooking_fats",
+      "name": "Cooking fats",
+      "reference": "1 tbsp oil",
+      "note": "Swap by volume. The differences are smoke point and flavour, not chemistry.",
+      "members": [
+        { "ingredient": "olive_oil", "amount": "1 tbsp", "provides": ["fat", "flavour"], "notes": "Fine up to a medium sear; too fruity for most Indian tempering." },
+        { "ingredient": "avocado_oil", "amount": "1 tbsp", "provides": ["fat", "high_heat"] },
+        { "ingredient": "sunflower_oil", "amount": "1 tbsp", "provides": ["fat", "high_heat"] },
+        { "ingredient": "ghee", "amount": "1 tbsp", "provides": ["fat", "high_heat", "flavour", "browning"] },
+        { "ingredient": "butter", "amount": "1 tbsp", "provides": ["fat", "flavour", "browning"], "lacks": ["high_heat"], "compensate": "Butter burns above a medium flame - drop the heat, or use half butter half oil." },
+        { "ingredient": "coconut_oil", "amount": "1 tbsp", "provides": ["fat", "high_heat", "flavour"], "notes": "Virgin coconut oil tastes strongly of coconut; refined does not." },
+        { "ingredient": "mustard_oil", "amount": "1 tbsp", "provides": ["fat", "high_heat", "flavour"], "notes": "Heat to smoking then cool slightly to take the raw edge off." },
+        { "ingredient": "cooking_spray", "amount": "2-3 second spray", "provides": ["fat"], "lacks": ["flavour", "richness"], "compensate": "Great for air fryer and non-stick, useless anywhere the fat is part of the sauce." }
+      ]
+    },
+
+    {
+      "id": "acids",
+      "name": "Finishing acids",
+      "reference": "1 tbsp lemon juice",
+      "note": "Anything sour that brightens a finished dish.",
+      "members": [
+        { "ingredient": "lemon", "amount": "1 tbsp juice (about half a lemon)", "provides": ["acid", "freshness"] },
+        { "ingredient": "vinegar", "amount": "2 tsp", "provides": ["acid"], "notes": "Sharper than lemon, so start with less. Apple cider and rice vinegar are the gentlest; balsamic brings its own sweetness and colour." },
+        { "ingredient": "yogurt", "amount": "2 tbsp", "provides": ["acid", "richness"], "lacks": ["freshness"], "compensate": "Stir in off the heat so it does not split." }
+      ]
+    },
+
+    {
+      "id": "thick_dairy",
+      "name": "Thick, creamy dairy",
+      "reference": "1/2 cup Greek yogurt",
+      "note": "For dips, marinades, dressings and bowls. All of these are the high-protein, low-fat way to get creaminess.",
+      "members": [
+        { "ingredient": "greek_yogurt", "amount": "1/2 cup", "provides": ["creaminess", "protein", "acid"] },
+        { "ingredient": "yogurt", "amount": "3/4 cup, strained 20 min in a cloth", "provides": ["creaminess", "protein", "acid"], "lacks": ["thickness"], "compensate": "Regular curd is much looser. Strain it, or accept a thinner sauce." },
+        { "ingredient": "cottage_cheese", "amount": "1/2 cup, blended smooth", "provides": ["creaminess", "protein"], "lacks": ["acid"], "compensate": "Blend it or it stays lumpy. Add a squeeze of lemon for the tang." },
+        { "ingredient": "cream_cheese", "amount": "1/3 cup", "provides": ["creaminess", "richness"], "lacks": ["protein"] },
+        { "ingredient": "tofu", "amount": "1/2 cup silken, blended", "provides": ["creaminess", "protein"], "lacks": ["acid"], "compensate": "Dairy-free route. Add lemon or vinegar for the sourness.", "notes": "Silken tofu only - firm tofu will not blend smooth." },
+        { "ingredient": "coconut_milk", "amount": "1/3 cup thick part", "provides": ["creaminess", "richness"], "lacks": ["protein", "acid"], "compensate": "Adds coconut flavour and a lot of fat - fine in curries, odd in a raita." }
+      ]
+    },
+
+    {
+      "id": "milks",
+      "name": "Milks",
+      "reference": "1 cup milk",
+      "note": "Interchangeable 1:1 in anything poured, soaked or blended.",
+      "members": [
+        { "ingredient": "milk", "amount": "1 cup", "provides": ["liquid", "creaminess", "protein"] },
+        { "ingredient": "almond_milk", "amount": "1 cup", "provides": ["liquid"], "lacks": ["protein", "creaminess"], "compensate": "Roughly 1g protein per cup vs 8g in dairy. If protein is the point of the recipe, add a scoop of whey or use soy milk." },
+        { "ingredient": "soy_milk", "amount": "1 cup", "provides": ["liquid", "protein"], "notes": "The only plant milk with protein close to dairy." },
+        { "ingredient": "coconut_milk", "amount": "1/2 cup + 1/2 cup water", "provides": ["liquid", "creaminess", "richness"], "lacks": ["protein"] },
+        { "ingredient": "water", "amount": "1 cup", "provides": ["liquid"], "lacks": ["protein", "creaminess", "flavour"], "compensate": "Last resort. Works in oats and smoothies; makes anything creamy taste thin." }
+      ]
+    },
+
+    {
+      "id": "egg_binder",
+      "name": "Egg (as a binder)",
+      "reference": "1 egg",
+      "note": "Only for eggs that are holding something together - pancakes, tikkis, muffins, meatballs. Nothing here replaces eggs in an omelette or scramble.",
+      "members": [
+        { "ingredient": "eggs", "amount": "1 egg", "provides": ["binding", "moisture", "protein", "structure"] },
+        { "ingredient": "flax_seeds", "amount": "1 tbsp ground + 3 tbsp water, rested 5 min", "provides": ["binding", "moisture"], "lacks": ["structure", "protein"], "compensate": "The classic flax egg. Holds things together but will not make anything rise - fine for tikkis and cookies, weak in cakes." },
+        { "ingredient": "chia_seeds", "amount": "1 tbsp + 3 tbsp water, rested 10 min", "provides": ["binding", "moisture"], "lacks": ["structure"], "compensate": "Same idea as a flax egg. Leaves visible specks." },
+        { "ingredient": "banana", "amount": "1/2 mashed ripe banana", "provides": ["binding", "moisture", "sweetness"], "lacks": ["structure"], "compensate": "Brings sweetness and banana flavour - only for sweet recipes, and dial back other sweeteners." },
+        { "ingredient": "yogurt", "amount": "1/4 cup", "provides": ["binding", "moisture"], "lacks": ["structure"] },
+        { "ingredient": "besan", "amount": "2 tbsp + 2 tbsp water", "provides": ["binding", "protein"], "lacks": ["moisture"], "compensate": "The Indian answer - what holds a tikki together. Cook it through or it tastes raw." }
+      ]
+    },
+
+    {
+      "id": "plant_protein",
+      "name": "Firm plant proteins",
+      "reference": "150 g paneer",
+      "note": "Cube-shaped protein that holds its shape in a pan. Cooking times are close enough to swap directly.",
+      "members": [
+        { "ingredient": "paneer", "amount": "150 g cubed", "provides": ["protein", "richness"] },
+        { "ingredient": "tofu", "amount": "150 g firm, pressed 15 min", "provides": ["protein"], "lacks": ["richness"], "compensate": "Press out the water or it will not brown. Salt it earlier than you would paneer - it is blander." },
+        { "ingredient": "tempeh", "amount": "150 g cubed", "provides": ["protein", "texture"], "notes": "Steam 10 min first to take out the bitterness." },
+        { "ingredient": "soya_chunks", "amount": "50 g dry, soaked in hot salted water 15 min and squeezed", "provides": ["protein"], "lacks": ["richness"], "compensate": "Squeeze them properly dry - waterlogged chunks will not take up any masala.", "notes": "Cheapest protein in this list by a distance." },
+        { "ingredient": "chickpeas", "amount": "1 cup boiled", "provides": ["protein", "fibre"], "lacks": ["richness"] }
+      ]
+    },
+
+    {
+      "id": "lean_meat",
+      "name": "Lean meat and fish",
+      "reference": "200 g chicken breast",
+      "note": "Swappable in most marinated / pan-cooked / air-fried recipes. Adjust the cook time.",
+      "members": [
+        { "ingredient": "chicken_breast", "amount": "200 g", "provides": ["protein", "lean"], "notes": "Dries out fast - pull it the moment it is done." },
+        { "ingredient": "chicken_thigh", "amount": "200 g", "provides": ["protein", "richness"], "notes": "More forgiving, a few minutes longer, slightly more fat." },
+        { "ingredient": "white_fish", "amount": "200 g", "provides": ["protein", "lean"], "compensate": "Cooks in roughly half the time and will fall apart if you stir it. Add it late.", "lacks": ["texture"] },
+        { "ingredient": "prawns", "amount": "200 g", "provides": ["protein", "lean"], "compensate": "3-4 minutes total, no more.", "lacks": ["texture"] },
+        { "ingredient": "paneer", "amount": "200 g", "provides": ["protein"], "lacks": ["lean"], "compensate": "Vegetarian route. Needs no cooking through, just browning - add it at the end." },
+        { "ingredient": "soya_chunks", "amount": "70 g dry, rehydrated", "provides": ["protein", "lean"], "compensate": "Vegetarian route. Soak, squeeze, then treat like the meat." }
+      ]
+    },
+
+    {
+      "id": "grain_base",
+      "name": "Grain bases",
+      "reference": "1 cup cooked rice",
+      "note": "The thing under the curry / in the bowl. Cooked volumes swap 1:1; uncooked quantities and water ratios do not.",
+      "members": [
+        { "ingredient": "rice", "amount": "1 cup cooked", "provides": ["base", "carbs"] },
+        { "ingredient": "brown_rice", "amount": "1 cup cooked", "provides": ["base", "carbs", "fibre"], "notes": "Roughly double the cooking time of white rice." },
+        { "ingredient": "quinoa", "amount": "1 cup cooked", "provides": ["base", "carbs", "protein", "fibre"], "notes": "Rinse it first or it tastes soapy. 1:2 with water, 15 min." },
+        { "ingredient": "millet", "amount": "1 cup cooked", "provides": ["base", "carbs", "fibre"] },
+        { "ingredient": "couscous", "amount": "1 cup cooked", "provides": ["base", "carbs"], "notes": "Fastest option - just pour over boiling water and cover for 5 min." },
+        { "ingredient": "cauliflower", "amount": "2 cups riced and dry-fried 5 min", "provides": ["base"], "lacks": ["carbs"], "compensate": "Low-carb route. Cook it dry in a hot pan first or the bowl turns watery." }
+      ]
+    },
+
+    {
+      "id": "leafy_greens",
+      "name": "Leafy greens",
+      "reference": "2 cups spinach",
+      "note": "Wilting greens are interchangeable; the sturdier ones need longer.",
+      "members": [
+        { "ingredient": "spinach", "amount": "2 cups packed", "provides": ["greens"], "notes": "Wilts in about a minute." },
+        { "ingredient": "kale", "amount": "2 cups, stems stripped", "provides": ["greens", "texture"], "compensate": "Needs 3-4 minutes and a pinch of salt to soften.", "lacks": [] },
+        { "ingredient": "fenugreek_leaves", "amount": "1.5 cups", "provides": ["greens", "flavour"], "notes": "Distinctly bitter - great in Indian dishes, wrong in a Caesar." },
+        { "ingredient": "cabbage", "amount": "2 cups shredded", "provides": ["greens", "texture"], "compensate": "Firmer and sweeter; give it 5 minutes." },
+        { "ingredient": "lettuce", "amount": "2 cups", "provides": ["greens", "freshness"], "lacks": ["heat_stable"], "compensate": "Raw only - it collapses to nothing when cooked." }
+      ]
+    },
+
+    {
+      "id": "nut_butters",
+      "name": "Nut and seed butters",
+      "reference": "2 tbsp peanut butter",
+      "members": [
+        { "ingredient": "peanut_butter", "amount": "2 tbsp", "provides": ["fat", "protein", "binding", "flavour"] },
+        { "ingredient": "almond_butter", "amount": "2 tbsp", "provides": ["fat", "protein", "binding", "flavour"] },
+        { "ingredient": "tahini", "amount": "2 tbsp", "provides": ["fat", "binding", "flavour"], "notes": "Bitter and savoury rather than sweet - better in dressings than in desserts." },
+        { "ingredient": "cashews", "amount": "1/4 cup soaked and blended with 1 tbsp water", "provides": ["fat", "binding", "creaminess"], "lacks": ["protein"] }
+      ]
+    },
+
+    {
+      "id": "salty_umami",
+      "name": "Salty umami liquids",
+      "reference": "1 tbsp soy sauce",
+      "members": [
+        { "ingredient": "soy_sauce", "amount": "1 tbsp", "provides": ["salt", "umami"] },
+        { "ingredient": "coconut_aminos", "amount": "1.5 tbsp", "provides": ["umami"], "lacks": ["salt"], "compensate": "Sweeter and much less salty - use more, and add a pinch of salt. Soy-free and gluten-free." },
+        { "ingredient": "stock", "amount": "2 tbsp + a pinch of salt", "provides": ["salt", "umami"], "lacks": ["colour"] },
+        { "ingredient": "nutritional_yeast", "amount": "1 tbsp + 1/4 tsp salt", "provides": ["umami", "salt"], "lacks": ["liquid"], "compensate": "Dry, so it will not deglaze a pan." }
+      ]
+    },
+
+    {
+      "id": "soft_flours",
+      "name": "Flours",
+      "reference": "1 cup whole wheat flour",
+      "note": "Only partly interchangeable - the gluten-free ones behave very differently. Swap up to half the flour and you will usually be fine.",
+      "members": [
+        { "ingredient": "whole_wheat_flour", "amount": "1 cup", "provides": ["structure", "bulk"] },
+        { "ingredient": "oat_flour", "amount": "1 cup + 2 tbsp", "provides": ["bulk", "fibre"], "lacks": ["structure"], "compensate": "No gluten, so batters spread more and breads will not rise the same. Blitz rolled oats to make it yourself.", "notes": "Best for pancakes, muffins and cookies." },
+        { "ingredient": "almond_flour", "amount": "1 cup", "provides": ["bulk", "fat", "protein"], "lacks": ["structure"], "compensate": "Very low carb but no binding at all - needs an extra egg, and everything comes out denser and more fragile." },
+        { "ingredient": "besan", "amount": "1 cup", "provides": ["structure", "protein", "flavour"], "compensate": "Tastes distinctly of gram - great in savoury batters, wrong in a cake. Must be cooked through." },
+        { "ingredient": "millet", "amount": "1 cup ragi or bajra flour", "provides": ["bulk", "fibre"], "lacks": ["structure"], "compensate": "Heavy and earthy - blend half-and-half with wheat flour for rotis that still fold." }
+      ]
+    },
+
+    {
+      "id": "aromatics",
+      "name": "Onion-family aromatics",
+      "reference": "1 medium onion",
+      "members": [
+        { "ingredient": "onion", "amount": "1 medium, chopped", "provides": ["aromatic", "sweetness", "bulk"] },
+        { "ingredient": "spring_onion", "amount": "1 cup chopped, whites and greens split", "provides": ["aromatic"], "lacks": ["sweetness", "bulk"], "compensate": "Cooks in a minute instead of ten and never goes brown and jammy." }
+      ]
+    },
+
+    {
+      "id": "fresh_herbs",
+      "name": "Soft fresh herbs",
+      "reference": "1/4 cup chopped coriander",
+      "note": "Swappable in quantity, but each one changes the dish's identity. Use as a garnish-level swap.",
+      "members": [
+        { "ingredient": "coriander", "amount": "1/4 cup chopped", "provides": ["freshness"] },
+        { "ingredient": "parsley", "amount": "1/4 cup chopped", "provides": ["freshness"], "notes": "The go-to if coriander tastes of soap to you." },
+        { "ingredient": "mint", "amount": "2 tbsp chopped", "provides": ["freshness"], "compensate": "Much stronger - use about half." },
+        { "ingredient": "basil", "amount": "1/4 cup torn", "provides": ["freshness"], "notes": "Add off the heat." },
+        { "ingredient": "dill", "amount": "2 tbsp chopped", "provides": ["freshness"], "compensate": "Assertive and aniseedy - use about half." }
+      ]
+    },
+
+    {
+      "id": "heat",
+      "name": "Chilli heat",
+      "reference": "1 green chilli",
+      "members": [
+        { "ingredient": "green_chilli", "amount": "1, slit or chopped", "provides": ["heat", "freshness"] },
+        { "ingredient": "red_chilli_powder", "amount": "1/2 tsp", "provides": ["heat", "colour"], "lacks": ["freshness"] },
+        { "ingredient": "chilli_flakes", "amount": "1/2 tsp", "provides": ["heat"], "lacks": ["freshness"] },
+        { "ingredient": "hot_sauce", "amount": "1 tsp", "provides": ["heat", "acid"], "lacks": ["freshness"], "compensate": "Brings vinegar with it - fine in a marinade, sharp in a dal." }
+      ]
+    },
+
+    {
+      "id": "hard_cheese",
+      "name": "Salty hard cheese",
+      "reference": "1/4 cup grated parmesan",
+      "members": [
+        { "ingredient": "parmesan", "amount": "1/4 cup grated", "provides": ["salt", "umami", "richness"] },
+        { "ingredient": "cheddar", "amount": "1/4 cup grated", "provides": ["salt", "richness", "melt"], "lacks": ["umami"] },
+        { "ingredient": "feta", "amount": "1/4 cup crumbled", "provides": ["salt", "acid"], "lacks": ["melt"] },
+        { "ingredient": "nutritional_yeast", "amount": "2 tbsp", "provides": ["umami", "salt"], "lacks": ["richness", "melt"], "compensate": "Dairy-free stand-in for the savoury hit only - it will never melt or brown." }
+      ]
+    },
+
+    {
+      "id": "tomato_forms",
+      "name": "Tomato",
+      "reference": "2 fresh tomatoes",
+      "members": [
+        { "ingredient": "tomato", "amount": "2 medium, chopped", "provides": ["acid", "bulk", "moisture"] },
+        { "ingredient": "canned_tomatoes", "amount": "1/2 cup", "provides": ["acid", "bulk", "moisture", "depth"], "notes": "More consistent than sad winter tomatoes." },
+        { "ingredient": "tomato_paste", "amount": "1 tbsp + 1/3 cup water", "provides": ["acid", "depth"], "lacks": ["bulk"], "compensate": "Concentrated - dilute it, and fry the paste for a minute first." }
+      ]
+    },
+
+    {
+      "id": "crunch",
+      "name": "Crunchy nuts and seeds",
+      "reference": "2 tbsp nuts",
+      "members": [
+        { "ingredient": "almonds", "amount": "2 tbsp sliced", "provides": ["crunch", "fat"] },
+        { "ingredient": "walnuts", "amount": "2 tbsp chopped", "provides": ["crunch", "fat", "omega3"] },
+        { "ingredient": "peanuts", "amount": "2 tbsp", "provides": ["crunch", "fat", "protein"] },
+        { "ingredient": "cashews", "amount": "2 tbsp", "provides": ["crunch", "fat"] },
+        { "ingredient": "pumpkin_seeds", "amount": "2 tbsp", "provides": ["crunch", "fat", "protein"], "notes": "Nut-free option." },
+        { "ingredient": "sunflower_seeds", "amount": "2 tbsp", "provides": ["crunch", "fat"], "notes": "Nut-free option." },
+        { "ingredient": "sesame_seeds", "amount": "1 tbsp toasted", "provides": ["crunch", "fat"], "compensate": "Much smaller - use about half by volume." }
+      ]
+    },
+
+    {
+      "id": "quick_dals",
+      "name": "Quick-cooking dals",
+      "reference": "1 cup masoor dal",
+      "note": "Swap freely; adjust water and time.",
+      "members": [
+        { "ingredient": "masoor_dal", "amount": "1 cup", "provides": ["protein", "fibre"], "notes": "Fastest - 20 min in a pan, breaks down completely." },
+        { "ingredient": "moong_dal", "amount": "1 cup", "provides": ["protein", "fibre"], "notes": "Lightest and easiest to digest." },
+        { "ingredient": "toor_dal", "amount": "1 cup", "provides": ["protein", "fibre"], "compensate": "Needs a pressure cooker or 45 min of simmering." },
+        { "ingredient": "chana_dal", "amount": "1 cup", "provides": ["protein", "fibre"], "compensate": "Soak 30 min first and pressure cook - it holds its shape rather than melting." }
+      ]
+    },
+
+    {
+      "id": "protein_boost",
+      "name": "Protein boosters",
+      "reference": "1 scoop whey protein",
+      "members": [
+        { "ingredient": "whey_protein", "amount": "1 scoop (~30 g)", "provides": ["protein"] },
+        { "ingredient": "greek_yogurt", "amount": "1/2 cup", "provides": ["protein", "creaminess"], "lacks": ["concentration"], "compensate": "About half the protein and a lot more volume - the smoothie gets thicker and tangier." },
+        { "ingredient": "cottage_cheese", "amount": "1/2 cup blended", "provides": ["protein", "creaminess"] },
+        { "ingredient": "peanut_butter", "amount": "2 tbsp", "provides": ["protein", "fat"], "lacks": ["concentration"], "compensate": "Only ~8 g of protein and 190 calories - not really a like-for-like swap." },
+        { "ingredient": "tofu", "amount": "1/3 cup silken", "provides": ["protein", "creaminess"], "notes": "Dairy-free, and tasteless in a smoothie." }
+      ]
+    }
+  ],
+
+  "rules": [
+    { "id": "buttermilk", "from": "buttermilk", "to": [ { "ingredient": "milk", "amount": "1 cup + 1 tbsp lemon juice or vinegar, rested 5 min" }, { "ingredient": "yogurt", "amount": "3/4 cup thinned with 1/4 cup water" } ], "note": "Chaas / lassi base. The acid is the point." },
+    { "id": "sour_cream", "from": "sour_cream", "to": [ { "ingredient": "greek_yogurt", "amount": "1:1", "notes": "Higher protein, lower fat, basically identical in a dip." } ] },
+    { "id": "mayo_swap", "from": "mayo", "to": [ { "ingredient": "greek_yogurt", "amount": "1:1 + 1/2 tsp mustard + a squeeze of lemon", "notes": "Saves ~80 calories per tablespoon and adds protein." }, { "ingredient": "avocado", "amount": "1/4 mashed per 2 tbsp" } ] },
+    { "id": "cream_swap", "from": "cream", "to": [ { "ingredient": "greek_yogurt", "amount": "1/2 cup whisked with 2 tbsp milk", "notes": "Off the heat only, or it splits." }, { "ingredient": "coconut_milk", "amount": "1/2 cup thick part" }, { "ingredient": "cashews", "amount": "1/4 cup soaked, blended with 1/4 cup water" } ] },
+    { "id": "breadcrumbs", "from": "breadcrumbs", "to": [ { "ingredient": "oats", "amount": "3/4 cup, pulsed coarse" }, { "ingredient": "almond_flour", "amount": "3/4 cup", "notes": "Low-carb; browns faster, so drop the heat." }, { "ingredient": "besan", "amount": "1/2 cup" } ] },
+    { "id": "cornstarch_swap", "from": "cornstarch", "to": [ { "ingredient": "psyllium_husk", "amount": "1/3 of the amount", "notes": "Very strong thickener - start small." }, { "ingredient": "oat_flour", "amount": "2x the amount" } ] },
+    { "id": "stock_swap", "from": "stock", "to": [ { "ingredient": "water", "amount": "same volume + 1/4 tsp salt per cup", "notes": "Loses depth but works.", "flagged": true } ] },
+    { "id": "ghee_swap", "from": "ghee", "to": [ { "ingredient": "butter", "amount": "1:1", "notes": "Lower smoke point - keep the flame down." }, { "ingredient": "coconut_oil", "amount": "1:1" } ] },
+    { "id": "kasuri_methi", "from": "fenugreek_leaves", "to": [ { "ingredient": "oregano", "amount": "1/2 tsp", "notes": "Not the same flavour, but it fills the herbal gap. Honestly, the dish is fine without it.", "flagged": true } ] },
+    { "id": "eno_swap", "from": "eno", "to": [ { "ingredient": "baking_soda", "amount": "3/4 tsp + 1 tsp lemon juice, added right before steaming", "notes": "Mix and get it in the steamer immediately." } ] },
+    { "id": "baking_powder_swap", "from": "baking_powder", "to": [ { "ingredient": "baking_soda", "amount": "1/4 tsp + 1/2 tsp lemon juice or vinegar per 1 tsp baking powder" } ] },
+    { "id": "paneer_from_milk", "from": "paneer", "to": [ { "ingredient": "milk", "amount": "1 litre full-fat + 2 tbsp lemon juice, curdled and hung 30 min = ~200 g paneer", "notes": "Only if you have time.", "flagged": true } ] },
+    { "id": "ginger_garlic", "from": "ginger", "to": [ { "ingredient": "ginger", "amount": "1/2 tsp dried ginger powder per 1 tbsp fresh", "notes": "Sonth. Loses the fresh bite." } ] },
+    { "id": "pasta_swap", "from": "pasta", "to": [ { "ingredient": "noodles", "amount": "1:1" }, { "ingredient": "zucchini", "amount": "2 spiralised, salted and squeezed", "notes": "Low-carb; will not hold a heavy sauce.", "flagged": true } ] },
+    { "id": "vanilla_swap", "from": "vanilla", "to": [ { "ingredient": "cardamom", "amount": "1/4 tsp powdered per 1 tsp vanilla", "notes": "Different but excellent, especially in anything milk-based." } ] }
+  ]
+}

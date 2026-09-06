@@ -1,0 +1,36 @@
+{
+  "id": "banana-pb-protein-smoothie",
+  "title": "Banana peanut butter protein smoothie",
+  "summary": "Two minutes, one blender, 35 g of protein. The frozen banana is what makes it thick instead of watery.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "snack", "post-workout"],
+  "servings": 1,
+  "time": { "prep": 2, "cook": 0, "total": 2 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "no-cook", "vegetarian", "quick", "post-workout"],
+  "nutrition_per_serving": { "calories": 430, "protein_g": 35, "carbs_g": 40, "fat_g": 14, "fibre_g": 6, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["blender"], "optional": [] },
+  "ingredients": [
+    { "id": "banana", "qty": "1 large, frozen in chunks", "core": true, "function": "bulk", "note": "Freeze them when they go spotty. A fresh banana makes a thin smoothie." },
+    { "id": "whey_protein", "qty": "1 scoop (30 g)", "core": true, "function": "protein" },
+    { "id": "milk", "qty": "1 cup", "core": true, "function": "liquid" },
+    { "id": "peanut_butter", "qty": "1 tbsp", "function": "fat", "sub_group": "nut_butters" },
+    { "id": "oats", "qty": "2 tbsp", "optional": true, "function": "bulk", "note": "Turns it from a drink into something that holds you until lunch." },
+    { "id": "cinnamon", "qty": "1/4 tsp", "optional": true, "function": "flavour" },
+    { "id": "dates", "qty": "1, pitted", "optional": true, "function": "sweetness", "note": "Only if your protein powder is unflavoured." },
+    { "id": "salt", "qty": "a pinch", "function": "salt", "note": "Sounds wrong, makes the peanut butter taste like more of itself." },
+    { "id": "chia_seeds", "qty": "1 tsp", "optional": true, "function": "thickening" }
+  ],
+  "steps": [
+    "Liquid into the blender first, then the powder, then everything solid on top. This order stops the protein caking against the blades.",
+    "Blend 45 seconds until completely smooth.",
+    "Too thick, add milk a splash at a time. Too thin, add a few ice cubes or more frozen banana and blend again."
+  ],
+  "tips": [
+    "Blending the protein powder for too long makes it foamy and strangely sweet. Short and hard is better.",
+    "No frozen banana? Use a fresh one plus 4-5 ice cubes. Not as creamy, still fine.",
+    "Prep bags: banana chunks, oats and chia in a freezer bag. Tip the bag in, add milk and powder, blend."
+  ],
+  "health_notes": "Real food carbs and 35 g of protein makes this a proper post-workout meal rather than a dessert. Skip the date and use unsweetened milk and there is no added sugar at all.",
+  "source": { "type": "traditional", "adapted": "Basic gym smoothie, with the fruit-juice base swapped out for milk so it is not a sugar bomb." }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "palak-paneer-light",
+  "title": "Lighter palak paneer",
+  "summary": "Restaurant palak paneer is mostly cream. This one gets its body from the spinach itself and finishes with yogurt - same dish, half the calories.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "dinner"],
+  "servings": 3,
+  "time": { "prep": 10, "cook": 25, "total": 35 },
+  "difficulty": "medium",
+  "tags": ["high-protein", "vegetarian", "low-carb", "gluten-free", "iron-rich"],
+  "nutrition_per_serving": { "calories": 310, "protein_g": 20, "carbs_g": 12, "fat_g": 21, "fibre_g": 4, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop", "blender"], "optional": [] },
+  "ingredients": [
+    { "id": "spinach", "qty": "500 g, washed", "core": true, "function": "base", "sub_group": "none" },
+    { "id": "paneer", "qty": "250 g, cubed", "core": true, "function": "protein", "sub_group": "none" },
+    { "id": "onion", "qty": "1, finely chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "1, chopped", "function": "acid" },
+    { "id": "garlic", "qty": "5 cloves", "function": "aromatic" },
+    { "id": "ginger", "qty": "1 tbsp, grated", "function": "aromatic" },
+    { "id": "green_chilli", "qty": "2", "function": "heat" },
+    { "id": "cumin_seeds", "qty": "1 tsp", "function": "flavour" },
+    { "id": "coriander_powder", "qty": "1 tsp", "function": "flavour" },
+    { "id": "garam_masala", "qty": "3/4 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1 tsp", "core": true, "function": "salt" },
+    { "id": "ghee", "qty": "1 tbsp", "function": "fat" },
+    { "id": "greek_yogurt", "qty": "3 tbsp, to finish", "function": "creaminess", "note": "Where the cream would have gone. Off the heat, or it splits." },
+    { "id": "lemon", "qty": "a squeeze", "function": "acid" },
+    { "id": "fenugreek_leaves", "qty": "1 tsp kasuri methi", "optional": true, "function": "flavour" }
+  ],
+  "steps": [
+    "Boil a pan of water. Drop the spinach in for 90 seconds, then straight into cold water. Blanching like this keeps it bright green - if you just cook it down it goes army-drab.",
+    "Squeeze the spinach out and blend it with the green chillies to a coarse puree. Leave some texture; a completely smooth puree tastes like baby food.",
+    "Sear the paneer cubes in half the ghee over high heat until golden on two sides, then lift them out. Optional but worth it.",
+    "Same pan, remaining ghee, crackle the cumin. Onion for 5 minutes until soft and light gold.",
+    "Ginger and garlic for a minute, then the tomato and powdered spices. Cook until the tomato breaks down and the oil separates, about 5 minutes.",
+    "Add the spinach puree and salt. Simmer 5-6 minutes - no longer, or the colour goes. Add a splash of water if it is too thick.",
+    "Return the paneer, simmer 2 minutes. Turn the heat OFF, then stir in the yogurt, garam masala, crushed kasuri methi and lemon."
+  ],
+  "tips": [
+    "Yogurt into a boiling pan will curdle every time. Off the heat, always.",
+    "Soak the seared paneer in warm salted water for 5 minutes before adding it - it goes soft again instead of staying squeaky.",
+    "Tofu works in place of paneer for a vegan version; use oil for the ghee and coconut cream for the yogurt."
+  ],
+  "health_notes": "The usual restaurant version runs on 100 ml of cream and a lot of butter. Blanched spinach plus a few spoons of Greek yogurt gets you the same body with roughly half the calories and more protein.",
+  "source": { "type": "traditional", "adapted": "Classic palak paneer, cream replaced with Greek yogurt and the ghee cut to one tablespoon." }
+}

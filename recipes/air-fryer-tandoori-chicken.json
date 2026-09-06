@@ -1,0 +1,45 @@
+{
+  "id": "air-fryer-tandoori-chicken",
+  "title": "Air fryer tandoori chicken",
+  "summary": "Yogurt marinade, twenty minutes in the basket, char on the edges. About 40 g of protein a portion and barely any oil.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "dinner"],
+  "servings": 2,
+  "time": { "prep": 10, "cook": 20, "total": 30, "note": "Plus 30 minutes to overnight marinating." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "low-carb", "air-fryer", "meal-prep", "gluten-free"],
+  "nutrition_per_serving": { "calories": 330, "protein_g": 42, "carbs_g": 7, "fat_g": 14, "fibre_g": 1, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["air_fryer"], "optional": ["mixing_bowl"] },
+  "ingredients": [
+    { "id": "chicken_thigh", "qty": "400 g, boneless, cut into large chunks", "core": true, "function": "protein", "note": "Thighs stay juicier here, but breast works if you pull it early." },
+    { "id": "greek_yogurt", "qty": "1/2 cup, thick", "core": true, "function": "creaminess", "note": "Thin curd will not cling. Strain it if that is all you have." },
+    { "id": "ginger", "qty": "1 tbsp, grated", "function": "aromatic" },
+    { "id": "garlic", "qty": "5 cloves, crushed", "function": "aromatic" },
+    { "id": "lemon", "qty": "1 tbsp juice", "function": "acid" },
+    { "id": "red_chilli_powder", "qty": "1.5 tsp Kashmiri", "function": "heat" },
+    { "id": "turmeric", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "cumin_powder", "qty": "1 tsp", "function": "flavour" },
+    { "id": "coriander_powder", "qty": "1 tsp", "function": "flavour" },
+    { "id": "garam_masala", "qty": "1 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1 tsp", "core": true, "function": "salt" },
+    { "id": "olive_oil", "qty": "1 tbsp", "function": "fat" },
+    { "id": "fenugreek_leaves", "qty": "1 tsp kasuri methi, crushed between your palms", "optional": true, "function": "flavour" },
+    { "id": "chaat_masala", "qty": "1/2 tsp, to finish", "optional": true, "function": "flavour" }
+  ],
+  "steps": [
+    "Pat the chicken properly dry and cut shallow slashes into the thicker pieces.",
+    "Mix everything else into a thick paste in a bowl. Taste it - it should be aggressively salty and sour, because the chicken will mute it.",
+    "Coat the chicken, cover, and leave it in the fridge. Thirty minutes is the minimum; overnight is noticeably better.",
+    "Preheat the air fryer to 200C / 400F for 3 minutes.",
+    "Lay the pieces in a single layer with space between them. Crowding the basket steams the chicken instead of charring it - do two batches if you need to.",
+    "Cook 10 minutes, turn everything, then 6-10 minutes more until the edges are blackening in places and the thickest piece reads 74C / 165F.",
+    "Rest 3 minutes, then hit it with chaat masala and a squeeze of lemon."
+  ],
+  "tips": [
+    "The dark patches are the point. If it comes out uniformly orange, it was crowded or the temperature was too low.",
+    "The leftover marinade in the bowl is raw - do not spoon it over the cooked chicken.",
+    "Same marinade works on paneer (12 minutes), cauliflower (15 minutes) or prawns (7 minutes)."
+  ],
+  "health_notes": "All the flavour comes from spice and yogurt rather than cream or butter, so this is a genuinely lean tandoori. Kashmiri chilli gives the red colour without the heat and without food dye.",
+  "source": { "type": "traditional", "adapted": "Classic tandoori marinade, adapted for an air fryer and cut down to a tablespoon of oil." }
+}

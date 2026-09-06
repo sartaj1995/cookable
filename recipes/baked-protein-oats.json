@@ -1,0 +1,43 @@
+{
+  "id": "baked-protein-oats",
+  "title": "Single-serve baked protein oats",
+  "summary": "Blended oats baked into something between a cake and a bowl of porridge. About 30 g of protein, and it works in an oven, air fryer or microwave.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "snack", "dessert"],
+  "servings": 1,
+  "time": { "prep": 5, "cook": 22, "total": 27 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "meal-prep", "no-added-sugar-option"],
+  "nutrition_per_serving": { "calories": 400, "protein_g": 30, "carbs_g": 48, "fat_g": 10, "fibre_g": 8, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["oven", "blender"], "optional": ["air_fryer", "microwave"] },
+  "ingredients": [
+    { "id": "oats", "qty": "1/2 cup rolled oats", "core": true, "function": "structure", "sub_group": "none" },
+    { "id": "whey_protein", "qty": "1 scoop (30 g)", "function": "protein" },
+    { "id": "banana", "qty": "1 ripe", "core": true, "function": "binding", "note": "The riper the better - this is most of the sweetness." },
+    { "id": "eggs", "qty": "1", "function": "binding" },
+    { "id": "milk", "qty": "1/3 cup", "function": "liquid" },
+    { "id": "baking_powder", "qty": "1/2 tsp", "core": true, "function": "rise" },
+    { "id": "honey", "qty": "1 tbsp", "function": "sweetness", "note": "Optional if your banana is very ripe and your protein powder is flavoured." },
+    { "id": "vanilla", "qty": "1/2 tsp", "optional": true, "function": "flavour" },
+    { "id": "cinnamon", "qty": "1/2 tsp", "optional": true, "function": "flavour" },
+    { "id": "salt", "qty": "a pinch", "function": "salt" },
+    { "id": "dark_chocolate", "qty": "1 tbsp chips", "optional": true, "function": "topping" },
+    { "id": "berries", "qty": "1/3 cup", "optional": true, "function": "topping" },
+    { "id": "peanut_butter", "qty": "1 tsp, swirled on top", "optional": true, "function": "topping" }
+  ],
+  "steps": [
+    "Heat the oven to 180C / 350F.",
+    "Blend the oats, banana, egg, milk, protein powder, baking powder, sweetener, vanilla, cinnamon and salt until smooth. About 30 seconds.",
+    "Pour into a greased ramekin or small oven dish. Scatter over the chocolate or berries.",
+    "Bake 20-25 minutes until the top is set and springs back, with the very centre still slightly soft.",
+    "Let it sit 5 minutes before eating - it firms up as it cools."
+  ],
+  "tips": [
+    "Do not overbake it. Protein powder turns dry and squeaky the moment it goes past done - pull it while the middle still looks a touch underdone.",
+    "Microwave version: 2 minutes on high in a mug, checking at 90 seconds. Air fryer: 170C for 12-14 minutes.",
+    "Bake four in ramekins on Sunday, refrigerate, and microwave for 30 seconds each morning.",
+    "Casein or a plant blend makes this moister than whey isolate, which tends to dry out."
+  ],
+  "health_notes": "This is the one to swap the sweetener in. With monk fruit or stevia drops instead of honey it comes to roughly 340 calories and no added sugar at all - the banana carries it.",
+  "source": { "type": "traditional", "adapted": "The standard blended baked-oats formula, with the protein raised and the sugar taken out." }
+}

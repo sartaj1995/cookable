@@ -1,0 +1,42 @@
+{
+  "id": "besan-chilla",
+  "title": "Loaded besan chilla",
+  "summary": "Savoury gram-flour pancake that eats like an omelette. Ten minutes, ~18 g of plant protein, and it takes whatever vegetables are dying in the fridge.",
+  "cuisine": "Indian",
+  "meal": ["breakfast", "lunch", "snack"],
+  "servings": 2,
+  "time": { "prep": 5, "cook": 10, "total": 15 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "gluten-free", "quick", "budget"],
+  "nutrition_per_serving": { "calories": 290, "protein_g": 17, "carbs_g": 34, "fat_g": 9, "fibre_g": 7, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop", "mixing_bowl"], "optional": [] },
+  "ingredients": [
+    { "id": "besan", "qty": "1 cup (110 g)", "core": true, "function": "structure", "sub_group": "none" },
+    { "id": "water", "qty": "3/4 to 1 cup", "core": true, "function": "liquid", "note": "Add slowly - you want thin pouring-cream consistency." },
+    { "id": "onion", "qty": "1 small, finely chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "1 small, deseeded and chopped", "function": "bulk" },
+    { "id": "green_chilli", "qty": "1, finely chopped", "function": "heat" },
+    { "id": "coriander", "qty": "a small handful, chopped", "function": "freshness" },
+    { "id": "turmeric", "qty": "1/4 tsp", "function": "flavour" },
+    { "id": "cumin_powder", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "3/4 tsp", "core": true, "function": "salt" },
+    { "id": "olive_oil", "qty": "2 tsp, for the pan", "function": "fat" },
+    { "id": "spinach", "qty": "1 cup, chopped fine", "optional": true, "function": "greens" },
+    { "id": "eno", "qty": "a pinch", "optional": true, "note": "Only if you want them fluffy rather than thin and crisp. Add just before pouring." }
+  ],
+  "steps": [
+    "Whisk the besan with salt, turmeric and cumin powder in a bowl. Pour in the water a little at a time, whisking, until you have a smooth, thin batter with no lumps. Let it sit 5 minutes if you have them.",
+    "Stir in the onion, tomato, chilli, coriander and any greens. The batter should still pour - loosen with a splash of water if the vegetables have thickened it.",
+    "Heat a non-stick or well-seasoned pan on medium. Rub it with half a teaspoon of oil.",
+    "Pour a ladle of batter into the centre and spread it outwards in a spiral with the back of the ladle. Thinner is better.",
+    "Cook 2-3 minutes until the top looks dry and the edges lift. Drizzle a few drops of oil around the rim, flip, and cook another 1-2 minutes until golden.",
+    "Repeat with the rest. Eat straight off the pan with curd or green chutney."
+  ],
+  "tips": [
+    "Lumpy batter means you added the water too fast. Make a thick paste first, then thin it.",
+    "If it sticks, the pan was not hot enough - heat it properly before every chilla.",
+    "For a bigger protein hit, whisk 2 tbsp of curd into the batter, or fold in a beaten egg."
+  ],
+  "health_notes": "Besan is about 22 g of protein per 100 g and low-GI, so this holds you far longer than a toast breakfast. No added sugar anywhere.",
+  "source": { "type": "traditional", "adapted": "Standard home recipe, cooked with 2 tsp oil total instead of shallow-frying." }
+}

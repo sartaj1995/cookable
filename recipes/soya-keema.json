@@ -1,0 +1,48 @@
+{
+  "id": "soya-keema",
+  "title": "Soya chunk keema",
+  "summary": "Soya granules cooked like mutton keema. Around 25 g of protein a serving for pocket change, and the texture genuinely fools people.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "dinner"],
+  "servings": 3,
+  "time": { "prep": 15, "cook": 20, "total": 35 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegan", "budget", "meal-prep", "dairy-free"],
+  "nutrition_per_serving": { "calories": 290, "protein_g": 25, "carbs_g": 22, "fat_g": 11, "fibre_g": 8, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop"], "optional": ["blender"] },
+  "ingredients": [
+    { "id": "soya_chunks", "qty": "1.5 cups granules, or chunks pulsed coarse in a blender", "core": true, "function": "protein", "sub_group": "none" },
+    { "id": "onion", "qty": "2 medium, finely chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "3, pureed or finely chopped", "function": "base" },
+    { "id": "ginger", "qty": "1 tbsp paste", "function": "aromatic" },
+    { "id": "garlic", "qty": "1 tbsp paste", "function": "aromatic" },
+    { "id": "green_chilli", "qty": "2, chopped", "function": "heat" },
+    { "id": "peas", "qty": "1/2 cup", "optional": true, "function": "vegetable" },
+    { "id": "cumin_seeds", "qty": "1 tsp", "function": "flavour" },
+    { "id": "turmeric", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "red_chilli_powder", "qty": "1 tsp", "function": "heat" },
+    { "id": "coriander_powder", "qty": "2 tsp", "function": "flavour" },
+    { "id": "garam_masala", "qty": "1 tsp", "function": "flavour" },
+    { "id": "fenugreek_leaves", "qty": "1 tsp kasuri methi", "optional": true, "function": "flavour" },
+    { "id": "salt", "qty": "1.25 tsp", "core": true, "function": "salt" },
+    { "id": "olive_oil", "qty": "1.5 tbsp", "function": "fat" },
+    { "id": "coriander", "qty": "a handful", "function": "freshness" },
+    { "id": "lemon", "qty": "half, juiced", "function": "acid" }
+  ],
+  "steps": [
+    "Pour boiling water over the soya with 1/2 tsp salt and leave 15 minutes. Drain, then rinse under cold water and squeeze out every bit of liquid with your hands. This step is not optional - waterlogged soya tastes of nothing and takes up no masala.",
+    "Heat the oil, crackle the cumin, then cook the onions properly - 8 minutes, until genuinely brown at the edges, not just soft. This is where the depth comes from.",
+    "Ginger and garlic paste for a minute, until the raw smell goes.",
+    "Powdered spices and salt with 2 tbsp water, 30 seconds.",
+    "Tomatoes in. Cook 6-8 minutes until the mixture thickens and oil beads at the sides.",
+    "Add the squeezed soya and peas. Stir to coat, add 1/2 cup water, cover and simmer 8 minutes.",
+    "Uncover, cook off any excess liquid - keema should be moist, not soupy. Finish with garam masala, crushed kasuri methi, coriander and lemon."
+  ],
+  "tips": [
+    "Squeeze the soya like you mean it. Half the complaints about soya chunks come from skipping this.",
+    "Chunks blitzed in a blender give a better keema texture than the granules you buy ready-made.",
+    "Goes in a wrap, over rice, or on toast with a fried egg on top."
+  ],
+  "health_notes": "Soya chunks are about 52 g of protein per 100 g dry, which is the highest of any cheap vegetarian staple, and a complete amino acid profile.",
+  "source": { "type": "traditional", "adapted": "Standard mutton keema masala with rehydrated soya standing in for the mince." }
+}
