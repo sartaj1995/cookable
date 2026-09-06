@@ -1,0 +1,43 @@
+{
+  "id": "chickpea-salad-jar",
+  "title": "Chana chaat salad jar",
+  "summary": "No cooking at all. Chickpeas, whatever is crunchy, lemon and chaat masala. Keeps four days and gets better after one.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "snack"],
+  "servings": 2,
+  "time": { "prep": 10, "cook": 0, "total": 10 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "no-cook", "vegan", "meal-prep", "budget", "gluten-free"],
+  "nutrition_per_serving": { "calories": 310, "protein_g": 14, "carbs_g": 42, "fat_g": 9, "fibre_g": 12, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["mixing_bowl", "knife_board"], "optional": [] },
+  "ingredients": [
+    { "id": "chickpeas", "qty": "2 cups boiled, or 1 can drained and rinsed", "core": true, "function": "protein", "sub_group": "none" },
+    { "id": "onion", "qty": "1 small red, finely chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "1, deseeded and diced", "function": "bulk" },
+    { "id": "cucumber", "qty": "1, diced", "function": "crunch" },
+    { "id": "green_chilli", "qty": "1, minced", "function": "heat" },
+    { "id": "coriander", "qty": "a large handful, chopped", "function": "freshness" },
+    { "id": "lemon", "qty": "1, juiced", "core": true, "function": "acid" },
+    { "id": "chaat_masala", "qty": "1 tsp", "function": "flavour", "note": "This is what makes it taste like chaat and not like a sad salad." },
+    { "id": "cumin_powder", "qty": "1/2 tsp, roasted", "function": "flavour" },
+    { "id": "salt", "qty": "to taste", "core": true, "function": "salt" },
+    { "id": "olive_oil", "qty": "1 tbsp", "optional": true, "function": "fat" },
+    { "id": "peanuts", "qty": "2 tbsp, roasted", "optional": true, "function": "crunch" },
+    { "id": "avocado", "qty": "1/2, diced", "optional": true, "function": "fat" },
+    { "id": "mint", "qty": "a few leaves, torn", "optional": true, "function": "freshness" }
+  ],
+  "steps": [
+    "Drain and rinse the chickpeas properly - the canning liquid tastes metallic.",
+    "Chop everything to roughly chickpea size so each spoonful gets a bit of each thing.",
+    "Toss it all together with the lemon, chaat masala, cumin and salt.",
+    "Taste and correct. It almost always needs more lemon and more salt than you think.",
+    "Eat now, or pack into jars: dressing at the bottom, chickpeas next, soft things, leaves on top. Shake when you eat."
+  ],
+  "tips": [
+    "Add the cucumber and any leaves the morning you eat it if you are prepping ahead - they go limp by day two.",
+    "Cooking dry chana yourself is a third of the price of tins: soak overnight, pressure cook 15 minutes with salt.",
+    "Add 100 g of crumbled paneer or a chopped boiled egg and it becomes a proper meal rather than a side."
+  ],
+  "health_notes": "12 g of fibre a serving, which is close to half a day's worth. Chickpeas are low-GI, so this does not spike the way a sandwich lunch does.",
+  "source": { "type": "traditional", "adapted": "Street chana chaat, without the fried sev and sweet chutney." }
+}

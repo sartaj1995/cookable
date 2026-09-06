@@ -1,0 +1,43 @@
+{
+  "id": "yogurt-chicken-wrap",
+  "title": "Greek yogurt chicken salad wrap",
+  "summary": "Chicken salad with yogurt standing in for mayo. Same creaminess, roughly a third of the calories, and about 15 g more protein.",
+  "cuisine": "Global",
+  "meal": ["lunch", "snack"],
+  "servings": 2,
+  "time": { "prep": 10, "cook": 0, "total": 10, "note": "Assumes cooked chicken - leftovers, a rotisserie bird, or yesterday's tandoori." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "no-cook", "quick", "meal-prep", "leftovers"],
+  "nutrition_per_serving": { "calories": 390, "protein_g": 38, "carbs_g": 30, "fat_g": 12, "fibre_g": 5, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["mixing_bowl", "knife_board"], "optional": [] },
+  "ingredients": [
+    { "id": "chicken_breast", "qty": "250 g cooked, shredded or diced", "core": true, "function": "protein" },
+    { "id": "greek_yogurt", "qty": "1/2 cup", "core": true, "function": "creaminess" },
+    { "id": "mustard_paste", "qty": "1 tsp dijon", "function": "flavour", "note": "Small amount, big difference - it is what stops the yogurt tasting like plain yogurt." },
+    { "id": "lemon", "qty": "1 tbsp juice", "function": "acid" },
+    { "id": "spring_onion", "qty": "2, sliced", "function": "aromatic" },
+    { "id": "cucumber", "qty": "1/2, diced", "function": "crunch" },
+    { "id": "salt", "qty": "1/2 tsp", "core": true, "function": "salt" },
+    { "id": "black_pepper", "qty": "a good grind", "function": "flavour" },
+    { "id": "tortilla", "qty": "2 large wholewheat wraps", "core": true, "function": "wrapper" },
+    { "id": "lettuce", "qty": "a handful", "function": "freshness" },
+    { "id": "walnuts", "qty": "2 tbsp, chopped", "optional": true, "function": "crunch" },
+    { "id": "hot_sauce", "qty": "a few dashes", "optional": true, "function": "heat" },
+    { "id": "dill", "qty": "1 tbsp, chopped", "optional": true, "function": "freshness" },
+    { "id": "avocado", "qty": "1/2, sliced", "optional": true, "function": "fat" }
+  ],
+  "steps": [
+    "Mix the yogurt, mustard, lemon, salt and pepper into a dressing first, in the bottom of the bowl. Taste it now - once the chicken is in it is harder to correct.",
+    "Fold in the chicken, spring onion, cucumber and anything else. Do not overmix or it turns pasty.",
+    "Warm the wraps for 20 seconds in a dry pan - they crack if you roll them cold.",
+    "Lay lettuce down first (it keeps the wrap from going soggy), then the chicken salad in a line just below the centre.",
+    "Fold the sides in, then roll tight from the bottom. Cut on the diagonal."
+  ],
+  "tips": [
+    "The filling keeps three days in the fridge. Assemble the wrap only when you are eating it.",
+    "Works just as well on toast, in a lettuce cup, or over a salad with no wrap at all.",
+    "Poach chicken specifically for this: cover with cold salted water, bring to a bare simmer, 12 minutes, then let it cool in the liquid. Stays far juicier than boiling."
+  ],
+  "health_notes": "Two tablespoons of mayo is about 190 calories and no protein. The same amount of Greek yogurt is roughly 20 calories and 3 g of protein. This one swap is most of the difference here.",
+  "source": { "type": "traditional", "adapted": "Deli chicken salad with the mayo base replaced entirely by Greek yogurt." }
+}

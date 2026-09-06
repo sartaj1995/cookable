@@ -1,0 +1,40 @@
+{
+  "id": "date-energy-balls",
+  "title": "Date and nut energy balls",
+  "summary": "Four ingredients, one blender, no baking. Dates do the sticking and the sweetening, so there is no sugar in here at all.",
+  "cuisine": "Global",
+  "meal": ["snack", "dessert", "pre-workout"],
+  "servings": 12,
+  "time": { "prep": 15, "cook": 0, "total": 15, "note": "Plus 30 minutes chilling." },
+  "difficulty": "easy",
+  "tags": ["no-cook", "vegan", "no-added-sugar", "meal-prep", "gluten-free", "snack"],
+  "nutrition_per_serving": { "calories": 110, "protein_g": 4, "carbs_g": 13, "fat_g": 6, "fibre_g": 2, "added_sugar_g": 0, "estimated": true, "note": "Per ball." },
+  "equipment": { "required": ["blender"], "optional": ["fridge"] },
+  "ingredients": [
+    { "id": "dates", "qty": "1 cup (about 12) medjool, pitted", "core": true, "function": "binding", "sub_group": "none", "note": "These are the glue, not just the sweetener - a zero-calorie sweetener cannot replace them here." },
+    { "id": "almonds", "qty": "1 cup", "core": true, "function": "bulk" },
+    { "id": "oats", "qty": "1/2 cup rolled", "function": "bulk" },
+    { "id": "peanut_butter", "qty": "2 tbsp", "function": "binding" },
+    { "id": "cocoa_powder", "qty": "2 tbsp", "optional": true, "function": "flavour" },
+    { "id": "whey_protein", "qty": "1 scoop", "optional": true, "function": "protein", "note": "Add 1 tbsp water with it, or the mix goes dry and crumbly." },
+    { "id": "salt", "qty": "1/4 tsp", "function": "salt", "note": "Not optional. Unsalted date balls taste flat." },
+    { "id": "vanilla", "qty": "1 tsp", "optional": true, "function": "flavour" },
+    { "id": "coconut_desiccated", "qty": "3 tbsp, for rolling", "optional": true, "function": "coating" },
+    { "id": "chia_seeds", "qty": "1 tbsp", "optional": true, "function": "bulk" }
+  ],
+  "steps": [
+    "If your dates are dry or hard, soak them in hot water for 10 minutes, then drain properly.",
+    "Blitz the almonds and oats alone first, to a coarse meal. Doing this before the wet ingredients go in stops you ending up with nut butter.",
+    "Add the dates, peanut butter, cocoa, salt and vanilla. Blend in pulses, scraping down the sides, until it clumps together and pulls away from the walls.",
+    "Squeeze a bit in your palm. If it holds, it is ready. If it crumbles, add one more date or a teaspoon of water and pulse again.",
+    "Roll into 12 balls, then roll in desiccated coconut if you want.",
+    "Chill 30 minutes to firm up. They keep two weeks in the fridge, three months frozen."
+  ],
+  "tips": [
+    "Wet your hands slightly before rolling and nothing sticks.",
+    "This is one recipe where dates cannot be swapped for stevia or monk fruit - they are structural. If you want it lower sugar, use half dates and add 2 tbsp more nut butter to hold it together.",
+    "A pinch of espresso powder with the cocoa makes them taste much more chocolatey."
+  ],
+  "health_notes": "Dates bring fibre and potassium along with their sugar, which is not the same thing as eating a spoon of syrup - but they are still dense. One or two is a snack; six is dessert.",
+  "source": { "type": "traditional", "adapted": "Standard date-and-nut ball, with the maple syrup most versions add left out entirely." }
+}

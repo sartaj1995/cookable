@@ -1,0 +1,43 @@
+{
+  "id": "air-fryer-crispy-tofu-bowl",
+  "title": "Crispy air fryer tofu bowl",
+  "summary": "The cornstarch coating is the whole trick - it is the difference between crisp cubes and sad grey ones. Vegan, 28 g of protein.",
+  "cuisine": "Asian",
+  "meal": ["lunch", "dinner"],
+  "servings": 2,
+  "time": { "prep": 20, "cook": 18, "total": 38, "note": "Most of the prep time is pressing the tofu, which is hands-off." },
+  "difficulty": "medium",
+  "tags": ["high-protein", "vegan", "air-fryer", "dairy-free", "meal-prep"],
+  "nutrition_per_serving": { "calories": 460, "protein_g": 28, "carbs_g": 45, "fat_g": 18, "fibre_g": 7, "added_sugar_g": 2, "estimated": true },
+  "equipment": { "required": ["air_fryer"], "optional": ["oven", "pan"] },
+  "ingredients": [
+    { "id": "tofu", "qty": "400 g extra firm", "core": true, "function": "protein", "note": "Silken or soft tofu will not work here at all.", "sub_group": "none" },
+    { "id": "cornstarch", "qty": "2 tbsp", "core": true, "function": "crisping" },
+    { "id": "sesame_oil", "qty": "1 tbsp", "function": "fat" },
+    { "id": "soy_sauce", "qty": "3 tbsp", "core": true, "function": "salt" },
+    { "id": "garlic", "qty": "3 cloves, minced", "function": "aromatic" },
+    { "id": "ginger", "qty": "1 tbsp, grated", "function": "aromatic" },
+    { "id": "honey", "qty": "1 tbsp", "function": "sweetness", "note": "Balances the salt in the glaze - a teaspoon of any sweetener does the job." },
+    { "id": "vinegar", "qty": "1 tbsp rice vinegar", "function": "acid" },
+    { "id": "chilli_flakes", "qty": "1/2 tsp", "optional": true, "function": "heat" },
+    { "id": "rice", "qty": "1 cup cooked, to serve", "function": "base" },
+    { "id": "broccoli", "qty": "1 cup florets, steamed", "function": "vegetable" },
+    { "id": "spring_onion", "qty": "2, sliced", "optional": true, "function": "freshness" },
+    { "id": "sesame_seeds", "qty": "1 tsp toasted", "optional": true, "function": "crunch" }
+  ],
+  "steps": [
+    "Press the tofu: wrap the block in a clean towel, put a heavy pan on top, leave 15 minutes. Squeezing the water out is what lets it crisp.",
+    "Cube it into 2 cm pieces. Toss gently with 1 tbsp of the soy sauce and the sesame oil, then dust over the cornstarch and toss again until every face is chalky and dry-looking.",
+    "Air fry at 200C / 400F for 15-18 minutes, shaking the basket twice. Single layer, always.",
+    "While it cooks, stir the remaining soy sauce, garlic, ginger, sweetener, vinegar and chilli flakes together in a small bowl.",
+    "Tip the hot tofu straight into the sauce and toss for a few seconds only. Any longer and the crust softens.",
+    "Serve over rice with the broccoli, scattered with spring onion and sesame."
+  ],
+  "tips": [
+    "Do not sauce it in advance. Crisp tofu plus wet sauce equals soggy tofu within minutes - combine at the table if you are packing it for lunch.",
+    "No air fryer: 220C oven on a lined tray for 25-30 minutes, turning once. Or a hot pan with a tablespoon of oil, undisturbed for 3 minutes a side.",
+    "Freeze and thaw the tofu block first if you want a chewier, spongier texture that soaks up more sauce."
+  ],
+  "health_notes": "Tofu is a complete protein at roughly 15 g per 100 g. Cornstarch is what crisps it, so this needs a fraction of the oil deep-frying would.",
+  "source": { "type": "traditional", "adapted": "Common cornstarch-crisping method, moved to the air fryer to cut the oil right down." }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "masala-omelette",
+  "title": "Masala omelette",
+  "summary": "Five minutes, one pan, 20 g of protein. The one thing worth getting right is keeping the heat low enough that it stays soft.",
+  "cuisine": "Indian",
+  "meal": ["breakfast", "lunch", "dinner"],
+  "servings": 1,
+  "time": { "prep": 3, "cook": 5, "total": 8 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "low-carb", "quick", "gluten-free"],
+  "nutrition_per_serving": { "calories": 280, "protein_g": 20, "carbs_g": 6, "fat_g": 19, "fibre_g": 2, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop", "mixing_bowl"], "optional": [] },
+  "ingredients": [
+    { "id": "eggs", "qty": "3", "core": true, "function": "protein", "sub_group": "none" },
+    { "id": "onion", "qty": "1/4, very finely chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "1/2, deseeded and finely chopped", "function": "bulk" },
+    { "id": "green_chilli", "qty": "1, minced", "function": "heat" },
+    { "id": "coriander", "qty": "2 tbsp, chopped", "function": "freshness" },
+    { "id": "turmeric", "qty": "a pinch", "optional": true, "function": "flavour" },
+    { "id": "red_chilli_powder", "qty": "1/4 tsp", "optional": true, "function": "heat" },
+    { "id": "salt", "qty": "1/4 tsp", "core": true, "function": "salt" },
+    { "id": "black_pepper", "qty": "a good grind", "function": "flavour" },
+    { "id": "olive_oil", "qty": "1 tsp", "function": "fat" },
+    { "id": "cheddar", "qty": "2 tbsp grated", "optional": true, "function": "richness" },
+    { "id": "spinach", "qty": "a handful, chopped", "optional": true, "function": "greens" }
+  ],
+  "steps": [
+    "Beat the eggs with the salt and pepper until the whites and yolks are completely combined - 20 seconds of real effort, not five half-hearted stirs.",
+    "Stir in the onion, tomato, chilli, coriander and spices.",
+    "Heat the oil in a small pan over medium-low. Low heat is the entire secret to a tender omelette.",
+    "Pour in the mixture. As it sets at the edges, drag them into the centre with a spatula and tilt the pan so the raw egg runs into the gap.",
+    "When the top is nearly set but still glossy, add the cheese if using, fold in half, and give it 30 seconds more.",
+    "Slide it out. The centre should still be just slightly soft."
+  ],
+  "tips": [
+    "Salting the eggs a couple of minutes before cooking makes them noticeably more tender.",
+    "Deseed the tomato or it weeps water and the omelette will not set properly.",
+    "Two eggs plus two whites gets you the same protein for about 60 fewer calories."
+  ],
+  "health_notes": "Whole eggs are worth eating - the yolk carries the choline, the vitamin D and most of the micronutrients. This is roughly 20 g of complete protein for under 300 calories.",
+  "source": { "type": "traditional", "adapted": "Standard Indian omelette, cooked in a teaspoon of oil on low heat." }
+}

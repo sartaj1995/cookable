@@ -1,0 +1,46 @@
+{
+  "id": "dal-tadka-masoor",
+  "title": "Everyday masoor dal tadka",
+  "summary": "The default weeknight dal. Red lentils need no soaking and no pressure cooker - twenty minutes in an open pan and they collapse on their own.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "dinner"],
+  "servings": 3,
+  "time": { "prep": 5, "cook": 25, "total": 30 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "vegan-option", "budget", "meal-prep", "gluten-free"],
+  "nutrition_per_serving": { "calories": 260, "protein_g": 15, "carbs_g": 38, "fat_g": 6, "fibre_g": 10, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop"], "optional": ["pressure_cooker"] },
+  "ingredients": [
+    { "id": "masoor_dal", "qty": "1 cup (200 g), rinsed until the water runs clear", "core": true, "function": "protein" },
+    { "id": "water", "qty": "3 cups", "core": true, "function": "liquid" },
+    { "id": "turmeric", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1 tsp", "core": true, "function": "salt" },
+    { "id": "ghee", "qty": "1 tbsp", "function": "fat", "note": "The tadka fat. Ghee tastes best; any oil works." },
+    { "id": "cumin_seeds", "qty": "1 tsp", "function": "flavour" },
+    { "id": "garlic", "qty": "5 cloves, sliced thin", "function": "aromatic" },
+    { "id": "onion", "qty": "1 small, chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "1 medium, chopped", "function": "acid" },
+    { "id": "green_chilli", "qty": "1, slit", "function": "heat" },
+    { "id": "red_chilli_powder", "qty": "1/2 tsp", "function": "heat" },
+    { "id": "asafoetida", "qty": "a pinch", "optional": true, "function": "flavour" },
+    { "id": "coriander", "qty": "a handful, chopped", "function": "freshness" },
+    { "id": "lemon", "qty": "half, juiced", "function": "acid" },
+    { "id": "spinach", "qty": "2 cups, roughly chopped", "optional": true, "function": "greens", "note": "Stir in for the last 3 minutes if you want dal palak." }
+  ],
+  "steps": [
+    "Put the rinsed dal, water, turmeric and half the salt in a pan. Bring to a boil, then drop to a simmer.",
+    "Skim off the grey foam that rises in the first few minutes - it makes the dal taste cleaner.",
+    "Simmer uncovered 18-22 minutes, stirring occasionally, until the lentils have completely lost their shape. Add hot water if it thickens past the consistency you want.",
+    "Meanwhile make the tadka: heat the ghee in a small pan, crackle the cumin, then the garlic. Take it to properly golden - this is where the flavour is.",
+    "Add asafoetida, onion and chilli, cook 3 minutes, then the tomato and chilli powder. Cook until the tomato breaks down, about 3 minutes more.",
+    "Pour the tadka into the dal - it will hiss. Stir, add the rest of the salt, simmer together 2 minutes.",
+    "Off the heat: lemon and coriander. Do not skip the lemon, it is what makes it taste finished."
+  ],
+  "tips": [
+    "Salt at the start is fine for masoor. For chana or rajma, salt at the end or the skins toughen.",
+    "In a pressure cooker: dal, water and turmeric for 2 whistles, then pour the tadka in after.",
+    "It thickens a lot in the fridge. Loosen with hot water when reheating, not cold."
+  ],
+  "health_notes": "About 10 g of fibre a serving and a genuinely cheap protein. Make it vegan by using oil instead of ghee - it loses a little depth, nothing more.",
+  "source": { "type": "traditional", "adapted": "Standard home dal, with the tadka cut to one tablespoon of fat." }
+}

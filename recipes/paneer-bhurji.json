@@ -1,0 +1,45 @@
+{
+  "id": "paneer-bhurji",
+  "title": "Paneer bhurji",
+  "summary": "Crumbled paneer cooked down with onion, tomato and spice. Fifteen minutes, one pan, 25 g of protein without touching an egg.",
+  "cuisine": "Indian",
+  "meal": ["breakfast", "lunch", "dinner"],
+  "servings": 2,
+  "time": { "prep": 5, "cook": 12, "total": 17 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "low-carb", "quick", "gluten-free"],
+  "nutrition_per_serving": { "calories": 340, "protein_g": 24, "carbs_g": 11, "fat_g": 23, "fibre_g": 3, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop"], "optional": [] },
+  "ingredients": [
+    { "id": "paneer", "qty": "250 g, crumbled by hand", "core": true, "function": "protein", "sub_group": "none" },
+    { "id": "onion", "qty": "1 medium, finely chopped", "function": "aromatic" },
+    { "id": "tomato", "qty": "2 medium, chopped", "function": "bulk" },
+    { "id": "green_chilli", "qty": "1-2, chopped", "function": "heat" },
+    { "id": "ginger", "qty": "1 tsp, grated", "function": "aromatic" },
+    { "id": "cumin_seeds", "qty": "1 tsp", "function": "flavour" },
+    { "id": "turmeric", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "red_chilli_powder", "qty": "1/2 tsp", "function": "heat" },
+    { "id": "coriander_powder", "qty": "1 tsp", "function": "flavour" },
+    { "id": "garam_masala", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "to taste", "core": true, "function": "salt" },
+    { "id": "olive_oil", "qty": "1 tbsp", "function": "fat" },
+    { "id": "coriander", "qty": "a handful, chopped", "function": "freshness" },
+    { "id": "bell_pepper", "qty": "1/2, diced", "optional": true, "function": "bulk" },
+    { "id": "lemon", "qty": "a squeeze, to finish", "optional": true, "function": "acid" }
+  ],
+  "steps": [
+    "Heat the oil, crackle the cumin seeds for 20 seconds.",
+    "Add the onion and cook 4-5 minutes until it turns translucent and just starts to catch colour at the edges.",
+    "Ginger and chilli in, 30 seconds, then the powdered spices and salt with a splash of water so they do not burn.",
+    "Add the tomatoes (and pepper if using) and cook 4-5 minutes, pressing them down, until they collapse and the oil separates at the edges.",
+    "Fold in the crumbled paneer. Two minutes, no more - paneer turns rubbery if you cook it hard.",
+    "Off the heat, stir through garam masala, coriander and lemon."
+  ],
+  "tips": [
+    "Crumble the paneer with your fingers, not a grater - you want irregular pieces, some big enough to bite.",
+    "If your paneer is shop-bought and firm, soak it in warm water for 10 minutes first and it softens right up.",
+    "Leftovers go into a wrap the next day and are arguably better."
+  ],
+  "health_notes": "Paneer is roughly 18 g protein per 100 g. This is one of the few vegetarian mains that hits a real protein target without any powder or supplement.",
+  "source": { "type": "traditional", "adapted": "Home-style bhurji, made with a tablespoon of oil rather than the usual ghee-heavy version." }
+}

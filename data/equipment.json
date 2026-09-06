@@ -1,0 +1,42 @@
+{
+  "_comment": "Devices and cookware. `staple: true` means the app assumes you have it (you can still switch it off in the app). `alternates` describes what you can cook a recipe with when you do not have the device it asks for, plus the adjustment you need to make.",
+  "equipment": [
+    { "id": "stovetop", "name": "Stovetop", "staple": true, "aliases": ["gas", "hob", "burner", "cooktop", "induction", "chulha"] },
+    { "id": "pan", "name": "Frying pan", "staple": true, "aliases": ["skillet", "tawa", "kadai", "wok", "non stick pan", "frying pan", "saucepan", "pot"] },
+    { "id": "knife_board", "name": "Knife and board", "staple": true, "aliases": ["knife", "chopping board", "cutting board"] },
+    { "id": "mixing_bowl", "name": "Mixing bowl", "staple": true, "aliases": ["bowl", "bowls"] },
+    { "id": "fridge", "name": "Fridge", "staple": true, "aliases": ["refrigerator", "freezer"] },
+
+    { "id": "oven", "name": "Oven", "aliases": ["otg", "convection oven", "baking oven", "microwave convection"] },
+    { "id": "air_fryer", "name": "Air fryer", "aliases": ["airfryer", "air-fryer"] },
+    { "id": "microwave", "name": "Microwave", "aliases": ["mw", "micro"] },
+    { "id": "blender", "name": "Blender", "aliases": ["mixer grinder", "mixie", "smoothie blender", "nutribullet", "food processor", "hand blender", "immersion blender", "grinder"] },
+    { "id": "pressure_cooker", "name": "Pressure cooker", "aliases": ["cooker", "instant pot", "instapot", "prestige", "electric pressure cooker"] },
+    { "id": "grill_pan", "name": "Grill pan", "aliases": ["griddle", "grill", "bbq", "sandwich griller", "panini press"] },
+    { "id": "steamer", "name": "Steamer", "aliases": ["idli steamer", "momo steamer", "bamboo steamer", "dhokla steamer"] },
+    { "id": "toaster", "name": "Toaster", "aliases": ["pop up toaster", "sandwich maker", "sandwich toaster"] },
+    { "id": "slow_cooker", "name": "Slow cooker", "aliases": ["crockpot", "crock pot"] },
+    { "id": "sheet_pan", "name": "Baking tray", "aliases": ["sheet pan", "baking sheet", "oven tray", "roasting tray"] },
+    { "id": "sieve", "name": "Sieve or strainer", "aliases": ["strainer", "colander", "chalni", "cheesecloth", "muslin"] },
+    { "id": "kettle", "name": "Kettle", "aliases": ["electric kettle"] },
+    { "id": "scale", "name": "Kitchen scale", "aliases": ["weighing scale", "food scale"] },
+    { "id": "waffle_iron", "name": "Waffle iron", "aliases": ["waffle maker"] }
+  ],
+
+  "alternates": [
+    { "from": "oven", "to": "air_fryer", "note": "Drop the temperature by about 20C / 25F and start checking 20-25% earlier. Cook in batches - a crowded basket steams instead of crisping." },
+    { "from": "air_fryer", "to": "oven", "note": "Raise the temperature by about 20C / 25F and add roughly a third to the time. Use the top rack and turn things halfway." },
+    { "from": "air_fryer", "to": "grill_pan", "note": "Works for anything flat - patties, paneer, chicken pieces. Press them down, do not move them for the first few minutes." },
+    { "from": "oven", "to": "pan", "note": "For thin cuts and patties only. Medium heat, lid on to cook through, lid off at the end to brown." },
+    { "from": "oven", "to": "microwave", "note": "Only for reheating and softening - never for anything that needs to be crisp or browned.", "flagged": true },
+    { "from": "pressure_cooker", "to": "pan", "note": "Roughly triple the time, keep it covered, and top up hot water as it evaporates." },
+    { "from": "pressure_cooker", "to": "slow_cooker", "note": "Low for 6-8 hours, or high for 3-4." },
+    { "from": "blender", "to": "sieve", "note": "For dals and soft vegetables, mash through a sieve or with the back of a ladle. Coarser, but it works." },
+    { "from": "steamer", "to": "pressure_cooker", "note": "Use the cooker as a steamer: an inch of water, a stand, lid on WITHOUT the weight." },
+    { "from": "steamer", "to": "pan", "note": "Any deep pan with a lid and a small stand or ring inside. Keep an inch of simmering water below the food." },
+    { "from": "grill_pan", "to": "pan", "note": "Same thing without the char lines. Get the pan properly hot before the food goes in." },
+    { "from": "toaster", "to": "pan", "note": "Dry pan, medium heat, a minute a side." },
+    { "from": "waffle_iron", "to": "pan", "note": "Cook the same batter as pancakes.", "flagged": true },
+    { "from": "sheet_pan", "to": "pan", "note": "Cook in batches on the stovetop instead of roasting in one go." }
+  ]
+}

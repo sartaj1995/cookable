@@ -1,0 +1,49 @@
+{
+  "id": "rajma-masala",
+  "title": "Rajma masala",
+  "summary": "Kidney beans in a slow-built onion-tomato base. Mostly hands-off in a pressure cooker, and a bowl gives you 15 g of protein and 13 g of fibre.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "dinner"],
+  "servings": 4,
+  "time": { "prep": 10, "cook": 45, "total": 55, "note": "Plus overnight soaking, or use tinned beans and skip to step 3." },
+  "difficulty": "medium",
+  "tags": ["high-protein", "vegetarian", "vegan-option", "high-fibre", "budget", "meal-prep"],
+  "nutrition_per_serving": { "calories": 300, "protein_g": 15, "carbs_g": 45, "fat_g": 8, "fibre_g": 13, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pressure_cooker"], "optional": ["pan"] },
+  "ingredients": [
+    { "id": "kidney_beans", "qty": "1.5 cups dry, soaked overnight - or 2 tins, drained", "core": true, "function": "protein", "sub_group": "none" },
+    { "id": "onion", "qty": "2 large, finely chopped", "core": true, "function": "base" },
+    { "id": "tomato", "qty": "4, pureed", "core": true, "function": "base" },
+    { "id": "ginger", "qty": "1 tbsp paste", "function": "aromatic" },
+    { "id": "garlic", "qty": "1 tbsp paste", "function": "aromatic" },
+    { "id": "green_chilli", "qty": "2, slit", "function": "heat" },
+    { "id": "cumin_seeds", "qty": "1 tsp", "function": "flavour" },
+    { "id": "bay_leaf", "qty": "1", "optional": true, "function": "flavour" },
+    { "id": "turmeric", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "red_chilli_powder", "qty": "1 tsp", "function": "heat" },
+    { "id": "coriander_powder", "qty": "2 tsp", "function": "flavour" },
+    { "id": "cumin_powder", "qty": "1 tsp", "function": "flavour" },
+    { "id": "garam_masala", "qty": "1 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1.5 tsp", "core": true, "function": "salt" },
+    { "id": "olive_oil", "qty": "1.5 tbsp", "function": "fat" },
+    { "id": "coriander", "qty": "a handful", "function": "freshness" },
+    { "id": "fenugreek_leaves", "qty": "1 tsp kasuri methi", "optional": true, "function": "flavour" }
+  ],
+  "steps": [
+    "Drain the soaked beans, cover with fresh water in the pressure cooker, add 1/2 tsp salt and a bay leaf. Cook 5-6 whistles, then let the pressure drop on its own. A cooked rajma should squash completely between two fingers - undercooked kidney beans are the main way this dish goes wrong.",
+    "Keep the cooking water. That starchy liquid is what thickens the gravy.",
+    "In a pan, heat the oil and crackle the cumin. Add the onions and cook them for a full 8-10 minutes to deep golden brown. This is the single biggest lever on how good the final dish tastes - do not rush it.",
+    "Ginger-garlic paste for 90 seconds, then the powdered spices with a splash of water.",
+    "Pour in the tomato puree. Cook 8-10 minutes until it darkens, thickens, and the oil beads out at the edges.",
+    "Add the beans with about 1.5 cups of their cooking liquid and the rest of the salt. Simmer 15 minutes, uncovered.",
+    "Mash roughly a quarter of the beans against the side of the pan with a ladle - this is what makes the gravy thick and creamy without any cream.",
+    "Finish with garam masala, crushed kasuri methi and coriander. It tastes better the next day."
+  ],
+  "tips": [
+    "Never salt beans heavily before they are soft - the skins toughen and they stop absorbing water.",
+    "Tinned beans: skip step 1, use vegetable stock in place of the bean water, simmer 10 minutes.",
+    "The soaking water is what causes most of the digestive trouble. Throw it away and cook in fresh water."
+  ],
+  "health_notes": "13 g of fibre a serving, and the resistant starch in cooked-then-cooled beans is genuinely good for gut bacteria. Leftovers reheated the next day are better for you, not worse.",
+  "source": { "type": "traditional", "adapted": "Punjabi home rajma with the ghee cut back and no cream in the finish." }
+}

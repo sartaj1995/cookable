@@ -1,0 +1,43 @@
+{
+  "id": "sheet-pan-salmon-veg",
+  "title": "Sheet pan salmon and vegetables",
+  "summary": "Everything on one tray, twenty minutes in the oven, one thing to wash. The trick is giving the vegetables a head start.",
+  "cuisine": "Global",
+  "meal": ["dinner", "lunch"],
+  "servings": 2,
+  "time": { "prep": 10, "cook": 25, "total": 35 },
+  "difficulty": "easy",
+  "tags": ["high-protein", "low-carb", "one-pan", "omega-3", "gluten-free", "dairy-free"],
+  "nutrition_per_serving": { "calories": 480, "protein_g": 38, "carbs_g": 18, "fat_g": 28, "fibre_g": 6, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["oven", "sheet_pan"], "optional": ["air_fryer"] },
+  "ingredients": [
+    { "id": "salmon", "qty": "2 fillets (150 g each), skin on", "core": true, "function": "protein" },
+    { "id": "broccoli", "qty": "1 head, cut into florets", "function": "vegetable" },
+    { "id": "bell_pepper", "qty": "1, cut into wide strips", "function": "vegetable" },
+    { "id": "onion", "qty": "1 red, cut into wedges", "function": "vegetable" },
+    { "id": "olive_oil", "qty": "2 tbsp", "function": "fat" },
+    { "id": "garlic", "qty": "4 cloves, crushed", "function": "aromatic" },
+    { "id": "lemon", "qty": "1, half juiced and half sliced", "function": "acid" },
+    { "id": "paprika", "qty": "1 tsp smoked", "function": "flavour" },
+    { "id": "oregano", "qty": "1 tsp dried", "function": "flavour" },
+    { "id": "salt", "qty": "1 tsp", "core": true, "function": "salt" },
+    { "id": "black_pepper", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "chilli_flakes", "qty": "1/2 tsp", "optional": true, "function": "heat" }
+  ],
+  "steps": [
+    "Heat the oven to 220C / 425F. A hot oven is what roasts vegetables instead of steaming them.",
+    "Toss the broccoli, pepper and onion with 1 tbsp oil, half the salt, the oregano and pepper. Spread them out on the tray in a single layer with gaps - a crowded tray steams.",
+    "Roast 12 minutes.",
+    "Meanwhile rub the salmon with the remaining oil, garlic, paprika, the rest of the salt and the lemon juice.",
+    "Pull the tray out, push the vegetables to the edges, and lay the salmon skin-side down in the middle with the lemon slices on top.",
+    "Back in for 10-13 minutes. It is done when the thickest part flakes under gentle pressure from a fork and is still faintly translucent in the very centre.",
+    "Rest 2 minutes. Scrape the garlicky pan juices back over everything."
+  ],
+  "tips": [
+    "Overcooked salmon is the one real failure mode here. White curd appearing on the surface means it has gone too far - pull it earlier next time.",
+    "In an air fryer: vegetables at 190C for 8 minutes, then salmon on top for 8-10 more.",
+    "Works exactly the same with any thick white fish - check it 3 minutes earlier."
+  ],
+  "health_notes": "Salmon is the easiest way to get real omega-3s into a weeknight. Two servings a week of oily fish is the standard recommendation and this is one of them handled.",
+  "source": { "type": "traditional", "adapted": "Standard sheet-pan method, staggered so the fish is not overcooked by the time the vegetables are done." }
+}

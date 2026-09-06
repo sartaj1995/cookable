@@ -1,0 +1,53 @@
+{
+  "id": "quinoa-veg-pulao",
+  "title": "Quinoa vegetable pulao",
+  "summary": "Pulao with quinoa instead of rice - roughly double the protein and triple the fibre, cooked the same way in one pot.",
+  "cuisine": "Indian",
+  "meal": ["lunch", "dinner"],
+  "servings": 3,
+  "time": { "prep": 10, "cook": 20, "total": 30 },
+  "difficulty": "easy",
+  "tags": ["vegetarian", "vegan-option", "high-fibre", "one-pan", "meal-prep", "gluten-free"],
+  "nutrition_per_serving": { "calories": 340, "protein_g": 12, "carbs_g": 48, "fat_g": 11, "fibre_g": 8, "added_sugar_g": 0, "estimated": true },
+  "equipment": { "required": ["pan", "stovetop"], "optional": ["pressure_cooker"] },
+  "ingredients": [
+    { "id": "quinoa", "qty": "1 cup, rinsed well", "core": true, "function": "base", "note": "Rinse it properly under running water or it tastes bitter and soapy.", "sub_group": "none" },
+    { "id": "water", "qty": "1.75 cups", "core": true, "function": "liquid" },
+    { "id": "onion", "qty": "1, sliced", "function": "aromatic" },
+    { "id": "carrot", "qty": "1, diced", "function": "vegetable" },
+    { "id": "green_beans", "qty": "10, cut into 2 cm pieces", "function": "vegetable" },
+    { "id": "peas", "qty": "1/2 cup", "function": "vegetable" },
+    { "id": "bell_pepper", "qty": "1, diced", "optional": true, "function": "vegetable" },
+    { "id": "ginger", "qty": "1 tbsp, julienned", "function": "aromatic" },
+    { "id": "garlic", "qty": "3 cloves, sliced", "function": "aromatic" },
+    { "id": "green_chilli", "qty": "2, slit", "function": "heat" },
+    { "id": "cumin_seeds", "qty": "1 tsp", "function": "flavour" },
+    { "id": "bay_leaf", "qty": "1", "optional": true, "function": "flavour" },
+    { "id": "cardamom", "qty": "2 pods", "optional": true, "function": "flavour" },
+    { "id": "cinnamon", "qty": "1 small stick", "optional": true, "function": "flavour" },
+    { "id": "cloves", "qty": "3", "optional": true, "function": "flavour" },
+    { "id": "garam_masala", "qty": "1/2 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1 tsp", "core": true, "function": "salt" },
+    { "id": "ghee", "qty": "1 tbsp", "function": "fat" },
+    { "id": "coriander", "qty": "a handful", "function": "freshness" },
+    { "id": "lemon", "qty": "half, juiced", "function": "acid" },
+    { "id": "cashews", "qty": "2 tbsp", "optional": true, "function": "crunch" }
+  ],
+  "steps": [
+    "Heat the ghee. Fry the whole spices and cashews for 30 seconds until they smell fragrant.",
+    "Onion in, cook 4-5 minutes to soft and lightly golden. Then ginger, garlic and chilli for a minute.",
+    "Add all the vegetables and salt. Cook 3 minutes.",
+    "Add the rinsed quinoa and stir for a minute so every grain gets coated in fat.",
+    "Pour in the water, bring to a hard boil, then cover and drop to the lowest heat for 15 minutes. Do not lift the lid.",
+    "Turn the heat off and leave it covered another 5 minutes - this is when the grains finish and separate.",
+    "Fluff with a fork, stir through garam masala, coriander and lemon."
+  ],
+  "tips": [
+    "The 1:1.75 ratio matters. Quinoa needs less water than rice and turns to mush if you treat it the same.",
+    "Little white spirals popping off the grains means it is done.",
+    "Pressure cooker: same method, 1:1.5 water, 2 whistles, natural release.",
+    "Add 200 g of paneer or a can of chickpeas in the last 5 minutes to turn it into a one-dish meal."
+  ],
+  "health_notes": "Quinoa is a complete protein, unusual for a grain, and has about 5 g of fibre per cooked cup against under 1 g for white rice.",
+  "source": { "type": "traditional", "adapted": "Standard veg pulao with quinoa in place of basmati and the water ratio corrected for it." }
+}
