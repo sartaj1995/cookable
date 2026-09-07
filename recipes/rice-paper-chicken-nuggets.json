@@ -1,0 +1,54 @@
+{
+  "id": "rice-paper-chicken-nuggets",
+  "title": "Rice paper chicken nuggets",
+  "summary": "Seasoned chicken mince rolled in rice paper, cut into thirty nuggets and air fried until the wrapper shatters. No breadcrumbs, no frying, and 45 g of protein a portion.",
+  "cuisine": "Global",
+  "meal": ["lunch", "dinner", "snack"],
+  "servings": 3,
+  "time": { "prep": 20, "cook": 20, "total": 40, "note": "Makes 30 nuggets, 10 a serving. The rolling is the slow part." },
+  "difficulty": "medium",
+  "tags": ["high-protein", "air-fryer", "low-carb", "meal-prep", "snack"],
+  "nutrition_per_serving": { "calories": 380, "protein_g": 45, "carbs_g": 20, "fat_g": 12, "fibre_g": 1, "added_sugar_g": 0, "estimated": true, "note": "Ten nuggets plus a third of the dip. Works out near 32 calories a nugget, with the dip adding about 50 on top." },
+  "equipment": { "required": ["air_fryer", "mixing_bowl", "knife_board"], "optional": [] },
+  "ingredients": [
+    { "id": "chicken_mince", "qty": "500 g lean", "core": true, "function": "protein", "note": "Has to be mince. The whole method depends on it binding into a log you can roll and slice." },
+    { "id": "rice_paper", "qty": "5 sheets", "core": true, "function": "crunch", "sub_group": "none", "note": "This is the entire crust. It goes glassy in the air fryer and shatters like batter." },
+    { "id": "eggs", "qty": "1", "function": "binding" },
+    { "id": "mozzarella", "qty": "1/4 cup, grated", "function": "melt" },
+    { "id": "baking_soda", "qty": "1/2 tsp", "function": "texture", "note": "Not for lift. It raises the pH of the mince and keeps it tender, which is what stops air fried chicken going dry and bouncy." },
+    { "id": "onion_powder", "qty": "1 tsp", "function": "aromatic" },
+    { "id": "garlic_powder", "qty": "1 tsp", "function": "aromatic" },
+    { "id": "paprika", "qty": "1 tsp smoked", "function": "flavour" },
+    { "id": "red_chilli_powder", "qty": "1/2 tsp cayenne", "function": "heat" },
+    { "id": "oregano", "qty": "1 tsp dried", "function": "flavour" },
+    { "id": "black_pepper", "qty": "1 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1 tsp", "function": "salt" },
+    { "id": "olive_oil", "qty": "cooking spray, for the baskets and the nuggets", "function": "fat", "note": "Do not skip it. Unsprayed rice paper dries leathery instead of crisping." },
+    { "id": "greek_yogurt", "qty": "100 g 0%, for the dip", "function": "creaminess" },
+    { "id": "mayo", "qty": "30 g light, for the dip", "function": "richness" },
+    { "id": "garlic", "qty": "1/2 tsp paste, for the dip", "function": "aromatic" }
+  ],
+  "steps": [
+    "Mix the mince with the egg, mozzarella, baking soda and all the seasoning until it is properly uniform. Work it a bit longer than feels necessary - the mixture should hold together when you squeeze it, or the rolls will not slice cleanly.",
+    "Dip a rice paper sheet in warm water for a few seconds, until it is only just pliable. Take it out while it still feels slightly stiff; it keeps softening on the board, and a sheet left in the water tears as soon as you handle it.",
+    "Lay the sheet flat and shape a log of mince along one edge, then roll it up tight. Air pockets in the roll turn into hollow nuggets.",
+    "Cut each roll crosswise into about 6 pieces. Five sheets gives you 30.",
+    "Spray the nuggets and the basket, then air fry at 200C for 15 to 20 minutes, shaking halfway. Give them room - crowded nuggets weld to each other and the wrapper never crisps.",
+    "Stir the yogurt, mayo, garlic paste and a little salt together for the dip, loosening with water until it pours."
+  ],
+  "tips": [
+    "Rice paper is the whole trick here. It hydrates, wraps, then dehydrates in the dry heat into something closer to a crisp shell than a breadcrumb coating.",
+    "Wear gloves, or work with wet hands. The soaked sheets stick to dry skin and tear.",
+    "They go soft if you stack them hot. Cool them in a single layer.",
+    "Reheat in the air fryer, never the microwave - the wrapper goes chewy and does not come back."
+  ],
+  "health_notes": "Nearly all the protein is the mince, and at 500 g of lean chicken across three portions that is 45 g each before the dip. The rice paper is close to pure starch, so it is where most of the carbohydrate comes from despite weighing very little.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=-s2zTqY6xGM",
+    "channel": "Panacea Palm",
+    "title": "The CRISPIEST Low Calorie Chicken Nuggets! 116g of protein for the plate!",
+    "captured": "2026-09-08",
+    "adapted": "Ingredients and method are from the pinned comment, confirmed against the video. Nutrition is recorded per portion of ten nuggets rather than the video's per-nugget and whole-plate figures, and it includes the dip, which the video's plate total leaves out. The video's 29 g carbs for the plate also looks low: five full size rice paper sheets are roughly 48 g of carbohydrate on their own, so the figure here is higher."
+  }
+}
