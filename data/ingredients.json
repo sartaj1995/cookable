@@ -176,6 +176,7 @@
     { "id": "coffee", "name": "Coffee", "category": "liquid", "aliases": ["espresso", "instant coffee", "brewed coffee"] },
     { "id": "dark_chocolate", "name": "Dark chocolate", "category": "pantry", "aliases": ["70 percent chocolate", "chocolate chips", "chocolate"] },
     { "id": "psyllium_husk", "name": "Psyllium husk", "category": "pantry", "aliases": ["isabgol"] },
-    { "id": "cornstarch", "name": "Cornstarch", "category": "pantry", "aliases": ["corn flour", "cornflour", "arrowroot"] }
+    { "id": "cornstarch", "name": "Cornstarch", "category": "pantry", "aliases": ["corn flour", "cornflour", "arrowroot"] },
+    { "id": "sugar_free_jelly", "name": "Sugar-free jelly", "category": "pantry", "aliases": ["jelly", "jelly crystals", "jelly mix", "jelly sachet", "sugar free jelly", "diet jelly", "jello", "sugar free jello", "jelly powder"] }
   ]
 }
