@@ -1,0 +1,43 @@
+{
+  "id": "mango-chia-protein-pudding",
+  "title": "Mango chia protein pudding",
+  "summary": "Blend it, split it between three jars, stir the chia in and leave it overnight. Thirty grams of protein and 8 g of fibre a pot, and the chia does all the thickening on its own.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "snack", "dessert"],
+  "servings": 3,
+  "time": { "prep": 10, "cook": 0, "total": 10, "note": "Plus at least 2 hours in the fridge, ideally overnight." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "high-fibre", "vegetarian", "no-bake", "meal-prep", "breakfast", "gluten-free"],
+  "nutrition_per_serving": { "calories": 320, "protein_g": 30, "carbs_g": 30, "fat_g": 10, "fibre_g": 8, "added_sugar_g": 6, "estimated": true, "note": "One of three pots, assuming 0% Greek yogurt. Full-fat yogurt adds roughly 40 calories and 5 g of fat per pot. Carbs are total; quoted net of fibre the figure is about 23 g." },
+  "equipment": { "required": ["blender", "fridge"], "optional": ["mixing_bowl"] },
+  "ingredients": [
+    { "id": "mango", "qty": "200 g", "core": true, "function": "flavour", "sub_group": "none", "note": "Frozen works and is often sweeter than underripe fresh." },
+    { "id": "chia_seeds", "qty": "60 g (20 g per pot)", "core": true, "function": "thickness", "sub_group": "none", "note": "The only thickener here. Nothing else in the pot sets it." },
+    { "id": "greek_yogurt", "qty": "300 g", "core": true, "function": "creaminess", "sub_group": "blended_creamy_base" },
+    { "id": "coconut_milk", "qty": "120 ml light", "function": "liquid", "note": "Light, not the thick tinned kind, or the pots come out heavy." },
+    { "id": "whey_protein", "qty": "2 scoops vanilla (about 60 g)", "function": "protein" },
+    { "id": "honey", "qty": "1 tbsp", "function": "sweetness" }
+  ],
+  "steps": [
+    "Blend the mango, coconut milk, Greek yogurt, honey and protein powder until smooth.",
+    "Divide the mixture between 3 pots or jars.",
+    "Stir 20 g of chia into each pot separately. Keep the chia out of the blender - blitzing it breaks the seeds up and they will not gel, and tipping the whole 60 g into one batch makes it clump before you can spread it.",
+    "Refrigerate at least 2 hours, ideally overnight, until thickened.",
+    "Add your toppings and eat."
+  ],
+  "tips": [
+    "Go back and stir each pot again after 15 to 20 minutes. Chia sinks fast, and left alone it sets as a dense layer at the bottom under a thin liquid top.",
+    "The nutrition assumes 0% Greek yogurt. Full-fat is nicer and costs about 40 calories and 5 g of fat a pot.",
+    "If it is too stiff by morning, loosen it with a splash of milk and stir.",
+    "These keep 3 to 4 days in the fridge, which is the point of making three at once."
+  ],
+  "health_notes": "The 20 g of chia in each pot carries nearly all of the 8 g of fibre and about a third of the calories, so it is not a free thickener. The protein is split roughly evenly between the yogurt and the powder, which means it still lands near 20 g a pot without the scoop.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=W1f6wXbux1c",
+    "channel": "Ralston D'Souza",
+    "title": "High Protein Mango Chia Seed Pudding | Try It Or Trash It @AdamHoadCoaching",
+    "captured": "2026-09-08",
+    "adapted": "Quantities are as given in the pinned comment on the video; the recipe originates with Adam Hoad (@AdamHoadCoaching) and this video is a cook-along of it. Nutrition checks out against the ingredient list at roughly 320 calories, 30 g protein, 10 g fat and 8 g fibre a pot, so the video's figures are recorded near enough as given. Its 23 g carbs is the same number quoted net of fibre; total carbs are about 30 g, which is what is recorded here."
+  }
+}
