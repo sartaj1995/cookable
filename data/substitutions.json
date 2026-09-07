@@ -130,6 +130,19 @@
     },
 
     {
+      "id": "blended_creamy_base",
+      "name": "Blendable creamy bases",
+      "reference": "200 g paneer",
+      "note": "Soft protein that blends to a smooth cream for desserts and thick drinks. Not the same list as the firm cube-shaped proteins - anything that stays grainy in a blender does not belong here.",
+      "members": [
+        { "ingredient": "paneer", "amount": "200 g cubed", "provides": ["creaminess", "protein", "richness"], "notes": "Blend it longer than feels necessary. Fresh paneer goes smoother than shop-bought." },
+        { "ingredient": "tofu", "amount": "200 g silken, or firm blended a little longer", "provides": ["creaminess", "protein"], "lacks": ["richness"], "compensate": "Blander and less rich than paneer. Taste before chilling and add a little more sweetener." },
+        { "ingredient": "greek_yogurt", "amount": "200 g, thick", "provides": ["creaminess", "protein", "acid"], "lacks": ["richness", "structure"], "compensate": "Looser, and it sets softer. Fine where melted chocolate is doing the setting; it will not hold a piped shape on its own." },
+        { "ingredient": "cottage_cheese", "amount": "200 g, blended smooth", "provides": ["creaminess", "protein"], "lacks": ["richness"], "compensate": "Blend it properly or it stays lumpy." }
+      ]
+    },
+
+    {
       "id": "lean_meat",
       "name": "Lean meat and fish",
       "reference": "200 g chicken breast",
