@@ -193,10 +193,11 @@ export default function App() {
                       </span>
                     </div>
                     <div className="grid">
-                      {group.map((match) => (
+                      {group.map((match, i) => (
                         <RecipeCard
                           key={match.recipe.id}
                           match={match}
+                          index={i}
                           onOpen={() => setOpenId(match.recipe.id)}
                         />
                       ))}

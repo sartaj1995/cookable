@@ -1,15 +1,22 @@
 import { useEffect } from 'react'
 import { ingredientLineText } from '../lib/db'
+import { IconAlert, IconCheck, IconClose, IconSkip, IconSwap } from './Icons'
 import type { MatchedLine, RecipeMatch } from '../lib/types'
 
-const TICK = { have: '✓', substitute: '⇄', missing: '!', skip: '–' } as const
+const TICK = {
+  have: IconCheck,
+  substitute: IconSwap,
+  missing: IconAlert,
+  skip: IconSkip,
+} as const
 
 function IngredientRow({ line }: { line: MatchedLine }) {
   const sub = line.substitution
+  const Tick = TICK[line.status]
   return (
     <li className="ing">
-      <span className={`tick ${line.status}`} aria-hidden>
-        {TICK[line.status]}
+      <span className={`tick ${line.status}`}>
+        <Tick />
       </span>
       <div className="ing-main">
         {sub ? (
@@ -84,8 +91,8 @@ export function RecipeDetail({ match, onClose }: Props) {
     <div className="scrim" onClick={onClose}>
       <div className="sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal>
         <header className="sheet-head">
-          <button className="close" onClick={onClose} aria-label="Close">
-            ×
+          <button className="close" onClick={onClose} aria-label="Close recipe">
+            <IconClose />
           </button>
           <h2>{recipe.title}</h2>
           <p className="summary">{recipe.summary}</p>
