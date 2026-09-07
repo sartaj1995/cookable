@@ -154,6 +154,8 @@
     { "id": "cloves", "name": "Cloves", "category": "spice", "aliases": ["laung"] },
     { "id": "bay_leaf", "name": "Bay leaf", "category": "spice", "aliases": ["tej patta"] },
     { "id": "paprika", "name": "Paprika", "category": "spice", "aliases": ["smoked paprika", "sweet paprika"] },
+    { "id": "onion_powder", "name": "Onion powder", "category": "spice", "aliases": ["onion granules", "dried onion"] },
+    { "id": "garlic_powder", "name": "Garlic powder", "category": "spice", "aliases": ["garlic granules", "dried garlic"] },
     { "id": "oregano", "name": "Oregano", "category": "spice", "aliases": ["dried oregano", "italian herbs", "mixed herbs"] },
     { "id": "chilli_flakes", "name": "Chilli flakes", "category": "spice", "aliases": ["red pepper flakes", "crushed red pepper"] },
     { "id": "nutritional_yeast", "name": "Nutritional yeast", "category": "spice", "aliases": ["nooch"] },
@@ -177,6 +179,7 @@
     { "id": "dark_chocolate", "name": "Dark chocolate", "category": "pantry", "aliases": ["70 percent chocolate", "chocolate chips", "chocolate"] },
     { "id": "psyllium_husk", "name": "Psyllium husk", "category": "pantry", "aliases": ["isabgol"] },
     { "id": "cornstarch", "name": "Cornstarch", "category": "pantry", "aliases": ["corn flour", "cornflour", "arrowroot"] },
-    { "id": "sugar_free_jelly", "name": "Sugar-free jelly", "category": "pantry", "aliases": ["jelly", "jelly crystals", "jelly mix", "jelly sachet", "sugar free jelly", "diet jelly", "jello", "sugar free jello", "jelly powder"] }
+    { "id": "sugar_free_jelly", "name": "Sugar-free jelly", "category": "pantry", "aliases": ["jelly", "jelly crystals", "jelly mix", "jelly sachet", "sugar free jelly", "diet jelly", "jello", "sugar free jello", "jelly powder"] },
+    { "id": "rice_paper", "name": "Rice paper", "category": "pantry", "aliases": ["rice paper sheets", "rice paper wrappers", "banh trang", "rice paper rounds"] }
   ]
 }
