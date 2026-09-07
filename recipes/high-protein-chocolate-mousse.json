@@ -1,0 +1,44 @@
+{
+  "id": "high-protein-chocolate-mousse",
+  "title": "High protein chocolate mousse",
+  "summary": "Paneer blended with melted dark chocolate until there is no trace of the paneer left, then set in the fridge. About 26 g of protein a serving, and it pipes well enough to top a cake.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack"],
+  "servings": 2,
+  "time": { "prep": 10, "cook": 0, "total": 10, "note": "Plus at least 2 hours setting in the fridge. The video waited three." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "no-bake", "dessert", "gluten-free", "meal-prep"],
+  "nutrition_per_serving": { "calories": 540, "protein_g": 26, "carbs_g": 33, "fat_g": 36, "fibre_g": 6, "added_sugar_g": 16, "estimated": true, "note": "Made with full-fat paneer. Firm tofu instead brings this to roughly 390 calories and 22 g protein." },
+  "equipment": { "required": ["blender", "fridge"], "optional": ["microwave", "mixing_bowl"] },
+  "ingredients": [
+    { "id": "paneer", "qty": "200 g (1 cup), cubed", "core": true, "function": "creaminess", "sub_group": "blended_creamy_base", "note": "The body of the mousse. It has to blend to a completely smooth cream - anything that stays grainy stays grainy in the finished dish." },
+    { "id": "dark_chocolate", "qty": "50 g (1/3 cup), melted", "core": true, "function": "structure", "sub_group": "none", "note": "This is what sets the mousse firm in the fridge, not the paneer. Leave it out and you get chocolate paneer paste that never firms up." },
+    { "id": "cocoa_powder", "qty": "20 g (1/4 cup)", "core": true, "function": "flavour", "sub_group": "none" },
+    { "id": "milk", "qty": "120 g (1/2 cup)", "function": "liquid", "note": "Without this the blender will not move the paste at all." },
+    { "id": "honey", "qty": "25 g (1 tbsp + 1 tsp)", "function": "sweetness" },
+    { "id": "salt", "qty": "a pinch (0.5 g)", "function": "salt", "note": "Not optional. Unsalted chocolate tastes flat and slightly chalky." },
+    { "id": "vanilla", "qty": "1 tsp", "optional": true, "function": "flavour" }
+  ],
+  "steps": [
+    "Melt the dark chocolate - 30 seconds in the microwave, stir, then 15 seconds at a time until it just goes liquid. Overheated chocolate seizes into a grainy lump and will not come back.",
+    "Put the paneer, cocoa, honey, salt and vanilla into a blender jar.",
+    "Pour in the melted chocolate and the milk. Add the liquid before you blend, not after - a dry paneer-and-cocoa paste will jam a blender and climb the sides instead of turning over.",
+    "Blend until completely smooth, stopping to scrape the sides down. Give it longer than feels necessary; any grain left now is grain in the set mousse.",
+    "Pour into a bowl or two glasses, cover with cling film pressed onto the surface so it does not form a skin, and refrigerate at least 2 hours until set."
+  ],
+  "tips": [
+    "A small bullet blender will struggle with this and stall - the paste is stiff before the milk goes in. A full jar mixer grinder handles it comfortably. If a bullet jar is all you have, blend the paneer with the milk alone first, then add everything else.",
+    "Set firm, it holds a piped rosette, so it works as a cake or cupcake topping and as a thick spread.",
+    "No microwave: melt the chocolate in a bowl set over a pan of just-simmering water, and keep water out of the bowl.",
+    "Firm tofu works in place of paneer and takes it down to roughly 390 calories a serving, but it is blander - taste it before it goes in the fridge and add a little more honey if it needs it."
+  ],
+  "health_notes": "The protein here is real, but so is the fat: paneer and dark chocolate are both fat-dense, and a serving lands near 540 calories. That is dessert, not a protein snack. Split it three ways rather than two and it becomes a sensible after-dinner portion at around 360 calories.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=x-KCWkOgrMQ",
+    "channel": "Ralston D'Souza",
+    "title": "High Protein Chocolate Mousse | Try It Or Trash It",
+    "captured": "2026-09-07",
+    "adapted": "Ingredients and method are as shown in the video. The nutrition figures are not: the video claims 780 calories and 65 g protein for the batch, and 65 g is not reachable from 200 g of paneer or tofu. Recalculated from the ingredient list at roughly 1075 calories and 52 g protein for the batch with full-fat paneer, or 775 calories and 44 g with firm tofu - the video's calorie figure matches the tofu version. Chilling time is given as the video's stated 2 hour minimum; the video itself waited three hours."
+  }
+}
