@@ -17,6 +17,12 @@ Type or paste what you have. `chicken, spinach, curd, air fryer, blender` — it
 sorts the food from the devices on its own, and understands the names people
 actually use (`dahi`, `kadai`, `capsicum`, `mixie`, `2 large onions`).
 
+Or tap instead of typing: the panel has four browsable lists — **Equipment**,
+**Key ingredients** (grouped by proteins, dairy, vegetables, grains, dals, nuts,
+fats, condiments), **Spices & herbs** and **Sweeteners**. Each header shows how
+many you have selected, and the lists are built from `data/ingredients.json`, so
+anything you add there appears on its own.
+
 Recipes then sort into:
 
 - **Make it now** — you have everything, or a swap you already own covers it
@@ -36,10 +42,13 @@ drops of stevia — and, because the table records that stevia gives sweetness b
 no bulk or stickiness, it will also tell you what to add back if the honey was
 holding the thing together.
 
-Set standing preferences in `data/preferences.json`: `prefer_not` for things to
-swap out whenever possible (sugar, honey and jaggery are there by default),
-`avoid` for a hard no, and `prefer` to rank which stand-in you want offered
-first.
+Standing preferences live in `data/preferences.json` and nowhere else — there
+are no preference controls in the app. `prefer_not` is for things to swap out
+whenever possible (sugar, honey, jaggery and maple syrup are there by default),
+`avoid` for a hard no, `prefer` to rank which stand-in gets offered first, and
+`diet` for vegetarian / vegan / eggless / gluten-free / dairy-free. Edit the file
+or ask Claude Code to; changes apply on the next page load. Only your kitchen is
+remembered in the browser.
 
 ### Devices too
 

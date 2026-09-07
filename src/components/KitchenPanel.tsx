@@ -1,29 +1,12 @@
 import { useMemo, useRef, useState } from 'react'
 import { resolve, splitEntry, suggest, type Suggestion } from '../lib/normalize'
-import { DIET_LABELS } from '../lib/diet'
-import { nameOf } from '../lib/db'
-import type { Preferences } from '../lib/types'
+import { pickerSections, sectionTotals } from '../lib/catalogue'
 
 export interface KitchenItem {
   id: string
   label: string
   kind: 'ingredient' | 'equipment' | 'unknown'
 }
-
-const QUICK_ADD = [
-  'eggs',
-  'onion',
-  'tomato',
-  'oats',
-  'chicken_breast',
-  'paneer',
-  'yogurt',
-  'rice',
-  'air_fryer',
-  'blender',
-  'pressure_cooker',
-  'oven',
-]
 
 interface Props {
   items: KitchenItem[]
@@ -32,8 +15,6 @@ interface Props {
   onClear: () => void
   includeStaples: boolean
   setIncludeStaples: (v: boolean) => void
-  prefs: Preferences
-  setPrefs: (p: Preferences) => void
 }
 
 export function KitchenPanel({
@@ -43,11 +24,10 @@ export function KitchenPanel({
   onClear,
   includeStaples,
   setIncludeStaples,
-  prefs,
-  setPrefs,
 }: Props) {
   const [query, setQuery] = useState('')
   const [cursor, setCursor] = useState(0)
+  const [openSection, setOpenSection] = useState<string | null>('equipment')
   const inputRef = useRef<HTMLInputElement>(null)
 
   const have = useMemo(() => new Set(items.map((i) => i.id)), [items])
@@ -64,7 +44,7 @@ export function KitchenPanel({
     for (const part of splitEntry(text)) {
       const r = resolve(part)
       if (!r.id) continue
-      added.push({ id: r.id, label: r.kind === 'unknown' ? r.label : r.label, kind: r.kind })
+      added.push({ id: r.id, label: r.label, kind: r.kind })
     }
     if (added.length) onAdd(added)
     setQuery('')
@@ -94,16 +74,9 @@ export function KitchenPanel({
     }
   }
 
-  function toggleDiet(key: string) {
-    setPrefs({ ...prefs, diet: { ...prefs.diet, [key]: !prefs.diet[key] } })
-  }
-
-  function togglePreferNot(id: string) {
-    const on = prefs.preferNot.includes(id)
-    setPrefs({
-      ...prefs,
-      preferNot: on ? prefs.preferNot.filter((x) => x !== id) : [...prefs.preferNot, id],
-    })
+  function toggle(id: string, label: string, kind: 'ingredient' | 'equipment') {
+    if (have.has(id)) onRemove(id)
+    else onAdd([{ id, label, kind }])
   }
 
   return (
@@ -149,8 +122,8 @@ export function KitchenPanel({
           )}
         </div>
         <p className="hint">
-          Type and hit enter. Paste a whole list separated by commas and it will sort the
-          devices from the food.
+          Type and hit enter, or pick from the lists below. Pasting a comma-separated
+          list works too — it sorts the devices from the food.
         </p>
 
         {ingredients.length > 0 && (
@@ -178,34 +151,56 @@ export function KitchenPanel({
             ))}
           </div>
         )}
-
-        {items.length === 0 && (
-          <>
-            <div className="chips">
-              {QUICK_ADD.map((id) => (
-                <button
-                  key={id}
-                  className="toggle"
-                  onClick={() =>
-                    onAdd([
-                      {
-                        id,
-                        label: nameOf(id),
-                        kind: resolve(nameOf(id)).kind === 'equipment' ? 'equipment' : 'ingredient',
-                      },
-                    ])
-                  }
-                >
-                  + {nameOf(id)}
-                </button>
-              ))}
-            </div>
-          </>
-        )}
       </div>
 
+      {pickerSections.map((section) => {
+        const chosen = section.groups.reduce(
+          (n, g) => n + g.options.filter((o) => have.has(o.id)).length,
+          0,
+        )
+        const open = openSection === section.id
+        return (
+          <div className="panel-section cat" key={section.id}>
+            <button
+              className="cat-head"
+              aria-expanded={open}
+              onClick={() => setOpenSection(open ? null : section.id)}
+            >
+              <span className="cat-name">{section.label}</span>
+              <span className="cat-count">
+                {chosen > 0 ? `${chosen} of ${sectionTotals[section.id]}` : sectionTotals[section.id]}
+              </span>
+              <span className="cat-caret" aria-hidden>
+                {open ? '−' : '+'}
+              </span>
+            </button>
+
+            {open && (
+              <div className="cat-body">
+                {section.groups.map((group, gi) => (
+                  <div className="cat-group" key={group.label ?? gi}>
+                    {group.label && <h3 className="cat-group-label">{group.label}</h3>}
+                    <div className="opts">
+                      {group.options.map((option) => (
+                        <button
+                          key={option.id}
+                          className={`opt ${section.kind === 'equipment' ? 'device' : ''}`}
+                          aria-pressed={have.has(option.id)}
+                          onClick={() => toggle(option.id, option.label, section.kind)}
+                        >
+                          {option.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )
+      })}
+
       <div className="panel-section">
-        <h2 className="panel-title">Assumptions</h2>
         <label className="switch">
           <input
             type="checkbox"
@@ -214,44 +209,6 @@ export function KitchenPanel({
           />
           I have the basics — salt, pepper, water, cooking oil, a stove, a pan and a fridge
         </label>
-      </div>
-
-      <div className="panel-section">
-        <h2 className="panel-title">Eating</h2>
-        <div className="toggle-row">
-          {Object.entries(DIET_LABELS).map(([key, label]) => (
-            <button
-              key={key}
-              className="toggle"
-              aria-pressed={!!prefs.diet[key]}
-              onClick={() => toggleDiet(key)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="panel-section">
-        <h2 className="panel-title">Swap out when possible</h2>
-        <div className="toggle-row">
-          {['sugar', 'honey', 'jaggery', 'maple_syrup', 'brown_sugar', 'ghee', 'butter', 'mayo'].map(
-            (id) => (
-              <button
-                key={id}
-                className="toggle"
-                aria-pressed={prefs.preferNot.includes(id)}
-                onClick={() => togglePreferNot(id)}
-              >
-                {nameOf(id)}
-              </button>
-            ),
-          )}
-        </div>
-        <p className="hint">
-          Anything switched on here gets replaced with something you like better whenever
-          the swap table has an option — it never stops a recipe from showing up.
-        </p>
       </div>
     </aside>
   )

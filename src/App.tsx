@@ -9,16 +9,22 @@ import {
   stapleIngredients,
 } from './lib/db'
 import { matchAll, type Kitchen } from './lib/match'
-import type { Preferences, RecipeMatch, Verdict } from './lib/types'
+import type { RecipeMatch, Verdict } from './lib/types'
 
 const STORAGE_KEY = 'cookable.v1'
 
 interface Saved {
   items: KitchenItem[]
   includeStaples: boolean
-  prefs: Preferences
 }
 
+/**
+ * Only the kitchen is remembered in the browser. Preferences - the avoid list,
+ * the swap-out list, the diet filters - are not editable in the app, so
+ * data/preferences.json stays the single source of truth for them. Anything a
+ * previous version of the app saved under `prefs` is deliberately ignored,
+ * rather than sticking around with no way to switch it off.
+ */
 function load(): Saved {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -27,13 +33,12 @@ function load(): Saved {
       return {
         items: parsed.items ?? [],
         includeStaples: parsed.includeStaples ?? true,
-        prefs: { ...defaultPreferences, ...parsed.prefs },
       }
     }
   } catch {
     // Corrupt or unavailable storage - start fresh rather than blowing up.
   }
-  return { items: [], includeStaples: true, prefs: defaultPreferences }
+  return { items: [], includeStaples: true }
 }
 
 const SECTIONS: Array<{ verdict: Verdict; title: string; blurb: string }> = [
@@ -53,14 +58,14 @@ export default function App() {
   const initial = useMemo(load, [])
   const [items, setItems] = useState<KitchenItem[]>(initial.items)
   const [includeStaples, setIncludeStaples] = useState(initial.includeStaples)
-  const [prefs, setPrefs] = useState<Preferences>(initial.prefs)
+  const prefs = defaultPreferences
   const [openId, setOpenId] = useState<string | null>(null)
   const [sort, setSort] = useState<SortMode>('best')
   const [showBlocked, setShowBlocked] = useState(false)
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ items, includeStaples, prefs }))
-  }, [items, includeStaples, prefs])
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ items, includeStaples }))
+  }, [items, includeStaples])
 
   const kitchen: Kitchen = useMemo(() => {
     const ing = new Set(items.filter((i) => i.kind !== 'equipment').map((i) => i.id))
@@ -138,8 +143,6 @@ export default function App() {
           onClear={() => setItems([])}
           includeStaples={includeStaples}
           setIncludeStaples={setIncludeStaples}
-          prefs={prefs}
-          setPrefs={setPrefs}
         />
 
         <main>
