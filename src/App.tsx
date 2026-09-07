@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
+import { IconSparkle } from './components/Icons'
 import { KitchenPanel, type KitchenItem } from './components/KitchenPanel'
 import { RecipeCard } from './components/RecipeCard'
 import { RecipeDetail } from './components/RecipeDetail'
+import { Spotlight } from './components/Spotlight'
 import {
   defaultPreferences,
   recipes,
@@ -9,6 +11,7 @@ import {
   stapleIngredients,
 } from './lib/db'
 import { matchAll, type Kitchen } from './lib/match'
+import { pickNext, suggestionPool } from './lib/suggest'
 import type { RecipeMatch, Verdict } from './lib/types'
 
 const STORAGE_KEY = 'cookable.v1'
@@ -62,6 +65,14 @@ export default function App() {
   const [openId, setOpenId] = useState<string | null>(null)
   const [sort, setSort] = useState<SortMode>('best')
   const [showBlocked, setShowBlocked] = useState(false)
+
+  /**
+   * The suggestion is deliberately not persisted. It is a roll of the dice, not
+   * a setting - coming back tomorrow to yesterday's pick would be odd, and the
+   * kitchen it was drawn from may well have changed underneath it.
+   */
+  const [suggestedId, setSuggestedId] = useState<string | null>(null)
+  const [drawn, setDrawn] = useState<string[]>([])
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ items, includeStaples }))
@@ -118,6 +129,22 @@ export default function App() {
   const open = openId ? matches.find((m) => m.recipe.id === openId) : null
   const hasKitchen = items.length > 0
 
+  const pool = useMemo(() => suggestionPool(matches), [matches])
+  /**
+   * Resolved against the live matches rather than stored whole, so a suggestion
+   * left on screen while you edit the kitchen updates its verdict instead of
+   * quietly going stale.
+   */
+  const suggested = suggestedId
+    ? matches.find((m) => m.recipe.id === suggestedId) ?? null
+    : null
+
+  function suggest() {
+    const next = pickNext(pool, drawn, suggestedId)
+    setSuggestedId(next.id)
+    setDrawn(next.seen)
+  }
+
   function addItems(added: KitchenItem[]) {
     setItems((prev) => {
       const seen = new Set(prev.map((i) => i.id))
@@ -158,6 +185,20 @@ export default function App() {
           ) : (
             <>
               <div className="results-head">
+                <button
+                  className="suggest"
+                  onClick={suggest}
+                  disabled={!pool.length}
+                  title={
+                    pool.length
+                      ? undefined
+                      : 'Nothing you could cook yet - add a couple more things'
+                  }
+                >
+                  <IconSparkle size={15} />
+                  Suggest a recipe
+                </button>
+
                 <div className="seg">
                   <button aria-pressed={sort === 'best'} onClick={() => setSort('best')}>
                     Best match
@@ -178,6 +219,16 @@ export default function App() {
                   Show what I cannot make
                 </label>
               </div>
+
+              {suggested && (
+                <Spotlight
+                  match={suggested}
+                  poolSize={pool.length}
+                  onAnother={suggest}
+                  onDismiss={() => setSuggestedId(null)}
+                  onOpen={() => setOpenId(suggested.recipe.id)}
+                />
+              )}
 
               {SECTIONS.map(({ verdict, title, blurb }) => {
                 const group = byVerdict[verdict]

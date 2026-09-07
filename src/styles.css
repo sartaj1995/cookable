@@ -878,6 +878,212 @@ input { font: inherit; }
 }
 .blank p { margin: 0 auto; max-width: 430px; font-size: 14.5px; line-height: 1.62; }
 
+/* ---------- suggest button + spotlight ---------- */
+
+/* Screen-reader-only announcement text. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The one filled button in the results toolbar, and the only one on the page -
+   everything else up here is a filter, so the primary action stays obvious. */
+.suggest {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 7px 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--brand);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.16s var(--ease), transform 0.16s var(--ease),
+    box-shadow 0.16s var(--ease);
+}
+.suggest:hover:not(:disabled) {
+  background: var(--brand-warm);
+  box-shadow: var(--shadow);
+}
+/* Scale rather than translate, so nothing around it reflows on press. */
+.suggest:active:not(:disabled) { transform: scale(0.97); }
+.suggest:disabled {
+  background: var(--blocked-soft);
+  color: var(--blocked);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.suggest svg { flex-shrink: 0; }
+
+.spotlight {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 26px;
+  padding: 16px 22px 18px;
+  background: var(--brand-soft);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  animation: rise 0.34s var(--ease) both;
+}
+
+/* Same left-edge hairline the cards use, so it reads as part of the set. */
+.spotlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--brand);
+}
+
+.spot-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.spotlight .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 auto 0 0;
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+}
+
+.spot-alone {
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+.spot-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: color 0.16s var(--ease), border-color 0.16s var(--ease),
+    transform 0.16s var(--ease);
+}
+.spot-btn:hover { color: var(--brand); border-color: var(--brand); }
+.spot-btn:active { transform: scale(0.96); }
+.spot-btn.icon { padding: 6px; width: 32px; justify-content: center; }
+
+/* Recipe summaries and note counts vary, and the results below must not jump
+   every time you press Another. Tall enough for the common two-note card; a
+   longer one still grows, it just does not shrink back. */
+.spot-body {
+  min-height: 152px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  animation: spotSwap 0.26s var(--ease) both;
+}
+
+@keyframes spotSwap {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.spot-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.spot-title-row h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+}
+
+.spot-summary {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+.spot-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+}
+
+/* The card's .meta pins itself to the bottom of a flex column and rules off
+   against --border; in here the footer row does the aligning and the tinted
+   panel needs the stronger edge. */
+.spot-foot .meta {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+  color: var(--text-dim);
+}
+
+.spot-open {
+  flex-shrink: 0;
+  min-height: 36px;
+  padding: 8px 18px;
+  border: 1.5px solid var(--brand);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.16s var(--ease), color 0.16s var(--ease),
+    transform 0.16s var(--ease);
+}
+.spot-open:hover { background: var(--brand); color: var(--bg); }
+.spot-open:active { transform: scale(0.97); }
+
+@media (max-width: 900px) {
+  /* Comfortable thumb targets once this is a phone rather than a pointer. */
+  .suggest,
+  .spot-btn,
+  .spot-open { min-height: 44px; }
+  .spot-btn.icon { width: 44px; }
+
+  .spotlight { padding: 14px 16px 16px; }
+  /* Wrapping changes the height wholesale, so a desktop floor would only add
+     dead space here. */
+  .spot-body { min-height: 0; }
+  .spot-title-row h3 { font-size: 21px; }
+  .spot-foot { flex-direction: column; align-items: stretch; gap: 12px; }
+  .spot-open { width: 100%; }
+}
+
 /* ---------- motion preferences ---------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -891,4 +1097,7 @@ input { font: inherit; }
     scroll-behavior: auto !important;
   }
   .card:hover { transform: none; }
+  .suggest:active,
+  .spot-btn:active,
+  .spot-open:active { transform: none; }
 }
