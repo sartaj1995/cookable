@@ -1,6 +1,7 @@
 /**
- * Inline SVG icons. Deliberately not an icon package - there are six of them and
- * they all inherit `currentColor`, so a dependency would cost more than it saves.
+ * Inline SVG icons. Deliberately not an icon package - there are eight of them
+ * and they all inherit `currentColor`, so a dependency would cost more than it
+ * saves.
  * Every icon is decorative here: the meaning is always carried by adjacent text,
  * so they are hidden from screen readers.
  */
@@ -72,6 +73,24 @@ export function IconChevron({ size = 16, className }: IconProps) {
   return (
     <svg {...base(size)} className={className}>
       <path d="m6 9 6 6 6-6" />
+    </svg>
+  )
+}
+
+/** Suggest something to cook. */
+export function IconSparkle({ size = 15, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path d="M12 3c0 5 4 9 9 9-5 0-9 4-9 9 0-5-4-9-9-9 5 0 9-4 9-9z" />
+    </svg>
+  )
+}
+
+/** Draw a different suggestion. */
+export function IconRefresh({ size = 14, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v5h-5" />
     </svg>
   )
 }
