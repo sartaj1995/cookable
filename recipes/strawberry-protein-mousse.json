@@ -1,0 +1,45 @@
+{
+  "id": "strawberry-protein-mousse",
+  "title": "Strawberry protein mousse bowl",
+  "summary": "Four ingredients, one blender, and the jelly does all the setting. Close to 58 g of protein for around 320 calories, which is a ratio almost nothing else in a dessert bowl manages.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack", "post-workout"],
+  "servings": 1,
+  "time": { "prep": 5, "cook": 0, "total": 5, "note": "Plus 3 hours setting in the fridge." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "no-bake", "dessert", "low-fat", "no-added-sugar", "gluten-free"],
+  "nutrition_per_serving": { "calories": 320, "protein_g": 58, "carbs_g": 13, "fat_g": 2, "fibre_g": 0, "added_sugar_g": 0, "estimated": true, "note": "The whole bowl is one serving. Varies with the yogurt and the powder you use." },
+  "equipment": { "required": ["blender", "fridge"], "optional": ["kettle", "mixing_bowl"] },
+  "ingredients": [
+    { "id": "sugar_free_jelly", "qty": "1 sachet, strawberry", "core": true, "function": "structure", "sub_group": "none", "note": "The gelatine in this is the only thing setting the mousse. There is no other binder in the recipe." },
+    { "id": "greek_yogurt", "qty": "290 g, 0% fat", "core": true, "function": "creaminess", "sub_group": "blended_creamy_base" },
+    { "id": "water", "qty": "250 ml, boiling", "function": "liquid", "note": "Less than the jelly packet asks for, on purpose. The yogurt makes up the rest of the liquid." },
+    { "id": "whey_protein", "qty": "30 g (about 1 scoop)", "function": "protein", "note": "Vanilla or strawberry works best here. Chocolate fights the jelly." },
+    { "id": "salt", "qty": "a pinch", "function": "salt", "note": "Sounds wrong in a sweet bowl, and it is what stops the sweetener tasting flat." },
+    { "id": "berries", "qty": "1 strawberry, sliced, to finish", "optional": true, "function": "freshness" }
+  ],
+  "steps": [
+    "Boil the kettle and measure out 250 ml of water.",
+    "Stir the jelly sachet into the boiling water until every grain has dissolved. Hold the jug up to the light and check - undissolved crystals sink and set into a rubbery layer at the bottom.",
+    "Let the jelly liquid cool until it is barely warm. Poured hot onto 0% yogurt it will split it, and the mousse turns grainy instead of smooth.",
+    "Put the yogurt into the blender cup, pour in the cooled jelly, then add the protein powder and the salt.",
+    "Blend until it is uniform, pale pink and foaming on top. That foam is what makes this a mousse rather than a bowl of set yogurt, so do not stop early.",
+    "Pour into a bowl, cover with cling film and refrigerate 3 hours, until set right through."
+  ],
+  "tips": [
+    "It has to be the sugar-free jelly. A standard strawberry jelly block carries around 60 g of sugar and would put most of a can of cola into the bowl.",
+    "A bullet blender cup is fine for this one - the mixture is thin and pours easily. It is the thick pastes that stall those blenders.",
+    "No blender: a whisk will combine it, but you will not get the aerated top, and it sets denser.",
+    "Any flavour of sugar-free jelly works. Match the protein powder to it or use an unflavoured one, or the two flavours argue with each other.",
+    "If it comes out rubbery rather than mousse-like, there was too little total liquid. Stick to 250 ml against the full 290 g of yogurt."
+  ],
+  "health_notes": "Close to 58 g of protein for roughly 320 calories is an unusually good ratio for a dessert, and it comes from the yogurt and the whey. The few grams the jelly contributes are gelatine, which is an incomplete protein and low in tryptophan, so it is worth less than the label number suggests.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=VvnFd59FoWg",
+    "channel": "Panacea Palm",
+    "title": "EASIEST High Protein Strawberry Mousse! ONLY 290 Calories with 56g of protein!",
+    "captured": "2026-09-07",
+    "adapted": "Ingredients and quantities are exactly as shown on screen. The cooling step is an addition: the video pours the dissolved jelly straight on and never mentions letting it cool, but boiling liquid will split 0% Greek yogurt. Nutrition recalculated at roughly 320 calories and 58 g protein against the video's claimed 290 and 56, which is close enough that the gap is brand variation rather than an error."
+  }
+}
