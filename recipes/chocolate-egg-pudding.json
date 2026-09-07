@@ -1,0 +1,42 @@
+{
+  "id": "chocolate-egg-pudding",
+  "title": "Chocolate pudding made from boiled eggs",
+  "summary": "Five hard boiled eggs blended with cacao and dates into something that sets like a chocolate mousse. Twenty-two grams of protein a pot, and no sugar in it beyond the dates.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack"],
+  "servings": 2,
+  "time": { "prep": 5, "cook": 10, "total": 15, "note": "Plus at least 1 hour in the fridge, and longer is better. Boil the eggs ahead if you can - they need to be completely cold." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "no-bake", "dessert", "gluten-free", "no-added-sugar"],
+  "nutrition_per_serving": { "calories": 400, "protein_g": 22, "carbs_g": 41, "fat_g": 18, "fibre_g": 8, "added_sugar_g": 0, "estimated": true, "note": "Half the batch. The dates carry about 27 g of fruit sugar per serving, which is not added sugar but is still sugar." },
+  "equipment": { "required": ["blender", "pan", "stovetop", "fridge"], "optional": [] },
+  "ingredients": [
+    { "id": "eggs", "qty": "5, hard boiled and peeled", "core": true, "function": "structure", "sub_group": "none", "note": "The yolks are what make this set like a pudding. Nothing else in the jar thickens it." },
+    { "id": "cocoa_powder", "qty": "30 g cacao powder", "core": true, "function": "flavour", "sub_group": "none" },
+    { "id": "dates", "qty": "4 (80 g), pitted", "function": "sweetness", "note": "These bring bulk as well as sweetness, which is why this version takes more milk than the honey one." },
+    { "id": "milk", "qty": "150 ml", "function": "liquid", "note": "Drop to 80 ml if you sweeten with honey instead of dates." },
+    { "id": "salt", "qty": "a pinch", "function": "salt" },
+    { "id": "vanilla", "qty": "a splash", "optional": true, "function": "flavour" }
+  ],
+  "steps": [
+    "Hard boil the eggs, peel them, and let them go completely cold. Warm eggs thin the mix and it will not be set after an hour.",
+    "Put the eggs, cacao, dates, milk, salt and vanilla into a blender.",
+    "Blend until completely smooth, longer than feels necessary. Any yolk that has not broken down turns up later as a grainy, eggy pocket, and that is the one thing that ruins this.",
+    "Pour into 2 jars or pots and refrigerate at least 1 hour. It thickens the longer you leave it."
+  ],
+  "tips": [
+    "Pit the dates, and soak them in hot water for 10 minutes first if they are dry, or they will not blend smooth.",
+    "The original version of this used 80 g honey and only 80 ml milk. Dates hold more water, so the milk goes up when the honey goes out - swapping one for the other without moving the milk gives you either a paste or a drink.",
+    "Chilled and properly blended it does not taste of egg. If yours does, it was underblended or it has not been in the fridge long enough.",
+    "Cacao is more bitter than standard cocoa powder. Taste before it goes in the fridge and add a fifth date if it needs it."
+  ],
+  "health_notes": "The five eggs carry the 22 g of protein and most of the 18 g of fat, roughly 13 g of which is yolk fat. The dates put about 27 g of fruit sugar into each serving, so at 41 g of carbs this sits at the dessert end of the range rather than being a light snack, even with nothing refined in it.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=huzXbJsofBc",
+    "channel": "Ralston D'Souza",
+    "title": "Chocolate Pudding | Try It Or Trash It",
+    "captured": "2026-09-08",
+    "adapted": "Quantities are from the pinned comment on the video. The video makes the dates version and that is what is recorded here; the recipe it was adapted from used 80 g honey with 80 ml milk in place of 80 g dates with 150 ml milk. Nutrition was recalculated from the ingredient list and agrees closely with the figures given, at roughly 400 calories, 22 g protein, 18 g fat and 41 g carbs a serving against the stated 410, 22, 16 and 42."
+  }
+}
