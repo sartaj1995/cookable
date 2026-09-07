@@ -926,6 +926,22 @@ input { font: inherit; }
 }
 .suggest svg { flex-shrink: 0; }
 
+/* The empty state's own way in - you should be able to press this before you
+   have told the app anything at all. Kept above the mobile 44px floor so the
+   extra specificity here cannot quietly shrink the touch target. */
+.suggest.blank-cta {
+  min-height: 46px;
+  padding: 11px 24px;
+  font-size: 14px;
+}
+.blank .blank-alt {
+  margin: 18px auto 15px;
+  max-width: 430px;
+  font-size: 13.5px;
+  font-style: italic;
+  color: var(--text-faint);
+}
+
 .spotlight {
   position: relative;
   overflow: hidden;

@@ -1,16 +1,23 @@
-import type { RecipeMatch, Verdict } from './types'
+import type { RecipeMatch } from './types'
 
 /**
- * "Suggest a recipe" - and the bit that actually matters, which is that
- * clicking it again has to give you something else.
+ * "Suggest a recipe" - the button for when you cannot decide.
  *
- * Two pieces:
+ * This deliberately does not ask what you can cook tonight. The sections below
+ * already answer that, and answering it twice is what made the button feel
+ * broken: pick paneer and the only thing on offer was the one paneer recipe you
+ * could already see was ready, never the palak paneer you were a single shop
+ * away from. Worse, a kitchen holding one thing produced no suggestion at all.
  *
- * `suggestionPool` decides what is fair game. Only things you could sit down
- * and eat tonight: the `ready` list first, widening to `almost` when there are
- * too few ready recipes for "another" to feel like it does anything, and to
- * `stretch` only when nothing better exists. `blocked` is never suggested -
- * being told to cook something you cannot cook is worse than no suggestion.
+ * So the pool here is wide on purpose. Short of ingredients is fine. Short of a
+ * device is fine. You are being handed an idea to react to, not a plan to
+ * follow, and the panel prints the verdict and what is missing so you can turn
+ * it down on the spot.
+ *
+ * The one thing it will not offer is something you have said you cannot eat.
+ * `avoid` in preferences.json is a hard no - "never suggested, never used" -
+ * so a recipe needing an avoided ingredient with no way around it stays out.
+ * The diet flags feed that same list.
  *
  * `pickNext` is a shuffle bag rather than a dice roll. Plain random repeats
  * itself: with six candidates there is a one-in-six chance every click of
@@ -19,16 +26,32 @@ import type { RecipeMatch, Verdict } from './types'
  * only once the bag is empty - you see every option before you see any twice.
  */
 
-/** Below this many `ready` recipes the bag empties too fast to feel random. */
-const MIN_POOL = 3
+/**
+ * What is in the running.
+ *
+ * `picked` is what you actually chose, not what the kitchen resolves to. The
+ * staples are folded in for matching, and counting them here would make every
+ * recipe "relevant" on the strength of the salt.
+ */
+export function suggestionPool(
+  matches: RecipeMatch[],
+  picked: Set<string>,
+): RecipeMatch[] {
+  const eligible = matches.filter(allowed)
+  if (!picked.size) return eligible
 
-export function suggestionPool(matches: RecipeMatch[]): RecipeMatch[] {
-  const of = (v: Verdict) => matches.filter((m) => m.verdict === v)
-  const ready = of('ready')
-  if (ready.length >= MIN_POOL) return ready
-  const cookable = [...ready, ...of('almost')]
-  if (cookable.length) return cookable
-  return of('stretch')
+  const uses = eligible.filter((m) =>
+    m.recipe.ingredients.some((i) => picked.has(i.id)),
+  )
+  // Nothing you picked turns up in any recipe - a kitchen of nothing but
+  // sugar-free jelly, say. Widen rather than hand back an empty pool: a button
+  // that goes dead on you is the exact thing this is meant to stop.
+  return uses.length ? uses : eligible
+}
+
+/** Diet and the avoid list are the only hard no. Everything else is fair game. */
+function allowed(match: RecipeMatch): boolean {
+  return !match.missing.some((line) => line.blockedByAvoid)
 }
 
 export interface Draw {
@@ -64,7 +87,7 @@ export function pickNext(
   }
 
   const id = draw(unseen)
-  return { id, seen: [...seen.filter((s) => bag.has(s) && ids.includes(s)), id] }
+  return { id, seen: [...seen.filter((s) => ids.includes(s)), id] }
 }
 
 function draw(ids: string[]): string {
