@@ -1,5 +1,5 @@
 {
-  "_comment": "Your standing preferences. These are the DEFAULTS the app boots with - changing anything in the app is remembered in that browser, but this file is the source of truth. Edit it directly, or ask Claude Code to.",
+  "_comment": "Your standing preferences. This file is the ONLY place they are set - there are no preference controls in the app, so edit it here or ask Claude Code to. Changes take effect on the next page load.",
 
   "avoid": {
     "_comment": "HARD no. Never suggested, never used. If a recipe needs one of these and nothing in substitutions.json can stand in, the recipe is marked blocked. Use this for allergies and genuine dislikes.",
@@ -23,7 +23,7 @@
   },
 
   "diet": {
-    "_comment": "Filters in the app. Set any to true to hide recipes that break it.",
+    "_comment": "Set any to true and the engine treats that diet as a set of avoids - it will try to swap the chicken for paneer first, and only hides a recipe when there is genuinely no way around it.",
     "vegetarian": false,
     "vegan": false,
     "eggless": false,

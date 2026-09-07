@@ -12,8 +12,9 @@ The app is read-only — Sartaj adds recipes by asking you.
 | `data/ingredients.json` | Canonical ingredient ids + the aliases people actually type. |
 | `data/substitutions.json` | The swap table: interchangeable groups + one-way rules. |
 | `data/equipment.json` | Devices, and what you can use when you do not have one. |
-| `data/preferences.json` | Standing preferences — the avoid list, the swap-out list, diet defaults. |
+| `data/preferences.json` | Standing preferences — avoid list, swap-out list, diet flags. **The app has no UI for these**, so this file is the only way to change them. |
 | `src/lib/match.ts` | The matching engine. Read this before changing swap semantics. |
+| `src/lib/catalogue.ts` | Builds the browsable pick-lists in the kitchen panel from the registries. Ingredients land in a section by `category`; anything with an unrecognised category falls into "Everything else" rather than disappearing. |
 | `SCHEMA.md` | Full field reference for every file above. |
 
 ## After ANY data change

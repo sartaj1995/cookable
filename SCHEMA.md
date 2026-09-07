@@ -209,9 +209,11 @@ cook from.
 ```
 
 `avoid` blocks. `prefer_not` never blocks — it just swaps when the table offers a
-way, and the app labels it "your swap". Diet toggles work by adding to `avoid`
-at match time, so turning on *vegetarian* makes the engine try to swap the
-chicken for paneer before it gives up on a recipe.
+way, and the app labels it "your swap". Diet flags work by adding to `avoid`
+at match time, so setting *vegetarian* makes the engine try to swap the chicken
+for paneer before it gives up on a recipe.
 
-This file is the boot state. The app remembers changes in the browser; edit here
-to change the default.
+**This file is the only place preferences are set.** The app has no preference
+controls — it reads these values on load and never writes them back. Only the
+kitchen itself (what you have, and the basics switch) is remembered in the
+browser.
