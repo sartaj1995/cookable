@@ -7,6 +7,8 @@ interface Props {
   match: RecipeMatch
   /** How many recipes are in the running, so the copy can be honest about it. */
   poolSize: number
+  /** Whether your picks narrowed the pool, which changes what "only one" means. */
+  narrowed: boolean
   onAnother: () => void
   onDismiss: () => void
   onOpen: () => void
@@ -21,7 +23,14 @@ interface Props {
  * mounted region: a live region that unmounts with its content announces
  * nothing, and reading the whole panel aloud on every click would be a lot.
  */
-export function Spotlight({ match, poolSize, onAnother, onDismiss, onOpen }: Props) {
+export function Spotlight({
+  match,
+  poolSize,
+  narrowed,
+  onAnother,
+  onDismiss,
+  onOpen,
+}: Props) {
   const { recipe, verdict } = match
   const n = recipe.nutrition_per_serving
   const alone = poolSize <= 1
@@ -35,7 +44,9 @@ export function Spotlight({ match, poolSize, onAnother, onDismiss, onOpen }: Pro
         </h2>
 
         {alone ? (
-          <span className="spot-alone">the only thing that fits right now</span>
+          <span className="spot-alone">
+            {narrowed ? 'the only one using what you picked' : 'the only one there is'}
+          </span>
         ) : (
           <button className="spot-btn" onClick={onAnother}>
             <IconRefresh size={13} />

@@ -57,6 +57,33 @@ const SECTIONS: Array<{ verdict: Verdict; title: string; blurb: string }> = [
 
 type SortMode = 'best' | 'protein' | 'quick'
 
+/**
+ * The same button in two places: the results toolbar once there is a kitchen,
+ * and the empty state before there is one. It is deliberately never gated on
+ * having picked anything - pressing it cold is a perfectly good way to start.
+ */
+function SuggestButton({
+  onClick,
+  disabled,
+  variant,
+}: {
+  onClick: () => void
+  disabled: boolean
+  variant?: 'blank'
+}) {
+  return (
+    <button
+      className={variant === 'blank' ? 'suggest blank-cta' : 'suggest'}
+      onClick={onClick}
+      disabled={disabled}
+      title={disabled ? 'Everything is ruled out by your avoid list' : undefined}
+    >
+      <IconSparkle size={15} />
+      Suggest a recipe
+    </button>
+  )
+}
+
 export default function App() {
   const initial = useMemo(load, [])
   const [items, setItems] = useState<KitchenItem[]>(initial.items)
@@ -129,7 +156,16 @@ export default function App() {
   const open = openId ? matches.find((m) => m.recipe.id === openId) : null
   const hasKitchen = items.length > 0
 
-  const pool = useMemo(() => suggestionPool(matches), [matches])
+  /**
+   * What you actually chose, which is not what the kitchen holds - the staples
+   * are folded into `kitchen` for matching, and letting them count here would
+   * make every recipe relevant on the strength of the salt.
+   */
+  const picked = useMemo(
+    () => new Set(items.filter((i) => i.kind !== 'equipment').map((i) => i.id)),
+    [items],
+  )
+  const pool = useMemo(() => suggestionPool(matches, picked), [matches, picked])
   /**
    * Resolved against the live matches rather than stored whole, so a suggestion
    * left on screen while you edit the kitchen updates its verdict instead of
@@ -173,6 +209,43 @@ export default function App() {
         />
 
         <main>
+          {hasKitchen && (
+            <div className="results-head">
+              <SuggestButton onClick={suggest} disabled={!pool.length} />
+
+              <div className="seg">
+                <button aria-pressed={sort === 'best'} onClick={() => setSort('best')}>
+                  Best match
+                </button>
+                <button aria-pressed={sort === 'protein'} onClick={() => setSort('protein')}>
+                  Most protein
+                </button>
+                <button aria-pressed={sort === 'quick'} onClick={() => setSort('quick')}>
+                  Quickest
+                </button>
+              </div>
+              <label className="switch" style={{ marginLeft: 'auto' }}>
+                <input
+                  type="checkbox"
+                  checked={showBlocked}
+                  onChange={(e) => setShowBlocked(e.target.checked)}
+                />
+                Show what I cannot make
+              </label>
+            </div>
+          )}
+
+          {suggested && (
+            <Spotlight
+              match={suggested}
+              poolSize={pool.length}
+              narrowed={picked.size > 0}
+              onAnother={suggest}
+              onDismiss={() => setSuggestedId(null)}
+              onOpen={() => setOpenId(suggested.recipe.id)}
+            />
+          )}
+
           {!hasKitchen ? (
             <div className="blank">
               <h2>Tell me what you have</h2>
@@ -181,55 +254,11 @@ export default function App() {
                 blender. Everything you can cook right now floats to the top, with the
                 substitutions worked out for whatever you are missing.
               </p>
+              <p className="blank-alt">Or do not, and let it pick for you.</p>
+              <SuggestButton onClick={suggest} disabled={!pool.length} variant="blank" />
             </div>
           ) : (
             <>
-              <div className="results-head">
-                <button
-                  className="suggest"
-                  onClick={suggest}
-                  disabled={!pool.length}
-                  title={
-                    pool.length
-                      ? undefined
-                      : 'Nothing you could cook yet - add a couple more things'
-                  }
-                >
-                  <IconSparkle size={15} />
-                  Suggest a recipe
-                </button>
-
-                <div className="seg">
-                  <button aria-pressed={sort === 'best'} onClick={() => setSort('best')}>
-                    Best match
-                  </button>
-                  <button aria-pressed={sort === 'protein'} onClick={() => setSort('protein')}>
-                    Most protein
-                  </button>
-                  <button aria-pressed={sort === 'quick'} onClick={() => setSort('quick')}>
-                    Quickest
-                  </button>
-                </div>
-                <label className="switch" style={{ marginLeft: 'auto' }}>
-                  <input
-                    type="checkbox"
-                    checked={showBlocked}
-                    onChange={(e) => setShowBlocked(e.target.checked)}
-                  />
-                  Show what I cannot make
-                </label>
-              </div>
-
-              {suggested && (
-                <Spotlight
-                  match={suggested}
-                  poolSize={pool.length}
-                  onAnother={suggest}
-                  onDismiss={() => setSuggestedId(null)}
-                  onOpen={() => setOpenId(suggested.recipe.id)}
-                />
-              )}
-
               {SECTIONS.map(({ verdict, title, blurb }) => {
                 const group = byVerdict[verdict]
                 if (!group.length) return null
@@ -264,8 +293,8 @@ export default function App() {
                     <h2>Nothing quite lines up yet</h2>
                     <p>
                       Add a couple more things — a protein and a base usually unlocks the
-                      most. Or tick “Show what I cannot make” to see what you are missing
-                      for each.
+                      most. Or press <b>Suggest a recipe</b>, which will happily propose
+                      something you are a shop away from.
                     </p>
                   </div>
                 )}
