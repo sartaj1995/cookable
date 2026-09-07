@@ -10,9 +10,11 @@ const VERDICT_LABEL = {
 interface Props {
   match: RecipeMatch
   onOpen: () => void
+  /** Position in its section, used to stagger the entrance animation. */
+  index?: number
 }
 
-export function RecipeCard({ match, onOpen }: Props) {
+export function RecipeCard({ match, onOpen, index = 0 }: Props) {
   const { recipe, verdict, missing, substitutions, equipment } = match
   const swapsNeeded = substitutions.filter((s) => s.substitution?.reason !== 'prefer_not')
   const preferenceSwaps = substitutions.filter((s) => s.substitution?.reason === 'prefer_not')
@@ -21,7 +23,8 @@ export function RecipeCard({ match, onOpen }: Props) {
 
   return (
     <button
-      className={`card ${verdict === 'blocked' ? 'is-blocked' : ''}`}
+      className={`card v-${verdict}`}
+      style={{ '--i': index } as React.CSSProperties}
       onClick={onOpen}
       aria-label={`Open ${recipe.title}`}
     >

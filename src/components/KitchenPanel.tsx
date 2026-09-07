@@ -1,6 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
 import { resolve, splitEntry, suggest, type Suggestion } from '../lib/normalize'
 import { pickerSections, sectionTotals } from '../lib/catalogue'
+import { IconChevron, IconClose } from './Icons'
 
 export interface KitchenItem {
   id: string
@@ -132,7 +133,7 @@ export function KitchenPanel({
               <span key={item.id} className={`chip ${item.kind === 'unknown' ? 'unknown' : ''}`}>
                 {item.label}
                 <button onClick={() => onRemove(item.id)} aria-label={`Remove ${item.label}`}>
-                  ×
+                  <IconClose size={13} />
                 </button>
               </span>
             ))}
@@ -145,7 +146,7 @@ export function KitchenPanel({
               <span key={item.id} className="chip device">
                 {item.label}
                 <button onClick={() => onRemove(item.id)} aria-label={`Remove ${item.label}`}>
-                  ×
+                  <IconClose size={13} />
                 </button>
               </span>
             ))}
@@ -170,8 +171,8 @@ export function KitchenPanel({
               <span className="cat-count">
                 {chosen > 0 ? `${chosen} of ${sectionTotals[section.id]}` : sectionTotals[section.id]}
               </span>
-              <span className="cat-caret" aria-hidden>
-                {open ? '−' : '+'}
+              <span className="cat-caret">
+                <IconChevron />
               </span>
             </button>
 
