@@ -2,6 +2,7 @@ import ingredientsData from '../../data/ingredients.json'
 import equipmentData from '../../data/equipment.json'
 import substitutionsData from '../../data/substitutions.json'
 import preferencesData from '../../data/preferences.json'
+import favouritesData from '../../data/favourites.json'
 import type {
   Equipment,
   EquipmentAlternate,
@@ -40,6 +41,15 @@ export const subRules: SubRule[] = substitutionsData.rules as SubRule[]
 
 export const ingredientById = new Map(ingredients.map((i) => [i.id, i]))
 export const equipmentById = new Map(equipment.map((e) => [e.id, e]))
+
+/**
+ * The pinned shortlist at the top of the kitchen panel. Ids that are not in
+ * either registry are dropped rather than rendered as dead chips - the
+ * validator is where a typo gets reported, not the UI.
+ */
+export const favouriteIds: string[] = favouritesData.items.filter(
+  (id) => ingredientById.has(id) || equipmentById.has(id),
+)
 
 export const stapleIngredients = ingredients.filter((i) => i.staple).map((i) => i.id)
 export const stapleEquipment = equipment.filter((e) => e.staple).map((e) => e.id)

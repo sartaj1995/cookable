@@ -459,7 +459,7 @@ input { font: inherit; }
   scrollbar-width: thin;
 }
 
-.cat-group + .cat-group { margin-top: 15px; }
+.cat-group + .cat-group { margin-top: 6px; }
 
 .cat-group-label {
   margin: 0 0 8px;
@@ -467,7 +467,43 @@ input { font: inherit; }
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--text-faint);
+  transition: color 0.16s var(--ease);
 }
+
+/* Sub-groups fold too, and start shut - opening Key ingredients gives nine
+   short rows instead of 128 chips. The count has to stay on the closed row, or
+   you would have to open every group to find where your picks already are. */
+.cat-group-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  margin: 0 -8px;
+  padding: 6px 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  text-align: left;
+  transition: background 0.16s var(--ease);
+}
+.cat-group-head:hover { background: var(--surface-2); }
+.cat-group-head .cat-group-label { margin: 0; }
+.cat-group-head[aria-expanded='true'] .cat-group-label,
+.cat-group-head:hover .cat-group-label { color: var(--text); }
+.cat-group-head + .opts { margin-top: 9px; }
+
+.cat-group-count {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.cat-group-head[aria-expanded='true'] .cat-group-count {
+  color: var(--brand);
+  font-weight: 600;
+}
+.cat-group-head[aria-expanded='true'] .cat-caret { transform: rotate(180deg); }
 
 .opts { display: flex; flex-wrap: wrap; gap: 5px; }
 
@@ -1134,6 +1170,8 @@ input { font: inherit; }
   .back,
   .spot-btn,
   .spot-open { min-height: 44px; }
+  /* Folding a sub-group is a thumb target like any other. */
+  .cat-group-head { min-height: 44px; }
   /* The count is a real control on a phone too, so it needs a thumb-sized
      target - the padding that suits a quiet desktop masthead leaves it at 31px. */
   .masthead .count { min-height: 44px; padding-left: 12px; padding-right: 12px; }

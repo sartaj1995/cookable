@@ -28,7 +28,17 @@ export function KitchenPanel({
 }: Props) {
   const [query, setQuery] = useState('')
   const [cursor, setCursor] = useState(0)
-  const [openSection, setOpenSection] = useState<string | null>('equipment')
+  const [openSection, setOpenSection] = useState<string | null>(
+    pickerSections[0]?.id ?? null,
+  )
+  /**
+   * Which sub-groups are unfolded. They start shut, so opening Key ingredients
+   * shows nine short rows rather than 128 chips. Several can be open at once:
+   * you are usually gathering across groups - a protein and a dairy - rather
+   * than switching between them, so closing one to open another would only mean
+   * clicking twice.
+   */
+  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set())
   const inputRef = useRef<HTMLInputElement>(null)
 
   const have = useMemo(() => new Set(items.map((i) => i.id)), [items])
@@ -73,6 +83,15 @@ export function KitchenPanel({
     } else if (e.key === 'Escape') {
       setQuery('')
     }
+  }
+
+  function toggleGroup(key: string) {
+    setOpenGroups((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
   }
 
   function toggle(id: string, label: string, kind: 'ingredient' | 'equipment') {
@@ -178,23 +197,52 @@ export function KitchenPanel({
 
             {open && (
               <div className="cat-body">
-                {section.groups.map((group, gi) => (
-                  <div className="cat-group" key={group.label ?? gi}>
-                    {group.label && <h3 className="cat-group-label">{group.label}</h3>}
-                    <div className="opts">
-                      {group.options.map((option) => (
+                {section.groups.map((group) => {
+                  const key = `${section.id}:${group.id}`
+                  // An unlabelled group is the whole section - Favourites,
+                  // Equipment - so there is nothing to fold it behind.
+                  const foldable = Boolean(group.label)
+                  const groupOpen = !foldable || openGroups.has(key)
+                  const picked = group.options.filter((o) => have.has(o.id)).length
+                  return (
+                    <div className="cat-group" key={key}>
+                      {foldable && (
                         <button
-                          key={option.id}
-                          className={`opt ${section.kind === 'equipment' ? 'device' : ''}`}
-                          aria-pressed={have.has(option.id)}
-                          onClick={() => toggle(option.id, option.label, section.kind)}
+                          className="cat-group-head"
+                          aria-expanded={groupOpen}
+                          onClick={() => toggleGroup(key)}
                         >
-                          {option.label}
+                          <span className="cat-group-label">{group.label}</span>
+                          <span className="cat-group-count">
+                            {picked > 0
+                              ? `${picked} of ${group.options.length}`
+                              : group.options.length}
+                          </span>
+                          <span className="cat-caret">
+                            <IconChevron size={14} />
+                          </span>
                         </button>
-                      ))}
+                      )}
+                      {groupOpen && (
+                        <div className="opts">
+                          {group.options.map((option) => {
+                            const kind = option.kind ?? section.kind
+                            return (
+                              <button
+                                key={option.id}
+                                className={`opt ${kind === 'equipment' ? 'device' : ''}`}
+                                aria-pressed={have.has(option.id)}
+                                onClick={() => toggle(option.id, option.label, kind)}
+                              >
+                                {option.label}
+                              </button>
+                            )
+                          })}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             )}
           </div>
