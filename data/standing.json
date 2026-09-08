@@ -1,0 +1,18 @@
+{
+  "_comment": "How much you actually want to cook each recipe, which is a fact about you rather than about the dish - so it lives here next to preferences.json, not inside the recipe files. There is no UI for this; edit here, or ask Claude Code to. Standing never hides a recipe and never changes whether you can cook it: browse-all still lists everything, and a rare recipe you have every ingredient for still lands in 'Make it now'. What it does is sort within each section, and keep the rare ones out of the Suggest dice roll. npm run validate checks every id is a real recipe.",
+
+  "_pinned": "The repertoire - the ones you come back to. Sorted to the top of whatever section they land in. Order here does not matter.",
+  "pinned": [],
+
+  "_rare": "Cook it once a year, if that. Sorted last, and never offered by Suggest unless you have specifically put one of its ingredients in the kitchen.",
+  "rare": [
+    "banana-pb-protein-smoothie",
+    "besan-chilla",
+    "dal-tadka-masoor",
+    "oats-upma",
+    "palak-paneer-light",
+    "quinoa-veg-pulao",
+    "sheet-pan-salmon-veg",
+    "soya-keema"
+  ]
+}

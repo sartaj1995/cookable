@@ -1,7 +1,9 @@
 # Data format
 
-Four data files and a folder of recipes. Everything is plain JSON so it diffs
-cleanly in git and can be edited by hand or by Claude Code.
+Six data files and a folder of recipes. Everything is plain JSON so it diffs
+cleanly in git and can be edited by hand or by Claude Code. The last three -
+preferences, favourites and standing - are the ones with no UI at all: the app
+reads them on load and never writes them back, so this is where they change.
 
 Keys beginning with `_` (like `_comment`) are notes for humans and are ignored.
 
@@ -217,3 +219,59 @@ for paneer before it gives up on a recipe.
 controls — it reads these values on load and never writes them back. Only the
 kitchen itself (what you have, and the basics switch) is remembered in the
 browser.
+
+---
+
+## `data/favourites.json`
+
+The handful of things you reach for constantly, pinned above the category lists
+in the kitchen panel so you do not have to hunt for them.
+
+```jsonc
+{ "items": ["chicken_breast", "eggs", "paneer", "air_fryer"] }
+```
+
+Ids may be ingredients or devices, and the order here is the order shown. These
+are shortcuts rather than a move - each one still appears in its own category,
+and since selection is keyed by id, ticking it in either place shows it ticked in
+both. `npm run validate` errors on an unknown id and warns if you pin a staple,
+which the basics switch already covers.
+
+---
+
+## `data/standing.json`
+
+How much you want to cook each recipe, as opposed to whether you *can*. It is a
+fact about you rather than about the dish, which is why it lives here next to
+preferences rather than as a field inside each recipe file.
+
+```jsonc
+{
+  "pinned": ["paneer-bhurji"],        // the repertoire, sorted to the top
+  "rare":   ["dal-tadka-masoor"]      // once a year, if that - sorted last
+}
+```
+
+Anything named in neither list is `normal`. The file only holds the two ends, so
+adding a recipe does not mean editing this. Listed in both, `rare` wins.
+
+What standing does, and just as importantly what it does not:
+
+| | Effect |
+| --- | --- |
+| Section it lands in | **Unchanged.** A rare recipe you have everything for is still "Make it now" |
+| Order within that section | Pinned first, rare last, in every sort mode |
+| Browse all | **Unchanged.** Everything is listed, A to Z, with a small `rarely` / `pinned` label |
+| Suggest a recipe | Rare recipes stay out of the dice roll |
+
+The one exception is the last row: a rare recipe comes back into the suggestion
+pool when you have put one of its own ingredients in the kitchen and nothing you
+cook regularly uses it. Typing "quinoa" tonight says more than the file does.
+
+Standing is deliberately **not** part of a match's `score`. `score` answers "how
+well does this fit the kitchen", and how much you like the dish is no part of
+that question - so it is applied as a sort key (`byShelf` in `match.ts`) that
+runs after verdict. A pinned recipe you cannot cook never outranks one you can.
+
+`npm run validate` errors on an id that is not a recipe, because a typo here
+demotes nothing at all and there is no way to see that from the app.

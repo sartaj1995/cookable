@@ -1203,3 +1203,22 @@ input { font: inherit; }
   .spot-btn:active,
   .spot-open:active { transform: none; }
 }
+
+/* Standing - how much you actually want to cook it, from data/standing.json.
+   Deliberately quiet: it belongs at the end of the meta row, not competing with
+   the verdict badge, because it says nothing about whether you can cook it. */
+.stand {
+  margin-left: auto;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+.stand.rare { color: var(--text-faint); }
+.stand.pinned {
+  color: var(--ready);
+  border-color: var(--ready-soft);
+  background: var(--ready-soft);
+}

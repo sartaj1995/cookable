@@ -152,6 +152,13 @@ export interface EquipmentCheck {
 
 export type Verdict = 'ready' | 'almost' | 'stretch' | 'blocked'
 
+/**
+ * How much you want to cook this, from data/standing.json. Independent of
+ * whether you *can* - a rare recipe with every ingredient in the kitchen is
+ * still ready, it just sorts below the others and stays out of the dice roll.
+ */
+export type Standing = 'pinned' | 'normal' | 'rare'
+
 export interface RecipeMatch {
   recipe: Recipe
   verdict: Verdict
@@ -161,6 +168,7 @@ export interface RecipeMatch {
   substitutions: MatchedLine[]
   /** Why it cannot be made at all. */
   blockers: string[]
+  standing: Standing
   score: number
   haveRatio: number
 }

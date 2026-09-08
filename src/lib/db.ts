@@ -3,12 +3,14 @@ import equipmentData from '../../data/equipment.json'
 import substitutionsData from '../../data/substitutions.json'
 import preferencesData from '../../data/preferences.json'
 import favouritesData from '../../data/favourites.json'
+import standingData from '../../data/standing.json'
 import type {
   Equipment,
   EquipmentAlternate,
   Ingredient,
   Preferences,
   Recipe,
+  Standing,
   SubGroup,
   SubRule,
 } from './types'
@@ -50,6 +52,29 @@ export const equipmentById = new Map(equipment.map((e) => [e.id, e]))
 export const favouriteIds: string[] = favouritesData.items.filter(
   (id) => ingredientById.has(id) || equipmentById.has(id),
 )
+
+/**
+ * How much you want to cook each recipe, from data/standing.json. Anything not
+ * named in either list is 'normal', which is the useful default - the file only
+ * has to hold the two ends, not all 23 recipes.
+ *
+ * Ids that match no recipe are dropped rather than kept in the map, so a typo
+ * cannot quietly demote nothing at all. The validator is where it gets reported.
+ */
+const recipeIds = new Set(recipes.map((r) => r.id))
+const standingById = new Map<string, Standing>()
+for (const id of standingData.pinned) {
+  if (recipeIds.has(id)) standingById.set(id, 'pinned')
+}
+for (const id of standingData.rare) {
+  // Listed in both is a contradiction; rare wins, because the whole point of
+  // marking something rare is to stop seeing it.
+  if (recipeIds.has(id)) standingById.set(id, 'rare')
+}
+
+export function standingOf(recipeId: string): Standing {
+  return standingById.get(recipeId) ?? 'normal'
+}
 
 export const stapleIngredients = ingredients.filter((i) => i.staple).map((i) => i.id)
 export const stapleEquipment = equipment.filter((e) => e.staple).map((e) => e.id)

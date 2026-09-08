@@ -19,6 +19,10 @@ import type { RecipeMatch } from './types'
  * so a recipe needing an avoided ingredient with no way around it stays out.
  * The diet flags feed that same list.
  *
+ * `rare` in standing.json is the softer version of the same idea: out of the
+ * bag by default, but let back in when you have put one of its ingredients in
+ * the kitchen, which says more about tonight than the file does.
+ *
  * `pickNext` is a shuffle bag rather than a dice roll. Plain random repeats
  * itself: with six candidates there is a one-in-six chance every click of
  * landing back on the recipe you just rejected, which reads as a broken button.
@@ -38,15 +42,28 @@ export function suggestionPool(
   picked: Set<string>,
 ): RecipeMatch[] {
   const eligible = matches.filter(allowed)
-  if (!picked.size) return eligible
+  // The dice roll is the one place standing really bites. Being handed a recipe
+  // you have already said you will not cook is exactly the "broken button" this
+  // file exists to avoid, so the rare ones sit it out.
+  const everyday = eligible.filter((m) => m.standing !== 'rare')
+  if (!picked.size) return everyday.length ? everyday : eligible
 
-  const uses = eligible.filter((m) =>
-    m.recipe.ingredients.some((i) => picked.has(i.id)),
-  )
+  const uses = (list: RecipeMatch[]) =>
+    list.filter((m) => m.recipe.ingredients.some((i) => picked.has(i.id)))
+
+  const wanted = uses(everyday)
+  if (wanted.length) return wanted
+
+  // Nothing you cook regularly uses what you picked. Before widening to
+  // something unrelated, offer the rare recipe that does - putting quinoa in the
+  // kitchen tonight is a better signal than the standing file is.
+  const rare = uses(eligible)
+  if (rare.length) return rare
+
   // Nothing you picked turns up in any recipe - a kitchen of nothing but
   // sugar-free jelly, say. Widen rather than hand back an empty pool: a button
   // that goes dead on you is the exact thing this is meant to stop.
-  return uses.length ? uses : eligible
+  return everyday.length ? everyday : eligible
 }
 
 /** Diet and the avoid list are the only hard no. Everything else is fair game. */
