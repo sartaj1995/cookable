@@ -15,8 +15,10 @@ interface Props {
   index?: number
 }
 
+const STANDING_LABEL = { pinned: 'pinned', rare: 'rarely', normal: '' } as const
+
 export function RecipeCard({ match, onOpen, index = 0 }: Props) {
-  const { recipe, verdict } = match
+  const { recipe, verdict, standing } = match
   const protein = recipe.nutrition_per_serving?.protein_g
 
   return (
@@ -50,6 +52,11 @@ export function RecipeCard({ match, onOpen, index = 0 }: Props) {
           </span>
         )}
         <span>serves {recipe.servings}</span>
+        {/* Standing is not a fact about the food, so it sits apart from the
+            numbers rather than reading as another one of them. */}
+        {standing !== 'normal' && (
+          <span className={`stand ${standing}`}>{STANDING_LABEL[standing]}</span>
+        )}
       </div>
     </button>
   )

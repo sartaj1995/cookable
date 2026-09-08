@@ -3,6 +3,7 @@ import {
   groupsByIngredient,
   nameOf,
   rulesByIngredient,
+  standingOf,
 } from './db'
 import { avoidsFromDiet } from './diet'
 import type {
@@ -12,6 +13,7 @@ import type {
   Recipe,
   RecipeIngredient,
   RecipeMatch,
+  Standing,
   SubstitutionResult,
   Verdict,
 } from './types'
@@ -27,6 +29,31 @@ interface Candidate {
   result: SubstitutionResult
   /** Lower sorts first. */
   rank: number
+}
+
+export const VERDICT_RANK: Record<Verdict, number> = {
+  ready: 0,
+  almost: 1,
+  stretch: 2,
+  blocked: 3,
+}
+
+const STANDING_RANK: Record<Standing, number> = { pinned: 0, normal: 1, rare: 2 }
+
+/**
+ * The two keys every sort mode agrees on, before it applies its own.
+ *
+ * Verdict comes first and standing second, never the other way round: a pinned
+ * recipe you cannot cook tonight must not outrank one you can, or the sections
+ * stop meaning what they say. Standing only reorders within a section, which is
+ * why it is a comparator here rather than a term in `score` - `score` answers
+ * "how well does this fit the kitchen", and how much you like the dish is no
+ * part of that question.
+ */
+export function byShelf(a: RecipeMatch, b: RecipeMatch): number {
+  const verdict = VERDICT_RANK[a.verdict] - VERDICT_RANK[b.verdict]
+  if (verdict !== 0) return verdict
+  return STANDING_RANK[a.standing] - STANDING_RANK[b.standing]
 }
 
 /**
@@ -241,10 +268,9 @@ export function matchRecipe(
     ? (counted.length - missing.length) / counted.length
     : 1
 
-  const verdictRank = { ready: 0, almost: 1, stretch: 2, blocked: 3 }[verdict]
   const messySubs = substitutions.filter((s) => !s.substitution?.clean).length
   const score =
-    verdictRank * 1000 +
+    VERDICT_RANK[verdict] * 1000 +
     missing.length * 20 +
     messySubs * 4 +
     substitutions.length * 1 +
@@ -259,6 +285,7 @@ export function matchRecipe(
     missing,
     substitutions,
     blockers,
+    standing: standingOf(recipe.id),
     score,
     haveRatio,
   }
@@ -271,5 +298,5 @@ export function matchAll(
 ): RecipeMatch[] {
   return recipes
     .map((r) => matchRecipe(r, kitchen, prefs))
-    .sort((a, b) => a.score - b.score)
+    .sort((a, b) => byShelf(a, b) || a.score - b.score)
 }

@@ -13,6 +13,7 @@ The app is read-only — Sartaj adds recipes by asking you.
 | `data/substitutions.json` | The swap table: interchangeable groups + one-way rules. |
 | `data/equipment.json` | Devices, and what you can use when you do not have one. |
 | `data/preferences.json` | Standing preferences — avoid list, swap-out list, diet flags. **The app has no UI for these**, so this file is the only way to change them. |
+| `data/standing.json` | How much you actually want to cook each recipe — a `pinned` list and a `rare` list. **No UI**, same as preferences. |
 | `src/lib/match.ts` | The matching engine. Read this before changing swap semantics. |
 | `src/lib/catalogue.ts` | Builds the browsable pick-lists in the kitchen panel from the registries. Ingredients land in a section by `category`; anything with an unrecognised category falls into "Everything else" rather than disappearing. |
 | `SCHEMA.md` | Full field reference for every file above. |
@@ -76,6 +77,25 @@ Reach for this whenever a swap comes out technically valid but obviously wrong.
 
 Everything unflagged is the useful middle: needed, freely swappable, and its
 absence downgrades the recipe rather than blocking it.
+
+## Standing — how much he actually wants to cook it
+
+`data/standing.json` holds two lists, `pinned` and `rare`; anything in neither is
+normal, so adding a recipe does not mean editing this file. It is a fact about
+Sartaj, not about the dish, which is why it lives beside `preferences.json`
+rather than as a field in each recipe.
+
+It changes ordering and nothing else. A rare recipe still lands in "Make it now"
+if he has the ingredients, and browse-all still lists everything — it just sorts
+last in its section and stays out of the Suggest dice roll. Verdict always beats
+standing (`byShelf` in `match.ts`): a pinned recipe he cannot cook tonight must
+never outrank one he can, or the sections stop meaning what they say.
+
+Deliberately kept out of a match's `score`, which answers "how well does this fit
+the kitchen" — how much he likes the dish is no part of that question.
+
+When he says a recipe is one he will rarely make, add it to `rare` here. Do not
+delete the file. Do not add a `standing` field to the recipe JSON.
 
 ## `function` — what the ingredient is doing there
 

@@ -26,6 +26,7 @@ const equipmentFile = read('data/equipment.json')
 const substitutions = read('data/substitutions.json')
 const preferences = read('data/preferences.json')
 const favourites = read('data/favourites.json')
+const standing = read('data/standing.json')
 
 const ingredientIds = new Set(ingredientsFile.ingredients.map((i) => i.id))
 const equipmentIds = new Set(equipmentFile.equipment.map((e) => e.id))
@@ -114,6 +115,39 @@ for (const id of favourites.items) {
   seenFavourite.add(id)
   if (stapleIds.has(id)) {
     warn('data/favourites.json', `"${id}" is a staple - the basics switch already covers it`)
+  }
+}
+
+/* ---------- standing ---------- */
+
+// A standing id that matches no recipe does nothing at all - it does not demote
+// anything, and there is no way to tell from the app that it missed.
+const recipeIdsSeen = new Set(
+  readdirSync(join(root, 'recipes'))
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => f.replace(/\.json$/, '')),
+)
+const pinned = new Set(standing.pinned)
+for (const [list, ids] of [
+  ['pinned', standing.pinned],
+  ['rare', standing.rare],
+]) {
+  const seen = new Set()
+  for (const id of ids) {
+    if (!recipeIdsSeen.has(id)) {
+      err('data/standing.json', `${list} lists "${id}", which is not a recipe`)
+    }
+    if (seen.has(id)) {
+      warn('data/standing.json', `${list} lists "${id}" twice`)
+      continue
+    }
+    seen.add(id)
+    if (list === 'rare' && pinned.has(id)) {
+      warn(
+        'data/standing.json',
+        `"${id}" is in both pinned and rare - rare wins, but one of them is wrong`,
+      )
+    }
   }
 }
 

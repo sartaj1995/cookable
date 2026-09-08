@@ -10,7 +10,7 @@ import {
   stapleEquipment,
   stapleIngredients,
 } from './lib/db'
-import { matchAll, type Kitchen } from './lib/match'
+import { byShelf, matchAll, type Kitchen } from './lib/match'
 import { pickNext, suggestionPool } from './lib/suggest'
 import type { RecipeMatch, Verdict } from './lib/types'
 
@@ -126,25 +126,19 @@ export default function App() {
 
   const sorted = useMemo(() => {
     const copy = [...matches]
+    // Every mode sorts on verdict and standing first (see `byShelf`), so the
+    // headline sort only ever reorders within a section - "Most protein" means
+    // the most protein among the things you would actually cook, with the rare
+    // ones following behind rather than topping the list.
     if (sort === 'protein') {
-      copy.sort((a, b) => {
-        const rank =
-          { ready: 0, almost: 1, stretch: 2, blocked: 3 }[a.verdict] -
-          { ready: 0, almost: 1, stretch: 2, blocked: 3 }[b.verdict]
-        if (rank !== 0) return rank
-        return (
+      copy.sort(
+        (a, b) =>
+          byShelf(a, b) ||
           (b.recipe.nutrition_per_serving?.protein_g ?? 0) -
-          (a.recipe.nutrition_per_serving?.protein_g ?? 0)
-        )
-      })
+            (a.recipe.nutrition_per_serving?.protein_g ?? 0),
+      )
     } else if (sort === 'quick') {
-      copy.sort((a, b) => {
-        const rank =
-          { ready: 0, almost: 1, stretch: 2, blocked: 3 }[a.verdict] -
-          { ready: 0, almost: 1, stretch: 2, blocked: 3 }[b.verdict]
-        if (rank !== 0) return rank
-        return a.recipe.time.total - b.recipe.time.total
-      })
+      copy.sort((a, b) => byShelf(a, b) || a.recipe.time.total - b.recipe.time.total)
     }
     return copy
   }, [matches, sort])
@@ -160,7 +154,8 @@ export default function App() {
     return map
   }, [sorted])
 
-  /** Every recipe, A to Z. Browsing is a cookbook, not a ranking. */
+  /** Every recipe, A to Z. Browsing is a cookbook, not a ranking - the rare
+   * ones sit in the list like anything else, just wearing their label. */
   const allRecipes = useMemo(
     () => [...matches].sort((a, b) => a.recipe.title.localeCompare(b.recipe.title)),
     [matches],
