@@ -173,12 +173,56 @@ input { font: inherit; }
   color: var(--text-dim);
 }
 
+/* The recipe count doubles as the way into the full list. The masthead is
+   deliberately quiet, so it stays plain text until you approach it - the border
+   is transparent rather than absent, so nothing shifts when it appears. */
 .masthead .count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-left: auto;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: none;
+  font-family: inherit;
   font-size: 12.5px;
   color: var(--text-faint);
   letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color 0.16s var(--ease), border-color 0.16s var(--ease),
+    background 0.16s var(--ease);
 }
+.masthead .count:hover {
+  color: var(--brand);
+  border-color: var(--border-strong);
+  background: var(--surface);
+}
+.masthead .count svg {
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease);
+}
+/* Pointing back up once the list is open, so the control says which way it goes. */
+.masthead .count.open svg { transform: rotate(180deg); }
+
+/* Leaving the browse view. Same weight as the segmented filters it replaces. */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 7px 15px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.16s var(--ease), border-color 0.16s var(--ease);
+}
+.back:hover { color: var(--brand); border-color: var(--brand); }
+/* A down chevron turned a quarter turn is the left arrow this needs. */
+.back-arrow { transform: rotate(90deg); }
 
 .layout {
   display: grid;
@@ -1087,8 +1131,12 @@ input { font: inherit; }
 @media (max-width: 900px) {
   /* Comfortable thumb targets once this is a phone rather than a pointer. */
   .suggest,
+  .back,
   .spot-btn,
   .spot-open { min-height: 44px; }
+  /* The count is a real control on a phone too, so it needs a thumb-sized
+     target - the padding that suits a quiet desktop masthead leaves it at 31px. */
+  .masthead .count { min-height: 44px; padding-left: 12px; padding-right: 12px; }
   .spot-btn.icon { width: 44px; }
 
   .spotlight { padding: 14px 16px 16px; }
