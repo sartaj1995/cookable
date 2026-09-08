@@ -25,6 +25,7 @@ const ingredientsFile = read('data/ingredients.json')
 const equipmentFile = read('data/equipment.json')
 const substitutions = read('data/substitutions.json')
 const preferences = read('data/preferences.json')
+const favourites = read('data/favourites.json')
 
 const ingredientIds = new Set(ingredientsFile.ingredients.map((i) => i.id))
 const equipmentIds = new Set(equipmentFile.equipment.map((e) => e.id))
@@ -93,6 +94,26 @@ for (const [key, list] of Object.entries(preferences.prefer)) {
 for (const list of [preferences.avoid.ingredients, preferences.prefer_not.ingredients]) {
   for (const id of list) {
     if (!ingredientIds.has(id)) err('data/preferences.json', `unknown ingredient "${id}"`)
+  }
+}
+
+/* ---------- favourites ---------- */
+
+// A favourite that does not exist renders as nothing at all: the pinned row just
+// silently comes up short, with no clue which id was wrong.
+const stapleIds = new Set([
+  ...ingredientsFile.ingredients.filter((i) => i.staple).map((i) => i.id),
+  ...equipmentFile.equipment.filter((e) => e.staple).map((e) => e.id),
+])
+const seenFavourite = new Set()
+for (const id of favourites.items) {
+  if (!ingredientIds.has(id) && !equipmentIds.has(id)) {
+    err('data/favourites.json', `unknown id "${id}"`)
+  }
+  if (seenFavourite.has(id)) warn('data/favourites.json', `"${id}" is listed twice`)
+  seenFavourite.add(id)
+  if (stapleIds.has(id)) {
+    warn('data/favourites.json', `"${id}" is a staple - the basics switch already covers it`)
   }
 }
 
