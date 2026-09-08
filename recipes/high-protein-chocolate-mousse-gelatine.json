@@ -1,0 +1,46 @@
+{
+  "id": "high-protein-chocolate-mousse-gelatine",
+  "title": "High protein chocolate mousse (Gelatine)",
+  "summary": "Gelatine, cacao and 0% yogurt blended until it is pale and foaming, then set. A whole bowl of it comes to about 47 g of protein for under 400 calories, and most of what you are eating is air.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack", "post-workout"],
+  "servings": 1,
+  "time": { "prep": 10, "cook": 0, "total": 10, "note": "Plus about 2 hours setting in the fridge." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "no-bake", "dessert", "low-fat", "gluten-free"],
+  "nutrition_per_serving": { "calories": 390, "protein_g": 47, "carbs_g": 25, "fat_g": 11, "fibre_g": 5, "added_sugar_g": 3, "estimated": true, "note": "The whole bowl including the toppings. Assumes a 0% fat Greek style yogurt at around 10 g protein per 100 g; a thinner 0% natural yogurt drops the protein by roughly 9 g." },
+  "equipment": { "required": ["blender", "fridge"], "optional": ["kettle"] },
+  "ingredients": [
+    { "id": "gelatine", "qty": "10 g gelatine sheets", "core": true, "function": "structure", "sub_group": "none", "note": "The only setting agent, and it is also what traps the air the blender whips in. Sheets go straight into the boiling water and dissolve as you stir - there is enough water here that they do not need blooming in cold water first. Powdered gelatine works at the same 10 g if that is what you keep." },
+    { "id": "cocoa_powder", "qty": "15 g cacao powder", "core": true, "function": "flavour", "sub_group": "none" },
+    { "id": "greek_yogurt", "qty": "200 g 0% fat, plus 30 g to top", "core": true, "function": "creaminess", "sub_group": "blended_creamy_base" },
+    { "id": "water", "qty": "300 ml, boiling", "function": "liquid" },
+    { "id": "dark_chocolate", "qty": "20 g", "function": "richness", "note": "Melted into the hot gelatine water. It is here for the fat and the depth - the cacao is doing the actual chocolate flavour." },
+    { "id": "whey_protein", "qty": "15 g", "function": "protein" },
+    { "id": "erythritol", "qty": "1-2 tsp, to taste", "function": "sweetness" },
+    { "id": "berries", "qty": "20 g raspberries, to top", "optional": true, "function": "freshness" }
+  ],
+  "steps": [
+    "Stir the gelatine sheets into 300 ml of boiling water until they have completely dissolved. Any gelatine left undissolved sets into rubbery threads you cannot blend out later.",
+    "Add the dark chocolate to the hot liquid and stir until it melts.",
+    "Tip that into a blender with the yogurt, cacao, whey and sweetener, and blend until it is pale and foaming. The blending is the recipe: it is what builds the volume, and the gelatine is only there to hold the foam once it cools.",
+    "Blend it while the gelatine mix is still warm. Left to cool on the counter it starts to gel, and gelatine that has begun setting will not whip up.",
+    "Pour into a bowl and refrigerate about 2 hours, until set.",
+    "Top with the extra yogurt and the raspberries."
+  ],
+  "tips": [
+    "Work quickly once the gelatine is dissolved. This is the opposite of most set desserts, where you cool the liquid before it meets the yogurt - here cooling it first costs you the aeration.",
+    "Blend for longer than feels sensible. The difference between a dense set pudding and an actual mousse is entirely how much air went in.",
+    "A wide shallow bowl sets faster than a deep one, and it keeps the aerated top layer intact.",
+    "It deflates a little overnight. Best eaten the day you make it."
+  ],
+  "health_notes": "Nearly 47 g of protein for under 400 calories is a very good ratio, but about 9 g of it is gelatine, which is an incomplete protein and low in tryptophan - it is worth less to you than the same weight of whey or dairy. The rest, from the yogurt and the powder, is complete.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=A_5svi4pN0k",
+    "channel": "Jonathan Clarke",
+    "title": "Low Calorie High Volume Protein Mousse (INSANE)",
+    "captured": "2026-09-09",
+    "adapted": "Ingredients and quantities are from the pinned comment. The video supplies the method the comment omits: everything goes through a blender rather than being stirred, which is what creates the volume, and it sets in the fridge for about two hours. The comment lists a generic sweetener; erythritol is recorded because 1-2 tsp only makes sense for a bulking sweetener, and that quantity of stevia would be inedible. Nutrition recalculated at roughly 390 calories and 48 g protein against the stated 371 and 47, close enough that the gap is brand variation. Carbs, fat and fibre were not given by the source and are estimated here."
+  }
+}
