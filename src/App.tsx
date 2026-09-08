@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { IconSparkle } from './components/Icons'
+import { IconChevron, IconSparkle } from './components/Icons'
 import { KitchenPanel, type KitchenItem } from './components/KitchenPanel'
 import { RecipeCard } from './components/RecipeCard'
 import { RecipeDetail } from './components/RecipeDetail'
@@ -56,6 +56,7 @@ const SECTIONS: Array<{ verdict: Verdict; title: string; blurb: string }> = [
 ]
 
 type SortMode = 'best' | 'protein' | 'quick'
+type ViewMode = 'matches' | 'all'
 
 /**
  * The same button in two places: the results toolbar once there is a kitchen,
@@ -92,6 +93,12 @@ export default function App() {
   const [openId, setOpenId] = useState<string | null>(null)
   const [sort, setSort] = useState<SortMode>('best')
   const [showBlocked, setShowBlocked] = useState(false)
+  /**
+   * Browsing answers the collection's other question: not "what can I cook"
+   * but "what is in here at all". Kept as view state rather than a filter, so
+   * the matched list holds its sort and its blocked toggle while you are away.
+   */
+  const [view, setView] = useState<ViewMode>('matches')
 
   /**
    * The suggestion is deliberately not persisted. It is a roll of the dice, not
@@ -153,6 +160,12 @@ export default function App() {
     return map
   }, [sorted])
 
+  /** Every recipe, A to Z. Browsing is a cookbook, not a ranking. */
+  const allRecipes = useMemo(
+    () => [...matches].sort((a, b) => a.recipe.title.localeCompare(b.recipe.title)),
+    [matches],
+  )
+
   const open = openId ? matches.find((m) => m.recipe.id === openId) : null
   const hasKitchen = items.length > 0
 
@@ -193,9 +206,18 @@ export default function App() {
       <header className="masthead">
         <h1>Cookable</h1>
         <span className="tagline">What can I actually make right now?</span>
-        <span className="count">
+        <button
+          className={`count ${view === 'all' ? 'open' : ''}`}
+          onClick={() => setView((v) => (v === 'all' ? 'matches' : 'all'))}
+          aria-label={
+            view === 'all'
+              ? `Back to your matches. ${recipes.length} recipes, ${byVerdict.ready.length} ready to go`
+              : `Browse all ${recipes.length} recipes`
+          }
+        >
           {recipes.length} recipes · {byVerdict.ready.length} ready to go
-        </span>
+          <IconChevron size={14} />
+        </button>
       </header>
 
       <div className="layout">
@@ -209,30 +231,40 @@ export default function App() {
         />
 
         <main>
-          {hasKitchen && (
+          {view === 'all' ? (
             <div className="results-head">
               <SuggestButton onClick={suggest} disabled={!pool.length} />
-
-              <div className="seg">
-                <button aria-pressed={sort === 'best'} onClick={() => setSort('best')}>
-                  Best match
-                </button>
-                <button aria-pressed={sort === 'protein'} onClick={() => setSort('protein')}>
-                  Most protein
-                </button>
-                <button aria-pressed={sort === 'quick'} onClick={() => setSort('quick')}>
-                  Quickest
-                </button>
-              </div>
-              <label className="switch" style={{ marginLeft: 'auto' }}>
-                <input
-                  type="checkbox"
-                  checked={showBlocked}
-                  onChange={(e) => setShowBlocked(e.target.checked)}
-                />
-                Show what I cannot make
-              </label>
+              <button className="back" onClick={() => setView('matches')}>
+                <IconChevron size={14} className="back-arrow" />
+                Back to matches
+              </button>
             </div>
+          ) : (
+            hasKitchen && (
+              <div className="results-head">
+                <SuggestButton onClick={suggest} disabled={!pool.length} />
+
+                <div className="seg">
+                  <button aria-pressed={sort === 'best'} onClick={() => setSort('best')}>
+                    Best match
+                  </button>
+                  <button aria-pressed={sort === 'protein'} onClick={() => setSort('protein')}>
+                    Most protein
+                  </button>
+                  <button aria-pressed={sort === 'quick'} onClick={() => setSort('quick')}>
+                    Quickest
+                  </button>
+                </div>
+                <label className="switch" style={{ marginLeft: 'auto' }}>
+                  <input
+                    type="checkbox"
+                    checked={showBlocked}
+                    onChange={(e) => setShowBlocked(e.target.checked)}
+                  />
+                  Show what I cannot make
+                </label>
+              </div>
+            )
           )}
 
           {suggested && (
@@ -246,7 +278,27 @@ export default function App() {
             />
           )}
 
-          {!hasKitchen ? (
+          {view === 'all' ? (
+            <section>
+              <div className="section-head">
+                <h2>All recipes</h2>
+                <span className="blurb">
+                  {recipes.length} · everything in the book, A to Z. The badges still
+                  read against your kitchen.
+                </span>
+              </div>
+              <div className="grid">
+                {allRecipes.map((match, i) => (
+                  <RecipeCard
+                    key={match.recipe.id}
+                    match={match}
+                    index={i}
+                    onOpen={() => setOpenId(match.recipe.id)}
+                  />
+                ))}
+              </div>
+            </section>
+          ) : !hasKitchen ? (
             <div className="blank">
               <h2>Tell me what you have</h2>
               <p>
