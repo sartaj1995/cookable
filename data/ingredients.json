@@ -180,6 +180,7 @@
     { "id": "psyllium_husk", "name": "Psyllium husk", "category": "pantry", "aliases": ["isabgol"] },
     { "id": "cornstarch", "name": "Cornstarch", "category": "pantry", "aliases": ["corn flour", "cornflour", "arrowroot"] },
     { "id": "sugar_free_jelly", "name": "Sugar-free jelly", "category": "pantry", "aliases": ["jelly", "jelly crystals", "jelly mix", "jelly sachet", "sugar free jelly", "diet jelly", "jello", "sugar free jello", "jelly powder"] },
-    { "id": "rice_paper", "name": "Rice paper", "category": "pantry", "aliases": ["rice paper sheets", "rice paper wrappers", "banh trang", "rice paper rounds"] }
+    { "id": "rice_paper", "name": "Rice paper", "category": "pantry", "aliases": ["rice paper sheets", "rice paper wrappers", "banh trang", "rice paper rounds"] },
+    { "id": "gelatine", "name": "Gelatine", "category": "pantry", "aliases": ["gelatin", "gelatine powder", "gelatin powder", "powdered gelatine", "leaf gelatine", "gelatine sheets"] }
   ]
 }
