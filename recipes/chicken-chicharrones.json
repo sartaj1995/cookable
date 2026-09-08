@@ -1,0 +1,45 @@
+{
+  "id": "chicken-chicharrones",
+  "title": "Chicken chicharrones",
+  "summary": "Raw chicken breast blended to a paste, spread paper thin and baked into a sheet that shatters like a crisp. Around 90 g of protein from the whole tray and nothing in it but chicken and spice.",
+  "cuisine": "Global",
+  "meal": ["snack", "starter"],
+  "servings": 2,
+  "time": { "prep": 15, "cook": 40, "total": 55, "note": "Plus 5 to 10 minutes cooling, which is when it actually turns crisp." },
+  "difficulty": "medium",
+  "tags": ["high-protein", "low-carb", "snack", "gluten-free", "oven"],
+  "nutrition_per_serving": { "calories": 255, "protein_g": 45, "carbs_g": 3, "fat_g": 7, "fibre_g": 0, "added_sugar_g": 0, "estimated": true, "note": "Half the tray. The whole batch comes to roughly 510 calories and 90 g protein, which matches the video's figures." },
+  "equipment": { "required": ["blender", "oven", "sheet_pan"], "optional": ["air_fryer"] },
+  "ingredients": [
+    { "id": "chicken_breast", "qty": "2 medium (about 400 g), raw", "core": true, "function": "protein", "sub_group": "none", "note": "Blended raw into a smooth paste. This is the whole dish - there is nothing else holding the sheet together." },
+    { "id": "baking_powder", "qty": "3 tsp", "function": "texture", "sub_group": "none", "note": "Baking powder specifically, not baking soda. Soda at this quantity leaves a soapy aftertaste, which is the reason the original recipe calls for powder." },
+    { "id": "paprika", "qty": "1 tsp", "function": "flavour" },
+    { "id": "garlic_powder", "qty": "1 tsp", "function": "aromatic" },
+    { "id": "salt", "qty": "1 tsp", "function": "salt" },
+    { "id": "black_pepper", "qty": "1 tsp", "function": "flavour" },
+    { "id": "avocado_oil", "qty": "cooking spray, halfway through baking", "function": "fat" }
+  ],
+  "steps": [
+    "Blend the raw chicken breasts to a smooth paste in a blender or food processor.",
+    "Mix in the paprika, garlic powder, salt, pepper and baking powder until it is evenly through the paste.",
+    "Spread the paste onto a parchment lined tray as thin as you possibly can. Lay a sheet of cling film over the top and press it out through that - it stops the paste dragging behind the spatula and is the only easy way to get it even. Peel the film off before baking. Thinness is the single thing that decides whether this crisps or turns leathery.",
+    "Bake at 180C for 35 to 40 minutes, spraying with oil halfway through.",
+    "Optional: break the sheet into shards and air fry at 200C for 5 to 6 minutes for extra colour and snap.",
+    "Let it sit 5 to 10 minutes before you judge it. It is still slightly bendy straight out of the heat and crisps as it cools."
+  ],
+  "tips": [
+    "The air fryer step is a finisher, not a requirement. The oven does the work of driving the water out, and most of the crisping happens as it cools. Skip it if you have no air fryer, or use it if the sheet came out paler than you wanted.",
+    "The baked sheet is bigger than most air fryer baskets, so break it into shards first if you are doing the second stage.",
+    "3 tsp of baking powder is on the heavy side for this weight of chicken. If you catch anything metallic, drop it to 2 tsp next time.",
+    "Store it airtight the moment it is cold. Left out it pulls moisture from the air and goes bendy within the hour."
+  ],
+  "health_notes": "This is close to pure chicken breast with the water removed, which is why the protein per calorie is so high - roughly 45 g of protein for 255 calories a portion. The 1 tsp of salt is spread across the whole tray, but it concentrates as the sheet dries, so it tastes saltier than the quantity suggests.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=P3HE5ga-4SE",
+    "channel": "Panacea Palm",
+    "title": "Trying Viral High Protein Recipes! Chicken Chicharrones! 89g protein! ONLY 506 calories!",
+    "captured": "2026-09-08",
+    "adapted": "Ingredients and quantities are from the pinned comment. The video shows the chicken blended raw, spread thin under cling film and going into the oven, then cuts straight to the finished sheet - it never shows or states either cooking stage, so both times come from the comment alone. The air fryer stage is recorded as optional rather than required: the oven drives the moisture out and the comment itself says the sheet crisps as it cools, so the second stage is a finisher. Nutrition recalculated at roughly 510 calories and 90 g protein for the batch against the stated 506 and 89, and split into two portions here."
+  }
+}
