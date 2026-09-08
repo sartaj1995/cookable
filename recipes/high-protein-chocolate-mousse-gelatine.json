@@ -1,7 +1,7 @@
 {
-  "id": "whipped-chocolate-mousse",
-  "title": "Whipped chocolate mousse",
-  "summary": "Gelatine, cacao and 0% yogurt blended hard enough to double in volume, then set. A whole bowl of it comes to about 47 g of protein for under 400 calories, and most of what you are eating is air.",
+  "id": "high-protein-chocolate-mousse-gelatine",
+  "title": "High protein chocolate mousse (Gelatine)",
+  "summary": "Gelatine, cacao and 0% yogurt blended until it is pale and foaming, then set. A whole bowl of it comes to about 47 g of protein for under 400 calories, and most of what you are eating is air.",
   "cuisine": "Global",
   "meal": ["dessert", "snack", "post-workout"],
   "servings": 1,
@@ -11,7 +11,7 @@
   "nutrition_per_serving": { "calories": 390, "protein_g": 47, "carbs_g": 25, "fat_g": 11, "fibre_g": 5, "added_sugar_g": 3, "estimated": true, "note": "The whole bowl including the toppings. Assumes a 0% fat Greek style yogurt at around 10 g protein per 100 g; a thinner 0% natural yogurt drops the protein by roughly 9 g." },
   "equipment": { "required": ["blender", "fridge"], "optional": ["kettle"] },
   "ingredients": [
-    { "id": "gelatine", "qty": "10 g", "core": true, "function": "structure", "sub_group": "none", "note": "The only setting agent. It also traps the air the blender whips in, which is where the volume comes from." },
+    { "id": "gelatine", "qty": "10 g, powdered", "core": true, "function": "structure", "sub_group": "none", "note": "The only setting agent, and it is also what traps the air the blender whips in. Powder, not leaf: it dissolves straight into boiling water. If sheets are all you have, bloom about 6 of them in cold water first, squeeze them out, then stir them into the hot liquid - dry sheets dropped into boiling water will not hydrate evenly." },
     { "id": "cocoa_powder", "qty": "15 g cacao powder", "core": true, "function": "flavour", "sub_group": "none" },
     { "id": "greek_yogurt", "qty": "200 g 0% fat, plus 30 g to top", "core": true, "function": "creaminess", "sub_group": "blended_creamy_base" },
     { "id": "water", "qty": "300 ml, boiling", "function": "liquid" },
@@ -23,7 +23,7 @@
   "steps": [
     "Stir the gelatine into 300 ml of boiling water until every grain has gone. Undissolved gelatine sets into rubbery threads you cannot blend out later.",
     "Add the dark chocolate to the hot liquid and stir until it melts.",
-    "Tip that into a blender with the yogurt, cacao, whey and sweetener, and blend until it is pale and foaming. The blending is the recipe: it is what triples the volume, and the gelatine is only there to hold the foam once it cools.",
+    "Tip that into a blender with the yogurt, cacao, whey and sweetener, and blend until it is pale and foaming. The blending is the recipe: it is what builds the volume, and the gelatine is only there to hold the foam once it cools.",
     "Blend it while the gelatine mix is still warm. Left to cool on the counter it starts to gel, and gelatine that has begun setting will not whip up.",
     "Pour into a bowl and refrigerate about 2 hours, until set.",
     "Top with the extra yogurt and the raspberries."
