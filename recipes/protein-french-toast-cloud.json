@@ -1,0 +1,44 @@
+{
+  "id": "protein-french-toast-cloud",
+  "title": "Protein French toast cloud",
+  "summary": "Greek yogurt and five whole eggs whisked with a spoon of cornflour and baked into a light set loaf. Cuts into eight slices at under 90 calories each, with no bread anywhere near it.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "dessert", "snack"],
+  "servings": 8,
+  "time": { "prep": 10, "cook": 45, "total": 55, "note": "Ovens vary a lot on this one. Start checking at 35 minutes." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "low-carb", "meal-prep", "breakfast", "gluten-free"],
+  "nutrition_per_serving": { "calories": 88, "protein_g": 8.5, "carbs_g": 6, "fat_g": 3, "fibre_g": 0, "added_sugar_g": 0, "estimated": true, "note": "One of eight slices. Assumes 0% fat Greek yogurt and medium eggs; a genuinely light 2% yogurt and large eggs push the loaf to nearer 780 calories and 34 g fat." },
+  "equipment": { "required": ["oven", "mixing_bowl"], "optional": ["blender"] },
+  "ingredients": [
+    { "id": "greek_yogurt", "qty": "410 g natural light", "core": true, "function": "creaminess", "sub_group": "blended_creamy_base", "note": "Vanilla yogurt instead of natural gives you extra sweetness without touching the sweetener." },
+    { "id": "eggs", "qty": "5 whole", "core": true, "function": "structure", "sub_group": "none", "note": "Whole eggs, not separated. This sets like a baked custard rather than rising like a souffle, so there is nothing to fold in and nothing to deflate." },
+    { "id": "cornstarch", "qty": "30 g cornflour", "function": "thickness", "note": "The only thing standing between this and scrambled egg. It stops the yogurt splitting as it bakes." },
+    { "id": "sugar_free_caramel", "qty": "30 g, to finish", "optional": true, "function": "sweetness", "note": "Goes over the top after baking, not into the batter." },
+    { "id": "erythritol", "qty": "30 g, optional", "optional": true, "function": "sweetness", "note": "Only worth it if your yogurt is unsweetened. 30 g is a quantity that only makes sense for a bulked 1:1 sweetener - pure stevia would be a small fraction of that." }
+  ],
+  "steps": [
+    "Heat the oven to 200C and line a loaf tin with baking paper. Line it properly, right up the sides - this is a baked custard and it will weld itself to bare metal.",
+    "Put the yogurt in a large bowl and crack in all five eggs.",
+    "Add the cornflour and the sweetener if you are using it, and whisk until completely smooth. Any lump of cornflour left now stays a lump, and it will not disperse once the batter is in the tin.",
+    "Pour into the lined tin.",
+    "Bake about 45 minutes, until the top is browned and the middle no longer wobbles as a liquid. Ovens differ enough on this that the time is a guide - start looking at 35 minutes.",
+    "Let it cool before you cut it. Warm, it tears rather than slices.",
+    "Drizzle the caramel over and cut into 8."
+  ],
+  "tips": [
+    "It puffs in the oven and settles as it cools. That is the custard doing what custard does, not a mistake.",
+    "Do not whisk air into it deliberately. The texture here comes from eggs setting around the yogurt, and a foamy batter bakes to a coarser, drier crumb.",
+    "If the top browns before the middle sets, cover it loosely with foil and carry on.",
+    "It keeps 3 to 4 days covered in the fridge, and the slices are better cold than reheated."
+  ],
+  "health_notes": "Five eggs and 410 g of yogurt across eight slices is where the 8.5 g of protein a slice comes from, and the eggs carry nearly all the fat. The cornflour is the only added carbohydrate and it is 30 g across the whole loaf, so a slice stays under 90 calories without anything artificial doing the work.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=Kq_Rl_T8yOA",
+    "channel": "Stefan Bodegrajac",
+    "title": "Fluffy Protein French Toast Cloud",
+    "captured": "2026-09-10",
+    "adapted": "Ingredients and the 200C bake are from the video description, which gives no method at all; every step here comes from watching the video. The caramel is a topping drizzled on after baking rather than a batter ingredient, which the description does not say. Nutrition is close to the stated figures and is recorded near enough as given, but those figures only work if the light yogurt is a 0% fat one and the eggs are medium - five large eggs alone are more fat than the 23 g quoted for the whole loaf. The sweetener is recorded as a bulked 0-calorie blend rather than stevia, because 30 g of pure stevia would be inedible. The video's on-screen claim of 75 g protein disagrees with the description's 66 g; my own estimate lands between them at about 69 g."
+  }
+}
