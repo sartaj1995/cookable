@@ -23,6 +23,7 @@
     { "id": "salmon", "name": "Salmon", "category": "protein", "aliases": ["salmon fillet"] },
     { "id": "white_fish", "name": "White fish", "category": "protein", "aliases": ["basa", "cod", "tilapia", "pomfret", "fish fillet", "rohu", "surmai", "fish"] },
     { "id": "prawns", "name": "Prawns", "category": "protein", "aliases": ["shrimp", "jhinga"] },
+    { "id": "bacon", "name": "Bacon", "category": "protein", "aliases": ["shortcut bacon", "streaky bacon", "back bacon", "bacon rashers", "rashers", "bacon strips"] },
     { "id": "tuna_canned", "name": "Canned tuna", "category": "protein", "aliases": ["tuna", "tinned tuna"] },
     { "id": "mutton", "name": "Mutton", "category": "protein", "aliases": ["lamb", "goat meat", "lamb mince", "mutton keema"] },
     { "id": "paneer", "name": "Paneer", "category": "protein", "aliases": ["cottage cheese cubes", "indian cottage cheese"] },

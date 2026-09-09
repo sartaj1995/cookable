@@ -1,0 +1,44 @@
+{
+  "id": "rice-paper-breakfast-bagel",
+  "title": "Rice paper breakfast bagel",
+  "summary": "A sheet of rice paper dipped in beaten egg, wrapped round scrambled egg and bacon and air fried into something that genuinely holds a bagel shape. About 21 g of protein, and no bread involved.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "brunch", "snack"],
+  "servings": 1,
+  "time": { "prep": 10, "cook": 15, "total": 25, "note": "Makes one bagel. Scale it a sheet at a time." },
+  "difficulty": "medium",
+  "tags": ["high-protein", "air-fryer", "low-carb", "breakfast"],
+  "nutrition_per_serving": { "calories": 280, "protein_g": 21, "carbs_g": 12, "fat_g": 16, "fibre_g": 1, "added_sugar_g": 0, "estimated": true, "note": "One bagel. Two large eggs carry most of this on their own; medium eggs take about 20 calories off." },
+  "equipment": { "required": ["air_fryer", "pan", "stovetop"], "optional": ["mixing_bowl"] },
+  "ingredients": [
+    { "id": "rice_paper", "qty": "1 sheet", "core": true, "function": "structure", "sub_group": "none", "note": "This is the bagel. Nothing else here holds a shape." },
+    { "id": "eggs", "qty": "2", "core": true, "function": "binding", "sub_group": "none", "note": "Doing two jobs. The beaten egg is the soak that softens the sheet and then sets and browns it into a crust, and the rest is the filling. A flax egg does neither." },
+    { "id": "parmesan", "qty": "10 g, grated", "function": "umami" },
+    { "id": "bacon", "qty": "20 g shortcut, chopped", "optional": true, "function": "salt", "note": "Leave it out and you have an egg and Parmesan bagel, which still works." },
+    { "id": "sesame_seeds", "qty": "a sprinkle, to top", "optional": true, "function": "crunch" }
+  ],
+  "steps": [
+    "Beat the eggs in a shallow bowl, wide enough to lay the rice paper sheet flat in.",
+    "Dip the rice paper into the beaten egg until it softens. The egg is doing the job water does for a spring roll wrapper, except it also sets and browns, which is what gives you a crust instead of a translucent sheet.",
+    "Scramble the rest of the egg in a pan with the bacon, then take it off the heat.",
+    "Pile the scrambled egg, bacon and Parmesan into the middle of the softened sheet.",
+    "Fold the sheet over the filling and shape it into a ring in your cupped hand, pushing a hole through the centre. It is slippery at this point, so keep the seam underneath and let it sit a moment to grip before you move it.",
+    "Sprinkle over the sesame seeds.",
+    "Air fry at 180C for 10 to 15 minutes, until golden and crisp."
+  ],
+  "tips": [
+    "Do not leave the sheet in the egg. It goes from stiff to unmanageable in seconds, and an over-soaked sheet tears as soon as you try to fold it.",
+    "Make the hole bigger than you think. It closes up as the wrapper puffs and sets.",
+    "Let the scramble cool a little before it goes in, or the steam softens the wrapper from the inside and the seam opens in the basket.",
+    "It is at its best straight out of the air fryer. Left to sit, the filling steams the crust soft from within."
+  ],
+  "health_notes": "The two eggs carry most of the 21 g of protein and nearly all of the 16 g of fat. The rice paper is the only real source of carbohydrate here and it weighs very little, which is the whole reason this comes in well under a bread bagel.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=CRnmJ0jhYpg",
+    "channel": "Stefan Bodegrajac",
+    "title": "Air Fryer Rice Paper Bagels",
+    "captured": "2026-09-10",
+    "adapted": "Ingredients and method are as given in the video description, with the shaping detail taken from the video itself: the ring is formed by hand and the hole pushed through the middle. Nutrition is not recorded as stated. The description claims 214 calories, but two large eggs and 10 g of Parmesan come to about 199 on their own, which leaves roughly 15 calories for a rice paper sheet, 20 g of bacon and the sesame seeds. Recalculated at about 280."
+  }
+}
