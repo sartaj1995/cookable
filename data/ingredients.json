@@ -132,6 +132,7 @@
 
     { "id": "honey", "name": "Honey", "category": "sweetener", "aliases": ["shahad", "raw honey"] },
     { "id": "maple_syrup", "name": "Maple syrup", "category": "sweetener", "aliases": ["pure maple syrup"] },
+    { "id": "sugar_free_caramel", "name": "Sugar-free caramel topping", "category": "sweetener", "aliases": ["sugar free caramel", "sugar free caramel sauce", "caramel topping", "skinny caramel syrup", "zero calorie caramel"] },
     { "id": "dates", "name": "Dates", "category": "sweetener", "aliases": ["khajoor", "medjool dates", "date paste"] },
     { "id": "sugar", "name": "Sugar", "category": "sweetener", "aliases": ["white sugar", "cane sugar", "chini", "caster sugar"] },
     { "id": "jaggery", "name": "Jaggery", "category": "sweetener", "aliases": ["gur", "gud"] },
