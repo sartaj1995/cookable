@@ -127,6 +127,29 @@ Two things make a swap entry good:
   `lacks` without a `compensate` note is never offered at all** — the engine
   refuses to suggest something it cannot explain.
 
+### A stand-in that only works in sweet things
+
+`lacks` is matched against the recipe line's `function`, and there is no
+function word for "savoury" — so there is no way to say "this one is sweet only"
+in a member entry. Mashed banana binds an egg perfectly well and would happily
+be offered, clean and unwarned, for the egg in a chicken nugget.
+
+The mechanism for that is a separate group. `egg_binder` holds the stand-ins
+that are safe anywhere; `egg_binder_sweet` holds banana. Put a new binder in
+whichever one it actually belongs to.
+
+**A line with no `sub_group` searches every group its ingredient is in**, so the
+sweet group reaches unpinned lines by default — which is what you want for oats
+and cookies. It is the *savoury* lines that need `"sub_group": "egg_binder"` to
+keep banana out. Same shape for any future pair: put the unrestricted members in
+the general group, and pin the lines that need protecting.
+
+Worth knowing when you are tempted to reach for `sub_group: "none"` instead:
+`core` already blocks any swap the table marks unclean, so a `core` line whose
+`function` every stand-in declares in `lacks` is protected without the flag. The
+flag is still right when the recipe *is* the ingredient — that is what it means
+— but it is not the tool for a swap the table can already reason about.
+
 ## House style for recipe prose
 
 Match the existing files. Specifically:

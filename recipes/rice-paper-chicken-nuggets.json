@@ -13,7 +13,7 @@
   "ingredients": [
     { "id": "chicken_mince", "qty": "500 g lean", "core": true, "function": "protein", "note": "Has to be mince. The whole method depends on it binding into a log you can roll and slice." },
     { "id": "rice_paper", "qty": "5 sheets", "core": true, "function": "crunch", "sub_group": "none", "note": "This is the entire crust. It goes glassy in the air fryer and shatters like batter." },
-    { "id": "eggs", "qty": "1", "function": "binding" },
+    { "id": "eggs", "qty": "1", "function": "binding", "sub_group": "egg_binder" },
     { "id": "mozzarella", "qty": "1/4 cup, grated", "function": "melt" },
     { "id": "baking_soda", "qty": "1/2 tsp", "function": "texture", "note": "Not for lift. It raises the pH of the mince and keeps it tender, which is what stops air fried chicken going dry and bouncy." },
     { "id": "onion_powder", "qty": "1 tsp", "function": "aromatic" },

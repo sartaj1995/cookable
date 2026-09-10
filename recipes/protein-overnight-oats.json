@@ -14,7 +14,7 @@
     { "id": "oats", "qty": "1/2 cup (45 g) rolled oats", "core": true, "function": "bulk", "sub_group": "none" },
     { "id": "greek_yogurt", "qty": "3/4 cup (150 g)", "core": true, "function": "creaminess" },
     { "id": "milk", "qty": "1/3 cup", "function": "liquid" },
-    { "id": "chia_seeds", "qty": "1 tbsp", "function": "binding" },
+    { "id": "chia_seeds", "qty": "1 tbsp", "function": "thickness" },
     { "id": "honey", "qty": "1 tbsp", "function": "sweetness", "note": "Or whatever sweetener you keep - this is purely for taste." },
     { "id": "vanilla", "qty": "1/2 tsp", "optional": true, "function": "flavour" },
     { "id": "cinnamon", "qty": "1/4 tsp", "optional": true, "function": "flavour" },
