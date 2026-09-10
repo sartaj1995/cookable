@@ -17,6 +17,7 @@ The app is read-only — Sartaj adds recipes by asking you.
 | `src/lib/match.ts` | The matching engine. Read this before changing swap semantics. |
 | `src/lib/catalogue.ts` | Builds the browsable pick-lists in the kitchen panel from the registries. Ingredients land in a section by `category`; anything with an unrecognised category falls into "Everything else" rather than disappearing. |
 | `SCHEMA.md` | Full field reference for every file above. |
+| `public/manifest.webmanifest`, `public/sw.js` | What makes Chrome install it as a real app rather than a home-screen shortcut, and lets it open offline. The icons are drawn by `scripts/make-icons.mjs` (`npm run icons`) — regenerate them, do not hand-edit. |
 
 ## After ANY data change
 
