@@ -1,0 +1,44 @@
+{
+  "id": "cottage-cheese-wrap",
+  "title": "Cottage cheese wrap",
+  "summary": "Cottage cheese and two eggs blended smooth and baked into a flat sheet that rolls like a wrap. About 38 g of protein for 320 calories, before you put anything in it.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "lunch", "dinner"],
+  "servings": 1,
+  "time": { "prep": 5, "cook": 25, "total": 30, "note": "Plus 5 to 10 minutes cooling in the tray, which is when it sets enough to lift." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "low-carb", "gluten-free", "meal-prep"],
+  "nutrition_per_serving": { "calories": 320, "protein_g": 38, "carbs_g": 8, "fat_g": 12, "fibre_g": 0, "added_sugar_g": 0, "estimated": true, "note": "The wrap on its own, before fillings. Assumes low-fat cottage cheese and medium eggs; full-fat cottage cheese takes it to about 380 calories and 20 g of fat." },
+  "equipment": { "required": ["oven", "blender", "sheet_pan"], "optional": [] },
+  "ingredients": [
+    { "id": "cottage_cheese", "qty": "225 g, low fat", "core": true, "function": "base", "sub_group": "none", "note": "The western kind, soft curds in a little whey. In India, packs labelled cottage cheese are often paneer, which does not melt into a sheet and will not work here." },
+    { "id": "eggs", "qty": "2", "core": true, "function": "structure", "note": "What sets the cottage cheese into something you can lift and roll." },
+    { "id": "salt", "qty": "a small pinch", "function": "salt", "note": "Go easy. The cottage cheese already carries about 2 g of salt before you add any." },
+    { "id": "garlic_powder", "qty": "1/2 tsp", "optional": true, "function": "aromatic", "note": "What the video used. Any dry seasoning works - see the tips." }
+  ],
+  "steps": [
+    "Heat the oven to 180C and line a tray or shallow tin with baking paper.",
+    "Blend the cottage cheese, eggs and seasoning until completely smooth. Whole curds bake into lumps, and the wrap tears wherever one sits.",
+    "Pour it into the lined tray and spread it into an even layer with the back of a spoon. Even, but not too thin: a thin layer bakes crisp all the way through and cracks when you roll it, and the soft middle is what lets it bend.",
+    "Bake 25 minutes, until the top is golden all over. The colour is the test, not the clock - a pale top means the inside is still too soft to lift.",
+    "Leave it in the tray for 5 to 10 minutes before peeling it off the paper. It firms up as it cools."
+  ],
+  "tips": [
+    "Garlic and herb: 1/2 tsp garlic powder, 1/2 tsp dried oregano and plenty of black pepper, all blended into the batter. Neutral enough for any filling.",
+    "Everything bagel: 1/2 tsp each of garlic and onion powder in the blend, then a tablespoon of sesame seeds scattered over the top before baking, so they toast and help the crust take colour.",
+    "Smoky taco: 1/2 tsp smoked paprika, 1/4 tsp cumin and a pinch of chilli flakes in the blend. Made for a burrito-style filling of chicken or beans.",
+    "Masala: 1/2 tsp garam masala, 1/4 tsp red chilli powder and a pinch of crushed kasuri methi in the blend. It turns the wrap into a paratha stand-in for paneer tikka or keema.",
+    "Keep the seasoning dry. Fresh herbs, onion or garlic bring water with them, and water is exactly what stops the top going golden.",
+    "No blender: mash the cottage cheese hard with a fork before beating in the eggs. It works, but expect a lumpier, more fragile sheet.",
+    "It keeps a couple of days in the fridge. Warm it in a dry pan rather than the microwave, which turns it rubbery."
+  ],
+  "health_notes": "Cottage cheese is roughly 12 g of protein per 100 g, so the 225 g here carries about two thirds of the wrap's 38 g, with the eggs making up the rest. It is also a salty cheese, which is why the added salt is kept to a pinch.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=gndBpViJE70",
+    "channel": "Stefan Bodegrajac",
+    "title": "This Really Shouldn't Work...",
+    "captured": "2026-09-10",
+    "adapted": "Ingredients, bake and cooling from the video description. Two method details come from the video itself: everything is blended rather than just mixed, and the batter is spread evenly but deliberately not thin. The description says any seasonings; the video used salt and garlic powder, which is what the ingredient list records. Nutrition holds against the stated 310 calories and 37 g protein only with low-fat cottage cheese and medium eggs - two large eggs alone are about 10.6 g of the 12 g of fat quoted."
+  }
+}
