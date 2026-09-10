@@ -104,14 +104,24 @@
       "id": "egg_binder",
       "name": "Egg (as a binder)",
       "reference": "1 egg",
-      "note": "Only for eggs that are holding something together - pancakes, tikkis, muffins, meatballs. Nothing here replaces eggs in an omelette or scramble.",
+      "note": "Only for eggs that are holding something together - pancakes, tikkis, muffins, meatballs. Nothing here replaces eggs in an omelette or scramble. Everything in here is safe in a savoury recipe; the sweet-only stand-ins live in egg_binder_sweet, so pin a savoury line to this group to keep them out.",
       "members": [
         { "ingredient": "eggs", "amount": "1 egg", "provides": ["binding", "moisture", "protein", "structure"] },
         { "ingredient": "flax_seeds", "amount": "1 tbsp ground + 3 tbsp water, rested 5 min", "provides": ["binding", "moisture"], "lacks": ["structure", "protein"], "compensate": "The classic flax egg. Holds things together but will not make anything rise - fine for tikkis and cookies, weak in cakes." },
-        { "ingredient": "chia_seeds", "amount": "1 tbsp + 3 tbsp water, rested 10 min", "provides": ["binding", "moisture"], "lacks": ["structure"], "compensate": "Same idea as a flax egg. Leaves visible specks." },
-        { "ingredient": "banana", "amount": "1/2 mashed ripe banana", "provides": ["binding", "moisture", "sweetness"], "lacks": ["structure"], "compensate": "Brings sweetness and banana flavour - only for sweet recipes, and dial back other sweeteners." },
+        { "ingredient": "chia_seeds", "amount": "1 tbsp + 3 tbsp water, rested 10 min", "provides": ["binding", "moisture", "thickness"], "lacks": ["structure"], "compensate": "Same idea as a flax egg. Leaves visible specks." },
         { "ingredient": "yogurt", "amount": "1/4 cup", "provides": ["binding", "moisture"], "lacks": ["structure"] },
         { "ingredient": "besan", "amount": "2 tbsp + 2 tbsp water", "provides": ["binding", "protein"], "lacks": ["moisture"], "compensate": "The Indian answer - what holds a tikki together. Cook it through or it tastes raw." }
+      ]
+    },
+
+    {
+      "id": "egg_binder_sweet",
+      "name": "Egg (as a binder, sweet bakes only)",
+      "reference": "1 egg",
+      "note": "Sweet recipes only. Mashed banana binds as well as an egg but brings its own flavour and sugar, which is fine in oats or cookies and wrong in anything savoury. A line left unpinned searches this group too, so pin savoury lines to egg_binder.",
+      "members": [
+        { "ingredient": "eggs", "amount": "1 egg", "provides": ["binding", "moisture", "protein", "structure"] },
+        { "ingredient": "banana", "amount": "1/2 mashed ripe banana", "provides": ["binding", "moisture", "sweetness"], "lacks": ["structure"], "compensate": "Brings sweetness and banana flavour - dial back the other sweeteners. Never in a savoury recipe." }
       ]
     },
 
