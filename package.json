@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "validate": "node scripts/validate.mjs",
-    "new-recipe": "node scripts/new-recipe.mjs"
+    "new-recipe": "node scripts/new-recipe.mjs",
+    "icons": "node scripts/make-icons.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
