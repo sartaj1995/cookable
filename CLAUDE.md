@@ -18,6 +18,7 @@ The app is read-only — Sartaj adds recipes by asking you.
 | `src/lib/catalogue.ts` | Builds the browsable pick-lists in the kitchen panel from the registries. Ingredients land in a section by `category`; anything with an unrecognised category falls into "Everything else" rather than disappearing. |
 | `SCHEMA.md` | Full field reference for every file above. |
 | `public/manifest.webmanifest`, `public/sw.js` | What makes Chrome install it as a real app rather than a home-screen shortcut, and lets it open offline. The icons are drawn by `scripts/make-icons.mjs` (`npm run icons`) — regenerate them, do not hand-edit. |
+| `docs/images/` | The pictures in the README, light and dark, taken from the running app by `scripts/make-readme-images.mjs` (`npm run readme-images`, needs Chrome or Edge). After a visible UI change, rerun it rather than editing or replacing the PNGs. The demo kitchen it uses is at the top of the script. |
 
 ## After ANY data change
 
