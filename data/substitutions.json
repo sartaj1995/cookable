@@ -350,6 +350,7 @@
     { "id": "paneer_from_milk", "from": "paneer", "to": [ { "ingredient": "milk", "amount": "1 litre full-fat + 2 tbsp lemon juice, curdled and hung 30 min = ~200 g paneer", "notes": "Only if you have time.", "flagged": true } ] },
     { "id": "ginger_garlic", "from": "ginger", "to": [ { "ingredient": "ginger", "amount": "1/2 tsp dried ginger powder per 1 tbsp fresh", "notes": "Sonth. Loses the fresh bite." } ] },
     { "id": "pasta_swap", "from": "pasta", "to": [ { "ingredient": "noodles", "amount": "1:1" }, { "ingredient": "zucchini", "amount": "2 spiralised, salted and squeezed", "notes": "Low-carb; will not hold a heavy sauce.", "flagged": true } ] },
+    { "id": "pizza_sauce_swap", "from": "pizza_sauce", "to": [ { "ingredient": "canned_tomatoes", "amount": "5 tbsp passata, simmered 2 min with 1/2 tsp dried oregano and a pinch of salt", "notes": "Pizza sauce is mostly seasoned passata, so this lands very close." }, { "ingredient": "tomato_paste", "amount": "2 tbsp thinned with 3 tbsp water, plus a pinch of oregano", "notes": "Much stronger and a little sweeter - use less than looks right." } ], "note": "Pizza sauce is just seasoned tomato. Anything tomato-based and thick enough not to run will do." },
     { "id": "vanilla_swap", "from": "vanilla", "to": [ { "ingredient": "cardamom", "amount": "1/4 tsp powdered per 1 tsp vanilla", "notes": "Different but excellent, especially in anything milk-based." } ] }
   ]
 }

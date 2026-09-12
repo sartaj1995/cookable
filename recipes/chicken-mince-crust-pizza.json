@@ -1,0 +1,55 @@
+{
+  "id": "chicken-mince-crust-pizza",
+  "title": "Chicken (mince) crust pizza",
+  "summary": "Minced chicken and four eggs cooked flat in a frying pan into a base firm enough to slice, then sauced and topped like a pizza. The whole thing carries 86 g of protein for 940 calories.",
+  "cuisine": "Global",
+  "meal": ["lunch", "dinner"],
+  "servings": 1,
+  "time": { "prep": 10, "cook": 15, "total": 25, "note": "One pan start to finish. The flip is the only fiddly moment." },
+  "difficulty": "medium",
+  "tags": ["high-protein", "low-carb", "quick", "one-pan"],
+  "nutrition_per_serving": { "calories": 940, "protein_g": 86, "carbs_g": 24, "fat_g": 56, "fibre_g": 4, "added_sugar_g": 2, "estimated": true, "note": "The whole pizza, eaten as one meal, which is how the source gives it. Assumes ordinary rather than lean mince - lean chicken mince brings it down to roughly 870 calories and 39 g of fat." },
+  "equipment": { "required": ["pan", "stovetop", "mixing_bowl"], "optional": [] },
+  "ingredients": [
+    { "id": "chicken_mince", "qty": "250 g", "core": true, "function": "base", "note": "This is the crust. There is no dough anywhere in the recipe." },
+    { "id": "eggs", "qty": "4", "core": true, "function": "structure", "note": "Four eggs to 250 g of mince is a lot, and deliberately so - they are what sets the base into a sheet you can flip and slice." },
+    { "id": "whole_wheat_flour", "qty": "4 tsp", "function": "binding", "note": "Only 12 g or so. It takes up the moisture the eggs bring, which is what stops the base being wet in the middle." },
+    { "id": "pizza_sauce", "qty": "5 tbsp", "core": true, "function": "base" },
+    { "id": "mozzarella", "qty": "50 g, grated", "function": "melt", "note": "Any melting cheese works. Cheddar is sharper and browns faster." },
+    { "id": "garlic_powder", "qty": "1.5 tsp", "function": "aromatic" },
+    { "id": "chilli_flakes", "qty": "1.5 tsp", "function": "heat" },
+    { "id": "red_chilli_powder", "qty": "1 tsp", "function": "heat" },
+    { "id": "black_pepper", "qty": "1.5 tsp", "function": "flavour" },
+    { "id": "salt", "qty": "1/2 tsp", "function": "salt", "note": "Cut down from the original 1.5 tsp. The mozzarella and the sauce bring plenty of their own." },
+    { "id": "onion", "qty": "1/2 small, sliced paper thin", "optional": true, "function": "aromatic" },
+    { "id": "bell_pepper", "qty": "1/4, sliced thin", "optional": true, "function": "freshness" },
+    { "id": "olives", "qty": "a few, sliced", "optional": true, "function": "salt" },
+    { "id": "corn", "qty": "2 tbsp, drained", "optional": true, "function": "freshness" },
+    { "id": "oregano", "qty": "a pinch, to finish", "optional": true, "function": "flavour" }
+  ],
+  "steps": [
+    "Mix the mince, eggs, flour, garlic powder, chilli flakes, chilli powder, salt and pepper in a bowl until it is completely uniform. Any pocket of unmixed egg shows up as a wet patch later.",
+    "Heat a large non-stick pan on medium and spread the mixture right across it in a thin, even layer. Use the widest pan you own: spread thin it cooks through, spread thick the outside browns long before the middle is done.",
+    "Cover and cook about 10 minutes on medium, until the underside is golden and the top has turned opaque rather than glossy.",
+    "Flip it, then check the middle. Minced chicken needs to be opaque the whole way through with no pink and no cloudy juice. Golden on the outside is not the same as cooked, so give it another two or three minutes covered if you are unsure.",
+    "Spread the pizza sauce over the top, then scatter on the mozzarella and any toppings.",
+    "Cover and cook on a low flame until the cheese melts. Slide it out and slice."
+  ],
+  "tips": [
+    "Toppings need a head start. Raw onion, capsicum and corn will not cook through in the two or three minutes it takes cheese to melt, so slice them paper thin or soften them in the pan first.",
+    "Anything wet makes the top soggy. Drain the olives and the corn properly before they go on.",
+    "The chilli here is assertive - 1.5 tsp of flakes plus a full tsp of powder. Halve both for something a child or a guest will eat.",
+    "No lid that fits? A baking tray or a sheet of foil over the pan does the job. The trapped steam is what sets the top before you flip it.",
+    "No wheat flour? Oat flour goes in 1:1, and almond flour works if you want it lower carb. Cornstarch does the same job at about half the quantity, because it takes up more water for its weight.",
+    "Let it sit a minute before slicing. Straight out of the pan the cheese slides off the slice."
+  ],
+  "health_notes": "The 250 g of mince and the four eggs carry almost all of the 86 g of protein. Salt is the thing worth watching when this is one sitting: the original 1.5 tsp is about 9 g on its own, and the mozzarella and sauce add roughly 1.4 g between them. At 1/2 tsp the pizza comes to about 4.4 g, most of it now the cheese and the sauce rather than the salt you add - still close to a day's recommended intake in a single meal.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=cv_MEALyFXM",
+    "channel": "Ralston D'Souza",
+    "title": "High Protein Pizza | Try It Or Trash It @Gskcooks2023",
+    "captured": "2026-09-12",
+    "adapted": "Quantities and method are from the pinned comment; the recipe originates with Gsk Cooks and this video is a cook-along of it. Three changes, all deliberate. Salt is down from 1.5 tsp to 1/2 tsp, because 1.5 tsp is about 9 g of salt before the cheese and sauce are counted. A doneness check is added at the flip: the comment's only cue for the first side is golden brown, which is a colour cue rather than a safety one for minced chicken. And the optional toppings are an addition at Sartaj's request, not part of the original; mushroom is deliberately not among them. Nutrition is recorded for the whole pizza as one serving, at Sartaj's request, against the comment's whole-pizza figures, which hold up but assume ordinary rather than lean mince."
+  }
+}

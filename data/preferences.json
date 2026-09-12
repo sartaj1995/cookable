@@ -3,7 +3,7 @@
 
   "avoid": {
     "_comment": "HARD no. Never suggested, never used. If a recipe needs one of these and nothing in substitutions.json can stand in, the recipe is marked blocked. Use this for allergies and genuine dislikes.",
-    "ingredients": []
+    "ingredients": ["mushroom"]
   },
 
   "prefer_not": {

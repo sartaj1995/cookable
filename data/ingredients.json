@@ -172,6 +172,7 @@
     { "id": "mustard_paste", "name": "Mustard", "category": "condiment", "aliases": ["dijon", "dijon mustard", "yellow mustard", "wholegrain mustard"] },
     { "id": "hot_sauce", "name": "Hot sauce", "category": "condiment", "aliases": ["sriracha", "tabasco", "chilli sauce", "peri peri sauce"] },
     { "id": "ketchup", "name": "Ketchup", "category": "condiment", "aliases": ["tomato sauce", "tomato ketchup"] },
+    { "id": "pizza_sauce", "name": "Pizza sauce", "category": "condiment", "aliases": ["marinara", "pasta sauce", "tomato pizza sauce"] },
     { "id": "mayo", "name": "Mayonnaise", "category": "condiment", "aliases": ["mayo", "eggless mayo"] },
     { "id": "tomato_paste", "name": "Tomato paste", "category": "condiment", "aliases": ["tomato concentrate"] },
     { "id": "stock", "name": "Stock", "category": "liquid", "aliases": ["broth", "chicken stock", "vegetable stock", "bouillon", "stock cube"] },
