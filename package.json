@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "validate": "node scripts/validate.mjs",
     "new-recipe": "node scripts/new-recipe.mjs",
-    "icons": "node scripts/make-icons.mjs"
+    "icons": "node scripts/make-icons.mjs",
+    "readme-images": "node scripts/make-readme-images.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
