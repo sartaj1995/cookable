@@ -1,0 +1,45 @@
+{
+  "id": "greek-yogurt-dough-pizza",
+  "title": "Greek yogurt dough pizza",
+  "summary": "A two ingredient yogurt and flour base spread straight into a baking dish, sauced, topped and baked in one go. Around 42 g of protein for 490 calories, with no dough to roll.",
+  "cuisine": "Global",
+  "meal": ["lunch", "dinner"],
+  "servings": 1,
+  "time": { "prep": 10, "cook": 35, "total": 45, "note": "Bake 30 to 40 minutes depending how crisp you want the top." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "oven", "one-pan"],
+  "nutrition_per_serving": { "calories": 490, "protein_g": 42, "carbs_g": 56, "fat_g": 9, "fibre_g": 7, "added_sugar_g": 1, "estimated": true, "note": "The whole dish, which is how the source gives it. Figured with wholemeal flour - a white or gluten free flour drops the fibre to about 2 g and takes a few grams off the protein." },
+  "equipment": { "required": ["oven", "mixing_bowl"], "optional": [] },
+  "ingredients": [
+    { "id": "greek_yogurt", "qty": "150 g, high protein", "core": true, "function": "base", "sub_group": "none", "note": "Half the base by weight. It has to be thick - a runny yogurt gives you a batter too loose to hold its edge in the dish." },
+    { "id": "whole_wheat_flour", "qty": "60 g (the video used a gluten free flour)", "core": true, "function": "structure", "note": "Any flour works here. The base is spread rather than stretched, so there is no gluten network to develop and nothing lost by going gluten free." },
+    { "id": "pizza_sauce", "qty": "40 g", "core": true, "function": "base" },
+    { "id": "mozzarella", "qty": "40 g, light", "function": "melt" },
+    { "id": "ham", "qty": "50 g, chopped", "function": "protein", "note": "Any cooked protein does the same job - the swap table offers chicken, paneer, bacon and prawns." },
+    { "id": "garlic_powder", "qty": "to taste", "function": "aromatic" },
+    { "id": "salt", "qty": "to taste", "function": "salt", "note": "Go light. The sauce, the mozzarella and the ham are all salty before you add any." }
+  ],
+  "steps": [
+    "Heat the oven to 180C.",
+    "Stir the yogurt and flour together until there is no dry flour left. At 150 g of yogurt to 60 g of flour this stays a thick spreadable paste rather than a dough you could roll, which is exactly why it goes into a dish instead of onto a tray.",
+    "Spread it into a small baking dish in an even layer, about a centimetre deep, pushing it right into the corners.",
+    "Spread the pizza sauce over the base, then scatter on the mozzarella and the ham.",
+    "Bake 30 to 40 minutes, until the top is browned and bubbling. Thirty minutes leaves it soft, forty gives you the crisp edges.",
+    "Eat it straight out of the dish with a fork. This is a deep soft base, not a slice you pick up."
+  ],
+  "tips": [
+    "The one genuine swap for the Greek yogurt is thick plain yogurt strained for 20 minutes in a cloth. Unstrained curd holds too much water and the base never sets.",
+    "Push the paste properly into the corners. Wherever it is thin the sauce soaks straight through and that patch stays wet.",
+    "Any cooked protein works in place of the ham. Leftover roast chicken, paneer, bacon or cooked prawns all sit well on this - add prawns only for the last ten minutes so they do not turn rubbery.",
+    "It reheats better than it keeps. Give it ten minutes back in a hot oven rather than the microwave, which turns the base rubbery."
+  ],
+  "health_notes": "The protein comes off three things rather than one: roughly 16 g from the yogurt, 10 g from the mozzarella and 9 g from the ham. The flour is nearly all of the carbohydrate, about 42 g of the 56, so this is the carb-heaviest recipe in here despite the protein.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=osAZjH6Kva4",
+    "channel": "Stefan Bodegrajac",
+    "title": "Simple Homemade Healthy One Dish Pizza",
+    "captured": "2026-09-18",
+    "adapted": "Ingredients and the bake are from the video description, which gives no method at all. Every step here comes from the video: the yogurt and flour go into a baking dish as a spreadable paste rather than a rolled dough, and the finished thing is eaten out of the dish with a fork. Mushrooms are in the original list and are deliberately left out - Sartaj may be allergic, and mushroom is on the avoid list in preferences.json. Alternative proteins are added at his request as a one-way swap rule rather than extra ingredient lines. Nutrition is recalculated rather than copied: the stated 50 g of protein and 71 g of carbohydrate are each well above what these quantities give, though the 9 g of fat matches."
+  }
+}
