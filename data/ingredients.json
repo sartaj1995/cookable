@@ -180,6 +180,8 @@
     { "id": "coconut_aminos", "name": "Coconut aminos", "category": "condiment", "aliases": [] },
     { "id": "olives", "name": "Olives", "category": "condiment", "aliases": ["black olives", "green olives", "kalamata"] },
     { "id": "coffee", "name": "Coffee", "category": "liquid", "aliases": ["espresso", "instant coffee", "brewed coffee"] },
+    { "id": "diet_cola", "name": "Diet cola", "category": "liquid", "aliases": ["diet coke", "coke zero", "zero sugar cola", "pepsi max", "diet pepsi", "diet soda"] },
+    { "id": "marshmallows", "name": "Marshmallows", "category": "pantry", "aliases": ["marshmallow", "mini marshmallows"] },
     { "id": "dark_chocolate", "name": "Dark chocolate", "category": "pantry", "aliases": ["70 percent chocolate", "chocolate chips", "chocolate"] },
     { "id": "psyllium_husk", "name": "Psyllium husk", "category": "pantry", "aliases": ["isabgol"] },
     { "id": "cornstarch", "name": "Cornstarch", "category": "pantry", "aliases": ["corn flour", "cornflour", "arrowroot"] },
