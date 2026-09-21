@@ -1,0 +1,47 @@
+{
+  "id": "diet-coke-brownies",
+  "title": "Diet Coke Brownies",
+  "summary": "Cocoa, whey and a can of Diet Coke stirred into a batter and baked with toasted marshmallows on top. Cut into eight squares at about 72 calories each, roughly a quarter of a regular brownie.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack"],
+  "servings": 8,
+  "time": { "prep": 10, "cook": 25, "total": 35, "note": "The source gives no bake time - 25 minutes is a starting estimate, not the creator's figure. Go by the doneness test in the method, and let them cool completely before cutting." },
+  "difficulty": "easy",
+  "tags": ["low-calorie", "dessert", "snack", "meal-prep"],
+  "nutrition_per_serving": { "calories": 72, "protein_g": 6, "carbs_g": 13, "fat_g": 1.5, "fibre_g": 3, "added_sugar_g": 3, "estimated": true, "note": "One of eight squares. Assumes a zero-calorie granulated sweetener, which is how the source counts it too. Without the marshmallows each square drops to about 60 calories and 0 g added sugar." },
+  "equipment": { "required": ["oven", "mixing_bowl"], "optional": [] },
+  "ingredients": [
+    { "id": "cocoa_powder", "qty": "63 g", "core": true, "function": "flavour", "sub_group": "none" },
+    { "id": "whey_protein", "qty": "36 g", "core": true, "function": "protein", "sub_group": "none", "note": "It has to be a dry powder - it is holding the batter together as much as adding protein. Any whey or casein works; Greek yogurt or another wet protein would flood the batter." },
+    { "id": "whole_wheat_flour", "qty": "55 g flour", "core": true, "function": "bulk", "note": "The source just says flour. Oat or almond flour both work well here and make it gluten free." },
+    { "id": "erythritol", "qty": "120 g granulated sweetener", "core": true, "function": "bulk", "note": "It has to be a granulated 1:1 sugar replacement. At 120 g this is bulk as much as sweetness, which is why drops of stevia cannot stand in for it." },
+    { "id": "baking_powder", "qty": "3 g (about 3/4 tsp)", "function": "texture", "note": "If you only have baking soda, use a quarter of the amount. The cola is acidic enough to activate it without adding lemon." },
+    { "id": "salt", "qty": "a pinch", "function": "salt" },
+    { "id": "diet_cola", "qty": "330 ml (one can)", "core": true, "function": "liquid", "note": "Diet Coke or Coke Zero. It is liquid plus a little lift from the fizz." },
+    { "id": "marshmallows", "qty": "30 g", "optional": true, "function": "sweetness", "note": "They toast and go crisp on top. Most marshmallows contain gelatine, so this is not vegetarian with them in." }
+  ],
+  "steps": [
+    "Heat the oven to 180C and line a small baking dish with baking paper.",
+    "Mix the cocoa, whey, flour, sweetener, baking powder and salt in a bowl. Break up any lumps of cocoa or whey now - they will not dissolve once the liquid is in, and they bake into dry pockets.",
+    "Pour in the Diet Coke and stir until just combined. It will fizz. Stop as soon as there is no dry powder left: the bubbles are part of the lift, and beating it knocks them out.",
+    "Tip it into the lined dish and level the top.",
+    "Scatter the marshmallows over.",
+    "Bake at 180C until set. The source never gives a time, so start checking at 20 minutes - it is done when the middle no longer wobbles and a skewer comes out with moist crumbs rather than wet batter.",
+    "Leave it to cool completely in the dish before lifting it out and cutting into 8 squares. Warm, it is too soft to cut cleanly and the marshmallow drags across every slice."
+  ],
+  "tips": [
+    "The marshmallows are the only real sugar in here, about 3 g a square. Leave them off and each square is nearer 60 calories.",
+    "No cola? Sparkling water keeps the lift; still water works but the brownies come out a little denser.",
+    "The dish size decides the bake time more than anything. A bigger dish means a thinner slab that is done sooner, so start checking earlier.",
+    "Keep them in an airtight tin for 3 to 4 days. The marshmallow top softens after the first day."
+  ],
+  "health_notes": "About 72 calories and 6 g of protein a square, so a third of the calories come from protein - a good ratio for something sweet, though not much protein in absolute terms. The 63 g of cocoa carries most of the fibre, around 2.5 g a square on its own.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=AWKIyTm-VYw",
+    "channel": "Jonathan Clarke",
+    "title": "I Made 73 Calorie Brownies With Coke Zero",
+    "captured": "2026-09-21",
+    "adapted": "Ingredients and method are from the pinned comment. The 180C is from the video at 0:17, since the comment only says bake until set. The video never gives a bake time either - it cuts from the oven door closing to the finished slab - so the 20 minute first check and the doneness test are additions, not the creator's. The sweetener is recorded as a granulated 1:1 replacement, because 120 g only makes sense for one, and flour as the registry's general flour. The 73 calories a square holds up at 8 squares, which is how the video cuts it."
+  }
+}
