@@ -27,7 +27,7 @@
     { "from": "oven", "to": "air_fryer", "note": "Drop the temperature by about 20C / 25F and start checking 20-25% earlier. Cook in batches - a crowded basket steams instead of crisping." },
     { "from": "air_fryer", "to": "oven", "note": "Raise the temperature by about 20C / 25F and add roughly a third to the time. Use the top rack and turn things halfway." },
     { "from": "air_fryer", "to": "grill_pan", "note": "Works for anything flat - patties, paneer, chicken pieces. Press them down, do not move them for the first few minutes." },
-    { "from": "oven", "to": "pan", "note": "For thin cuts and patties only. Medium heat, lid on to cook through, lid off at the end to brown." },
+    { "from": "oven", "to": "pan", "note": "Thin cuts, patties and flatbreads: medium heat, lid on to cook through, lid off at the end to brown. Batters in a tin (cakes, brownies, baked oats): turn a kadai or deep pan into an oven instead - a stand inside, lid on, lowest flame." },
     { "from": "oven", "to": "microwave", "note": "Only for reheating and softening - never for anything that needs to be crisp or browned.", "flagged": true },
     { "from": "pressure_cooker", "to": "pan", "note": "Roughly triple the time, keep it covered, and top up hot water as it evaporates." },
     { "from": "pressure_cooker", "to": "slow_cooker", "note": "Low for 6-8 hours, or high for 3-4." },

@@ -96,6 +96,7 @@
     { "id": "poha", "name": "Poha", "category": "grain", "aliases": ["flattened rice", "beaten rice"] },
     { "id": "suji", "name": "Semolina", "category": "grain", "aliases": ["suji", "sooji", "rava", "semolina"] },
     { "id": "whole_wheat_flour", "name": "Whole wheat flour", "category": "grain", "aliases": ["atta", "gehun ka atta", "wholemeal flour", "flour"] },
+    { "id": "maida", "name": "Maida / plain flour", "category": "grain", "aliases": ["plain flour", "all purpose flour", "all-purpose flour", "refined flour", "white flour", "ap flour"] },
     { "id": "besan", "name": "Gram flour", "category": "grain", "aliases": ["besan", "chickpea flour", "chana flour"] },
     { "id": "oat_flour", "name": "Oat flour", "category": "grain", "aliases": ["ground oats"] },
     { "id": "almond_flour", "name": "Almond flour", "category": "grain", "aliases": ["almond meal", "badam powder"] },
@@ -140,7 +141,7 @@
     { "id": "brown_sugar", "name": "Brown sugar", "category": "sweetener", "aliases": ["demerara", "coconut sugar"] },
     { "id": "stevia", "name": "Stevia", "category": "sweetener", "aliases": ["stevia drops", "liquid stevia", "stevia powder"] },
     { "id": "monk_fruit", "name": "Monk fruit", "category": "sweetener", "aliases": ["monk fruit drops", "monkfruit", "luo han guo", "monk fruit sweetener"] },
-    { "id": "erythritol", "name": "Erythritol / allulose", "category": "sweetener", "aliases": ["erythritol", "allulose", "sugar alcohol", "swerve"] },
+    { "id": "erythritol", "name": "Erythritol / allulose", "category": "sweetener", "aliases": ["erythritol", "allulose", "sugar alcohol", "swerve", "granulated sweetener", "granulated monk fruit", "monk fruit granulated", "granulated stevia", "stevia granulated"] },
     { "id": "raisins", "name": "Raisins", "category": "sweetener", "aliases": ["kishmish", "sultanas"] },
 
     { "id": "cumin_seeds", "name": "Cumin seeds", "category": "spice", "aliases": ["jeera", "whole cumin"] },

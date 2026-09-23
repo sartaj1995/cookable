@@ -227,6 +227,7 @@
       "note": "Only partly interchangeable - the gluten-free ones behave very differently. Swap up to half the flour and you will usually be fine.",
       "members": [
         { "ingredient": "whole_wheat_flour", "amount": "1 cup", "provides": ["structure", "bulk"] },
+        { "ingredient": "maida", "amount": "1 cup", "provides": ["structure", "bulk"], "notes": "Refined, with about a quarter of the fibre of atta, but it gives the lightest, softest crumb." },
         { "ingredient": "oat_flour", "amount": "1 cup + 2 tbsp", "provides": ["bulk", "fibre"], "lacks": ["structure"], "compensate": "No gluten, so batters spread more and breads will not rise the same. Blitz rolled oats to make it yourself.", "notes": "Best for pancakes, muffins and cookies." },
         { "ingredient": "almond_flour", "amount": "1 cup", "provides": ["bulk", "fat", "protein"], "lacks": ["structure"], "compensate": "Very low carb but no binding at all - needs an extra egg, and everything comes out denser and more fragile." },
         { "ingredient": "besan", "amount": "1 cup", "provides": ["structure", "protein", "flavour"], "compensate": "Tastes distinctly of gram - great in savoury batters, wrong in a cake. Must be cooked through." },
