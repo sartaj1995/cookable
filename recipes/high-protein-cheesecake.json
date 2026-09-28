@@ -1,0 +1,46 @@
+{
+  "id": "high-protein-cheesecake",
+  "title": "High protein cheesecake",
+  "summary": "Greek yogurt, one egg and a spoon of honey whisked in a bowl, baked in a ramekin and chilled until it sets like a crustless baked cheesecake. The whole ramekin is one serving, with over 20 g of protein and five minutes of actual work.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack"],
+  "servings": 1,
+  "time": { "prep": 5, "cook": 25, "total": 30, "note": "Plus cooling and at least 2 hours in the fridge. The source only says to chill it until cold - the 2 hours is an estimate, and overnight does no harm." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "dessert", "gluten-free", "no-added-sugar-option", "meal-prep"],
+  "nutrition_per_serving": { "calories": 340, "protein_g": 22, "carbs_g": 25, "fat_g": 16, "fibre_g": 0, "added_sugar_g": 17, "estimated": true, "note": "The whole ramekin, with full-fat Greek yogurt, since the source does not say which. With 0% yogurt it is about 270 calories, 25 g protein and 7 g fat. All 17 g of added sugar is the honey." },
+  "equipment": { "required": ["oven", "mixing_bowl", "fridge"], "optional": ["air_fryer"] },
+  "ingredients": [
+    { "id": "greek_yogurt", "qty": "180 g", "core": true, "function": "protein", "sub_group": "thick_dairy", "note": "Strained Greek yogurt, as thick as you can get. The source does not give a fat level: full-fat bakes creamier, while 0% works, takes off about 70 calories and sets a little firmer and tangier." },
+    { "id": "eggs", "qty": "1 whole", "core": true, "function": "structure", "note": "The egg is what sets it. Without one the yogurt only thickens and weeps whey in the oven." },
+    { "id": "honey", "qty": "1 tbsp", "function": "sweetness", "note": "Only sweetening here, not holding anything together, so monk fruit or stevia drops swap in with nothing else to change." },
+    { "id": "vanilla", "qty": "1 tsp", "optional": true, "function": "flavour", "note": "No vanilla? 1/4 tsp ground cardamom is different but very good here." },
+    { "id": "salt", "qty": "a pinch", "function": "salt" },
+    { "id": "butter", "qty": "a little unsalted butter, for greasing", "optional": true, "function": "fat", "note": "Any oil, a spray, or a circle of baking paper in the base does the same job." }
+  ],
+  "steps": [
+    "Heat the oven to 180C and lightly grease a small ramekin or oven-safe dish with butter.",
+    "Put the yogurt, egg, honey, vanilla and salt in a bowl and mix until completely smooth. Keep going until there are no streaks of egg white left - they bake into firm white patches.",
+    "Pour it into the ramekin.",
+    "Bake for 25 minutes, until the edges are set and the centre still has a slight jiggle. Take it out then, even if it looks underdone: it keeps setting as it cools, and baked until the middle is firm it turns grainy and weeps liquid.",
+    "Let it cool completely on the counter, then refrigerate until cold, at least 2 hours. Warm, it eats like a custard - the cheesecake texture only arrives once it is properly chilled."
+  ],
+  "tips": [
+    "Check the protein on the tub. Properly strained Greek yogurt has around 8-10 g per 100 g, while tubs labelled Greek style are often thickened rather than strained and can have half that.",
+    "Straining dahi instead? Hang it for a few hours, not the 20 minutes that does for a dip. It has to be as thick as the shop-bought kind, or the cheesecake sets wetter and softer.",
+    "Cottage cheese or silken tofu instead: blend it completely smooth first, and add a squeeze of lemon for the tang the yogurt would have brought. With cottage cheese, skip the salt - it is salty enough already.",
+    "It comes out tangy and only lightly sweet. Taste the yogurt and honey together before the egg goes in, and adjust the sweetness then.",
+    "Air fryer: the creator uses the same 180C and 25 minutes as the oven. Air fryers brown the top faster, so if yours runs hot, drop to 160C, and if the top colours before the centre sets, crimp a piece of foil over the ramekin. Either way, go by the jiggle rather than the clock.",
+    "No oven or air fryer: steam it. Cover the ramekin with foil and set it on a small stand in a deep pan with an inch of simmering water, lid on, low heat, and check from 15 minutes for the same jiggle. It comes out smoother and paler, with no browned top - much the way bhapa doi is made.",
+    "It keeps for 3 days covered in the fridge, so it is worth baking two or three ramekins at once. Spaced apart in the oven they take about the same time."
+  ],
+  "health_notes": "About three quarters of the protein is the yogurt - 180 g of strained Greek yogurt carries 16-18 g, the egg another 6. The tablespoon of honey is all 17 g of the added sugar; with monk fruit or stevia drops instead, and 0% yogurt, the ramekin comes to about 205 calories with 25 g of protein, so roughly half its calories are protein.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=9XhIqQZxOR4",
+    "channel": "Ralston D'Souza",
+    "title": "High Protein Cheesecake | Try It Or Trash It @kenji.remedie",
+    "captured": "2026-09-28",
+    "adapted": "Ingredients and method are from the pinned comment on the video, and the recipe is credited in the title to @kenji.remedie. Nothing was changed to make it healthier - it already is, with no crust, no cream cheese and one tablespoon of honey. The comment gives nutrition for the whole cheesecake, one small ramekin, so it is recorded as one serving. It gives no chill time, so the 2 hours is an estimate, and the lower air fryer temperature, the steamed version and the other tips are additions, not the creator's. The comment's nutrition - 270 calories, 12 g protein, 27 g carbs and 11 g fat - matches 180 g of ordinary unstrained yogurt almost exactly, and Greek yogurt roughly doubles the protein, so the figures here are recalculated, assuming full-fat because the comment does not say."
+  }
+}
