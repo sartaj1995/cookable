@@ -10,7 +10,7 @@ const TICK = {
   skip: IconSkip,
 } as const
 
-function IngredientRow({ line }: { line: MatchedLine }) {
+function IngredientRow({ line, inExtras = false }: { line: MatchedLine; inExtras?: boolean }) {
   const sub = line.substitution
   const Tick = TICK[line.status]
   return (
@@ -46,13 +46,16 @@ function IngredientRow({ line }: { line: MatchedLine }) {
               <span className="qty">
                 {ingredientLineText(line.ingredient.qty, line.ingredient.id)}
               </span>
-              {line.status === 'skip' && <span className="tag">optional — skipping</span>}
+              {/* Under the Optional heading, "optional" on every row is just noise. */}
+              {line.status === 'skip' && (
+                <span className="tag">{inExtras ? 'skipping' : 'optional — skipping'}</span>
+              )}
               {line.status === 'missing' && (
                 <span className="tag">
                   {line.blockedByAvoid ? 'on your avoid list' : 'missing'}
                 </span>
               )}
-              {line.status === 'have' && line.ingredient.optional && (
+              {line.status === 'have' && line.ingredient.optional && !inExtras && (
                 <span className="tag">optional</span>
               )}
             </div>
@@ -62,6 +65,23 @@ function IngredientRow({ line }: { line: MatchedLine }) {
       </div>
     </li>
   )
+}
+
+/**
+ * Which lines are listed under the Optional heading at the foot of the
+ * ingredients, and which stay in the main list above it. Optional lines are
+ * never swapped, so a line in that section always shows its own note - which
+ * is where a flavour extra says how much to add and when.
+ *
+ * Decided by the flag alone, not by what is in the kitchen, so a recipe keeps
+ * the same shape whatever you have: ticking blueberries must not lift a
+ * flavour extra up into the base recipe. `filter` keeps the recipe's order.
+ */
+function splitOptional(lines: MatchedLine[]): { main: MatchedLine[]; extras: MatchedLine[] } {
+  return {
+    main: lines.filter((line) => !line.ingredient.optional),
+    extras: lines.filter((line) => line.ingredient.optional),
+  }
 }
 
 interface Props {
@@ -86,6 +106,7 @@ export function RecipeDetail({ match, onClose }: Props) {
   }, [onClose])
 
   const deviceNotes = equipment.filter((e) => !e.have)
+  const { main, extras } = splitOptional(lines)
 
   return (
     <div className="scrim" onClick={onClose}>
@@ -165,10 +186,26 @@ export function RecipeDetail({ match, onClose }: Props) {
           <div className="block">
             <h3>Ingredients</h3>
             <ul className="ing-list">
-              {lines.map((line) => (
+              {main.map((line) => (
                 <IngredientRow key={line.ingredient.id + line.ingredient.qty} line={line} />
               ))}
             </ul>
+            {/* Inside the Ingredients block, not a block of its own: the README's
+                recipe picture is cropped at the bottom of this block. */}
+            {extras.length > 0 && (
+              <>
+                <h4>Optional</h4>
+                <ul className="ing-list">
+                  {extras.map((line) => (
+                    <IngredientRow
+                      key={line.ingredient.id + line.ingredient.qty}
+                      line={line}
+                      inExtras
+                    />
+                  ))}
+                </ul>
+              </>
+            )}
             {missing.length > 0 && (
               <p className="hint" style={{ marginTop: 12 }}>
                 Shopping list: {missing.map((m) => m.name.toLowerCase()).join(', ')}

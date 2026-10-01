@@ -65,7 +65,11 @@ Getting these right matters more than anything else in the recipe file.
   one. Without this the engine will cheerfully offer chicken thigh for the paneer
   in paneer bhurji, which is a different dish.
 - **`optional: true`** — a garnish or a nice-to-have. Missing costs nothing and
-  is never substituted.
+  is never substituted. Also how to add a flavour extra (a chocolate or berry
+  version of a plain dessert): the app lists optional lines under their own
+  Optional heading, and because they are never swapped, the `note` always
+  shows. Put the amount in `qty`; say when it goes in and what it adds in the
+  note. The cheesecake is the worked example.
 
 Rule of thumb: if the ingredient is in the title, it is `sub_group: "none"`.
 If the recipe collapses without it but a close cousin would do, it is `core`.

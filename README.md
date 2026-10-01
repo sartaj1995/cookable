@@ -97,12 +97,12 @@ Sort any of them by **Best match**, **Most protein** or **Quickest**.
 
 ### 3. Open a recipe
 
-The ingredient list is rewritten for your kitchen. What you do not have is struck out with the stand-in and its amount underneath, a missing device comes with the adjustment for the one you do have, and anything still missing becomes a shopping list.
+The ingredient list is rewritten for your kitchen. What you do not have is struck out with the stand-in and its amount underneath, a missing device comes with the adjustment for the one you do have, and anything still missing becomes a shopping list. Garnishes and optional extras, like a chocolate or berry version of a plain dessert, are listed apart under their own heading at the foot of the list.
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/recipe-dark.png">
-    <img src="docs/images/recipe-light.png" width="640" alt="Single-serve baked protein oats, opened. No oven, so: use your air fryer, dropping the temperature by about 20C. 1/3 cup milk is struck out in favour of almond milk. 1 tbsp honey is struck out in favour of 6-8 drops of liquid stevia, tagged your swap. Vanilla, cinnamon and berries are marked optional, skipping.">
+    <img src="docs/images/recipe-light.png" width="640" alt="Single-serve baked protein oats, opened. No oven, so: use your air fryer, dropping the temperature by about 20C. 1/3 cup milk is struck out in favour of almond milk. 1 tbsp honey is struck out in favour of 6-8 drops of liquid stevia, tagged your swap. Under Optional at the foot of the list, the chocolate chips and peanut butter are ticked, and vanilla, cinnamon and berries are skipping.">
   </picture>
 </p>
 
@@ -276,7 +276,7 @@ Any ingredient line in a recipe can carry one of them:
 | --- | --- | --- |
 | `core: true` | The recipe does not work without it | Blocked, unless a like-for-like swap is in your kitchen |
 | <code>sub_group:&nbsp;"none"</code> | The dish *is* this ingredient - paneer in paneer bhurji | Never swapped, not even for a close match |
-| `optional: true` | A garnish or a nice-to-have | Left out, never swapped |
+| `optional: true` | A garnish, a nice-to-have or a flavour extra, listed apart under Optional | Left out, never swapped |
 | no flag | Needed, but a stand-in will do | Swapped if anything fits; otherwise the recipe drops a shelf |
 
 ### The swap table knows what an ingredient is for

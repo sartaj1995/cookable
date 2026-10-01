@@ -84,6 +84,13 @@ build time, so adding a file is all it takes — there is no index.
 in paneer bhurji, besan in besan chilla, dates in date balls. Without it the
 engine will offer a technically-valid swap that produces a different dish.
 
+`optional: true` lines are listed apart, under an **Optional** heading at the
+foot of the ingredients, in recipe order whether or not you have them. That
+makes them the place for flavour extras as well as garnishes - a chocolate or
+berry version of a plain dessert. Put the amount in `qty`, and say in the
+`note` when it goes in and what it adds. An optional line is never swapped, so
+its note always shows; a swapped line's note does not.
+
 ### `function`
 
 What the ingredient is doing, so the engine can judge whether a stand-in is a
