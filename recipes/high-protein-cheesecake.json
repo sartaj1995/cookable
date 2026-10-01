@@ -1,14 +1,14 @@
 {
   "id": "high-protein-cheesecake",
   "title": "High protein cheesecake",
-  "summary": "Greek yogurt, one egg and a spoon of honey whisked in a bowl, baked in a ramekin and chilled until it sets like a crustless baked cheesecake. The whole ramekin is one serving, with over 20 g of protein and five minutes of actual work.",
+  "summary": "Greek yogurt, one egg and a spoon of honey, baked in a ramekin and chilled until it sets like a crustless cheesecake - vanilla as written, or chocolate, blueberry or strawberry from the optional extras. The whole ramekin is one serving, with over 20 g of protein and five minutes of actual work.",
   "cuisine": "Global",
   "meal": ["dessert", "snack"],
   "servings": 1,
   "time": { "prep": 5, "cook": 25, "total": 30, "note": "Plus cooling and at least 2 hours in the fridge. The source only says to chill it until cold - the 2 hours is an estimate, and overnight does no harm." },
   "difficulty": "easy",
   "tags": ["high-protein", "vegetarian", "dessert", "gluten-free", "no-added-sugar-option", "meal-prep"],
-  "nutrition_per_serving": { "calories": 340, "protein_g": 22, "carbs_g": 25, "fat_g": 16, "fibre_g": 0, "added_sugar_g": 17, "estimated": true, "note": "The whole ramekin, with full-fat Greek yogurt, since the source does not say which. With 0% yogurt it is about 270 calories, 25 g protein and 7 g fat. All 17 g of added sugar is the honey." },
+  "nutrition_per_serving": { "calories": 340, "protein_g": 22, "carbs_g": 25, "fat_g": 16, "fibre_g": 0, "added_sugar_g": 17, "estimated": true, "note": "The whole ramekin, with full-fat Greek yogurt, since the source does not say which. With 0% yogurt it is about 270 calories, 25 g protein and 7 g fat. All 17 g of added sugar is the honey. The optional extras add about 20 calories for the cacao, 30 for the blueberries, and next to nothing for a zero-calorie syrup." },
   "equipment": { "required": ["oven", "mixing_bowl", "fridge"], "optional": ["air_fryer"] },
   "ingredients": [
     { "id": "greek_yogurt", "qty": "180 g", "core": true, "function": "protein", "sub_group": "thick_dairy", "note": "Strained Greek yogurt, as thick as you can get. The source does not give a fat level: full-fat bakes creamier, while 0% works, takes off about 70 calories and sets a little firmer and tangier." },
@@ -16,7 +16,10 @@
     { "id": "honey", "qty": "1 tbsp", "function": "sweetness", "note": "Only sweetening here, not holding anything together, so monk fruit or stevia drops swap in with nothing else to change." },
     { "id": "vanilla", "qty": "1 tsp", "optional": true, "function": "flavour", "note": "No vanilla? 1/4 tsp ground cardamom is different but very good here." },
     { "id": "salt", "qty": "a pinch", "function": "salt" },
-    { "id": "butter", "qty": "a little unsalted butter, for greasing", "optional": true, "function": "fat", "note": "Any oil, a spray, or a circle of baking paper in the base does the same job." }
+    { "id": "butter", "qty": "a little unsalted butter, for greasing", "optional": true, "function": "fat", "note": "Any oil, a spray, or a circle of baking paper in the base does the same job." },
+    { "id": "cocoa_powder", "qty": "1 1/2 tbsp cacao powder (about 8 g)", "optional": true, "function": "flavour", "note": "For chocolate: whisk it into the yogurt and honey until smooth before the egg goes in - dry cacao lumps in a thin batter, and the lumps bake into dry pockets. It is bitter, so add 6-8 drops of monk fruit or stevia with it. Adds about 20 calories and 3 g of fibre." },
+    { "id": "berries", "qty": "50 g blueberries (a small handful)", "optional": true, "function": "topping", "note": "For blueberry: best on top once it is chilled, either fresh or simmered with 1 tbsp water for 5 minutes until most have burst, then cooled. To bake them in instead, scatter them in the ramekin and pour the batter over; frozen ones go in straight from the freezer and need a few minutes more. Adds about 30 calories. Strawberries work too, but chopped on top only - baked in, they go watery." },
+    { "id": "sugar_free_strawberry_syrup", "qty": "1-2 tbsp", "optional": true, "function": "topping", "note": "For strawberry: drizzle it over once it is chilled, not into the batter - it is mostly water, so it loosens the set, and the flavour fades in the oven. A zero-calorie one adds next to nothing; anything over about 10 calories a tablespoon is a sugar syrup. It goes on the chocolate one too. For real fruit instead, mash 60 g of strawberries with a fork, about 20 calories." }
   ],
   "steps": [
     "Heat the oven to 180C and lightly grease a small ramekin or oven-safe dish with butter.",
@@ -41,6 +44,6 @@
     "channel": "Ralston D'Souza",
     "title": "High Protein Cheesecake | Try It Or Trash It @kenji.remedie",
     "captured": "2026-09-28",
-    "adapted": "Ingredients and method are from the pinned comment on the video, and the recipe is credited in the title to @kenji.remedie. Nothing was changed to make it healthier - it already is, with no crust, no cream cheese and one tablespoon of honey. The comment gives nutrition for the whole cheesecake, one small ramekin, so it is recorded as one serving. It gives no chill time, so the 2 hours is an estimate, and the lower air fryer temperature, the steamed version and the other tips are additions, not the creator's. The comment's nutrition - 270 calories, 12 g protein, 27 g carbs and 11 g fat - matches 180 g of ordinary unstrained yogurt almost exactly, and Greek yogurt roughly doubles the protein, so the figures here are recalculated, assuming full-fat because the comment does not say."
+    "adapted": "Ingredients and method are from the pinned comment on the video, and the recipe is credited in the title to @kenji.remedie. Nothing was changed to make it healthier - it already is, with no crust, no cream cheese and one tablespoon of honey. The comment gives nutrition for the whole cheesecake, one small ramekin, so it is recorded as one serving. It gives no chill time, so the 2 hours is an estimate, and the lower air fryer temperature, the steamed version, the chocolate, blueberry and strawberry extras and the other tips are additions, not the creator's. The comment's nutrition - 270 calories, 12 g protein, 27 g carbs and 11 g fat - matches 180 g of ordinary unstrained yogurt almost exactly, and Greek yogurt roughly doubles the protein, so the figures here are recalculated, assuming full-fat because the comment does not say."
   }
 }
