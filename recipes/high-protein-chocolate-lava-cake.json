@@ -1,0 +1,46 @@
+{
+  "id": "high-protein-chocolate-lava-cake",
+  "title": "High protein chocolate lava cake",
+  "summary": "Blended cottage cheese, two eggs and cacao mixed in a ramekin and baked until the edges set and the middle stays gooey. The whole ramekin is one dessert, with about 38 g of protein for 390 calories and no added sugar.",
+  "cuisine": "Global",
+  "meal": ["dessert", "snack"],
+  "servings": 1,
+  "time": { "prep": 5, "cook": 30, "total": 35, "note": "Plus a few minutes cooling - it is eaten warm. Blending the cottage cheese is most of the prep." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "dessert", "gluten-free", "low-carb", "no-added-sugar"],
+  "nutrition_per_serving": { "calories": 390, "protein_g": 38, "carbs_g": 16, "fat_g": 20, "fibre_g": 6, "added_sugar_g": 0, "estimated": true, "note": "The whole ramekin, with full-fat cottage cheese and without the chips. The source's 45 g of protein needs a cottage cheese with about 14 g per 100 g; the usual kind has 11 g. Its 10 g of carbs is this 16 g net of the fibre. Low-fat cottage cheese takes it to about 360 calories and 16 g fat, and 20 g of sugar-free chips adds about 85 calories." },
+  "equipment": { "required": ["oven", "blender"], "optional": ["air_fryer"] },
+  "ingredients": [
+    { "id": "cottage_cheese", "qty": "200 g", "core": true, "function": "protein", "sub_group": "thick_dairy", "note": "The western kind, soft curds in a little whey. Blended smooth first, or the curds bake into white flecks of cheese all through the cake." },
+    { "id": "eggs", "qty": "2 large", "core": true, "function": "structure", "note": "The eggs are what set it." },
+    { "id": "erythritol", "qty": "4 tbsp powdered monk fruit or stevia", "function": "sweetness", "note": "A 1:1 sugar-replacement blend, as sweet as 1/4 cup of sugar - most powdered monk fruit and stevia sweeteners are erythritol underneath, and the video uses a granulated stevia blend. Pure extract at 4 tbsp would be inedible." },
+    { "id": "cocoa_powder", "qty": "15 g cacao powder (about 2 1/2 tbsp)", "core": true, "function": "flavour", "sub_group": "none", "note": "Cacao or ordinary unsweetened cocoa. Mix until no dry powder is left, or simply blend it in with the cottage cheese - pockets of it stay dry and bitter in the finished cake." },
+    { "id": "vanilla", "qty": "a splash of vanilla extract", "optional": true, "function": "flavour" },
+    { "id": "sugar_free_chocolate", "qty": "about 20 g sugar-free chocolate chips", "optional": true, "function": "topping", "note": "Scattered over the top before baking, as in the video - they melt into the gooey pockets. The source gives no amount; 20 g is a small handful and adds about 85 calories. 70% dark chocolate works too, with about 6 g of sugar in 20 g." }
+  ],
+  "steps": [
+    "Heat the oven to 180C.",
+    "Blend the cottage cheese until completely smooth - a mini food processor or a mixer grinder jar does it in under a minute. Unblended, the curds bake into white flecks of cheese through the cake.",
+    "Scrape it into a ramekin or small oven dish that holds at least 450 ml, because it rises as it bakes. Add the eggs, sweetener, cacao and vanilla and mix right there until smooth, with no streaks of egg and no dry cacao left.",
+    "Scatter the chocolate chips over the top.",
+    "Bake on a tray for 30 minutes, until the edges are set and the middle still wobbles a little. That soft middle is the lava - baked until firm all the way through, it turns dry, more like a baked cheesecake.",
+    "Let it cool for a few minutes, then eat it warm, straight from the ramekin."
+  ],
+  "tips": [
+    "Leave room in the dish. It puffs up in the oven, and in the video it runs over the rim of the ramekin and down the sides. Two smaller ramekins work too, and are done sooner - check from 20 minutes.",
+    "In India, packs labelled cottage cheese are often paneer. It works, but it is much drier: blend it with 3-4 tbsp of milk until smooth, and expect a denser, richer cake at close to 800 calories against 390, with about 50 g of protein.",
+    "Greek yogurt works in place of the cottage cheese and needs no blending. It bakes a little looser and tangier, closer to the cheesecake in here. Straining dahi instead? Hang it for a few hours, not 20 minutes, so it is as thick as the shop-bought kind.",
+    "Only have drops, or another sweetener? 4 tbsp of a 1:1 blend is as sweet as 1/4 cup of sugar, so use what your bottle says matches that - for most monk fruit or stevia drops, somewhere around 20-30 drops. Honey or sugar work, but add about 190 calories and 50 g of sugar.",
+    "Air fryer: 160C, checking from 20 minutes, in a ramekin that fits the basket with room above it for the rise.",
+    "It keeps for 2 days covered in the fridge. Cold, it firms up into something closer to a fudgy brownie than a lava cake - still good, just different."
+  ],
+  "health_notes": "About 40% of the calories are protein - roughly 22 g from the cottage cheese and 13 g from the eggs. There is no sugar beyond the lactose in the cottage cheese, and the 15 g of cacao brings over 5 g of fibre.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=_a7xTgfSBXI",
+    "channel": "Stefan Bodegrajac",
+    "title": "High Protein Chocolate Lava Cake...",
+    "captured": "2026-10-05",
+    "adapted": "Ingredients, temperature and time are from the video description. The method is read from the video itself: the cottage cheese is blended smooth in a mini food processor, everything else is mixed in the ramekin, and the chips go on top. The description's macros are for the whole batch, one ramekin and one dessert, so it is recorded as one serving. Nothing was changed to make it healthier - it already is, with no flour, no sugar and a zero-calorie sweetener. The chip amount, the dish size and the doneness check are estimates, and the tips are additions, not the creator's. The description's 380 calories and 18 g fat are close to this estimate; its 45 g of protein needs a cottage cheese with about 14 g per 100 g, against the usual 11 g, so 38 g is recorded, and its 10 g of carbs is the total net of fibre."
+  }
+}

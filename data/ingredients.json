@@ -142,7 +142,7 @@
     { "id": "brown_sugar", "name": "Brown sugar", "category": "sweetener", "aliases": ["demerara", "coconut sugar"] },
     { "id": "stevia", "name": "Stevia", "category": "sweetener", "aliases": ["stevia drops", "liquid stevia", "stevia powder"] },
     { "id": "monk_fruit", "name": "Monk fruit", "category": "sweetener", "aliases": ["monk fruit drops", "monkfruit", "luo han guo", "monk fruit sweetener"] },
-    { "id": "erythritol", "name": "Erythritol / allulose", "category": "sweetener", "aliases": ["erythritol", "allulose", "sugar alcohol", "swerve", "granulated sweetener", "granulated monk fruit", "monk fruit granulated", "granulated stevia", "stevia granulated"] },
+    { "id": "erythritol", "name": "Erythritol / allulose", "category": "sweetener", "aliases": ["erythritol", "allulose", "sugar alcohol", "swerve", "granulated sweetener", "granulated monk fruit", "monk fruit granulated", "granulated stevia", "stevia granulated", "powdered monk fruit", "powdered stevia blend", "powdered sweetener", "powdered erythritol"] },
     { "id": "raisins", "name": "Raisins", "category": "sweetener", "aliases": ["kishmish", "sultanas"] },
 
     { "id": "cumin_seeds", "name": "Cumin seeds", "category": "spice", "aliases": ["jeera", "whole cumin"] },
@@ -185,6 +185,7 @@
     { "id": "diet_cola", "name": "Diet cola", "category": "liquid", "aliases": ["diet coke", "coke zero", "zero sugar cola", "pepsi max", "diet pepsi", "diet soda"] },
     { "id": "marshmallows", "name": "Marshmallows", "category": "pantry", "aliases": ["marshmallow", "mini marshmallows"] },
     { "id": "dark_chocolate", "name": "Dark chocolate", "category": "pantry", "aliases": ["70 percent chocolate", "chocolate chips", "chocolate"] },
+    { "id": "sugar_free_chocolate", "name": "Sugar-free chocolate", "category": "pantry", "aliases": ["sugar free chocolate chips", "sugar free choc chips", "no added sugar chocolate", "stevia chocolate", "keto chocolate chips"] },
     { "id": "psyllium_husk", "name": "Psyllium husk", "category": "pantry", "aliases": ["isabgol"] },
     { "id": "cornstarch", "name": "Cornstarch", "category": "pantry", "aliases": ["corn flour", "cornflour", "arrowroot"] },
     { "id": "sugar_free_jelly", "name": "Sugar-free jelly", "category": "pantry", "aliases": ["jelly", "jelly crystals", "jelly mix", "jelly sachet", "sugar free jelly", "diet jelly", "jello", "sugar free jello", "jelly powder"] },
