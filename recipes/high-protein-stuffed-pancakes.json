@@ -1,0 +1,49 @@
+{
+  "id": "high-protein-stuffed-pancakes",
+  "title": "High protein stuffed pancakes",
+  "summary": "Whey, eggs and Greek yogurt whisked into a flourless batter and cooked as pancakes with jam and cream cheese sealed in the middle. Two of them come to about 61 g of protein for 570 calories.",
+  "cuisine": "Global",
+  "meal": ["breakfast", "dessert"],
+  "servings": 2,
+  "time": { "prep": 5, "cook": 20, "total": 25, "note": "The batter makes about four, cooked one at a time at about 5 minutes each - two pans halve it." },
+  "difficulty": "easy",
+  "tags": ["high-protein", "vegetarian", "breakfast", "gluten-free", "low-carb", "no-added-sugar-option"],
+  "nutrition_per_serving": { "calories": 570, "protein_g": 61, "carbs_g": 18, "fat_g": 28, "fibre_g": 1, "added_sugar_g": 0, "estimated": true, "note": "Two stuffed pancakes, with plain whey, full-fat Greek yogurt, full-fat cream cheese and sugar-free jam. With 0% yogurt and light cream cheese it is about 480 calories and 17 g fat. Ordinary jam, as in the video, adds about 80 calories and 20 g of sugar a serving." },
+  "equipment": { "required": ["pan", "stovetop", "mixing_bowl"], "optional": [] },
+  "ingredients": [
+    { "id": "whey_protein", "qty": "3 scoops (about 90 g)", "core": true, "function": "structure", "sub_group": "none", "note": "It is the flour as well as the protein - a dry powder is what holds this batter together, so nothing wet stands in for it. Any whey, casein or plant protein powder works. The video uses a glazed-donut flavoured one; with plain whey, add the vanilla, nutmeg and sweetener from the optional list." },
+    { "id": "eggs", "qty": "4 large", "core": true, "function": "structure", "note": "With the whey, the eggs are what set the batter into a pancake you can flip." },
+    { "id": "greek_yogurt", "qty": "1 cup (about 240 g)", "core": true, "function": "protein", "sub_group": "thick_dairy", "note": "It keeps a whey batter moist - whey on its own cooks up dry and rubbery." },
+    { "id": "baking_powder", "qty": "2 tsp", "function": "texture" },
+    { "id": "cream_cheese", "qty": "1 tbsp cream cheese per pancake", "optional": true, "function": "filling", "note": "Half of the filling in the video. Light cream cheese halves the fat, and thick Greek yogurt or a spoon of peanut butter work in its place." },
+    { "id": "jam", "qty": "1 tbsp sugar-free strawberry jam per pancake", "optional": true, "function": "filling", "note": "The other half. The video uses ordinary strawberry jam, about 10 g of sugar a tablespoon; sugar-free keeps the stack at no added sugar. Or mash 3-4 strawberries with a fork and a few drops of monk fruit." },
+    { "id": "vanilla", "qty": "1 tsp", "optional": true, "function": "flavour", "note": "For plain whey: the vanilla half of a glazed-donut flavour." },
+    { "id": "nutmeg", "qty": "a pinch of nutmeg", "optional": true, "function": "flavour", "note": "For plain whey: the spice that makes a batter taste of donut. Cinnamon if you have no nutmeg." },
+    { "id": "monk_fruit", "qty": "12-15 drops of monk fruit", "optional": true, "function": "sweetness", "note": "Only for unflavoured whey - flavoured whey is already sweet, and with no sweetener at all the pancakes taste mostly of egg. Or 2 tbsp of a granulated 1:1 sweetener." }
+  ],
+  "steps": [
+    "Whisk the eggs, Greek yogurt, whey and baking powder in a bowl until smooth and thick, with the vanilla, nutmeg and sweetener too if your whey is plain. Break up every lump of powder - dry pockets of whey stay chalky in the cooked pancake.",
+    "Heat a non-stick pan over medium-low and wipe it with a few drops of oil.",
+    "Pour in about 1/3 cup of batter and let it spread into a round.",
+    "Spoon the cream cheese and jam into the middle, keeping them well clear of the edge, then pour about 1/4 cup more batter over the top to cover them. Filling that reaches the edge leaks into the pan and burns.",
+    "Cook until the edges are set and the top no longer looks wet, about 3 minutes, then flip it in one go and cook another 2 minutes until golden. Keep the heat down: whey browns long before a stuffed middle cooks through.",
+    "Repeat with the rest of the batter. It makes about four."
+  ],
+  "tips": [
+    "No glazed-donut whey? The one in the video is whey isolate with flavouring and sweetener in it. Plain whey with the vanilla, a pinch of nutmeg and the sweetener gets most of the way there. For the glaze, whisk 2 tbsp of Greek yogurt with 1-2 tsp of powdered sweetener and a splash of milk until it runs, and drizzle it over the stack.",
+    "Any sweet whey works as it is - vanilla, cookies and cream, or chocolate, which is very good with the strawberry jam. Unflavoured whey is the one that needs the sweetener.",
+    "Casein or a plant protein makes a much thicker batter. Loosen it with a splash of milk until it pours.",
+    "Dahi works in place of the Greek yogurt without straining here. The batter just pours a little looser, which pancakes do not mind.",
+    "Flip with a wide spatula in one confident move. Stuffed pancakes are heavier than plain ones and tear if you hesitate.",
+    "They keep for 2 days in the fridge. Warm them in a dry pan for a minute a side, or for 30 seconds in the microwave."
+  ],
+  "health_notes": "About 61 g of protein a serving, nearly all of it from three places: the whey (about 36 g), the eggs (13 g) and the yogurt (11 g). With sugar-free jam there is no added sugar at all; ordinary jam puts about 20 g into each serving.",
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=k62UFtIz-BA",
+    "channel": "Josh Bailey",
+    "title": "High Protein Stuffed Pancakes NO FLOUR!",
+    "captured": "2026-10-06",
+    "adapted": "Ingredients are from the video description, including its fillings: strawberry jam and cream cheese, to taste. The method is read from the video: everything is whisked in a bowl, a pancake is poured into a non-stick pan, the jam and cream cheese go in the middle, more batter goes over them, and it is flipped once. The video uses Dymatize ISO100 in Dunkin' Glazed Donut flavour, a flavoured whey isolate, so this records any whey, with vanilla, nutmeg, sweetener and a yogurt glaze as ways to get the glazed-donut taste from plain whey - those are additions, not the creator's. To keep the sugar down the jam is sugar-free here; ordinary jam, as in the video, adds about 10 g of sugar a tablespoon. The filling amounts, the batter per pancake, the number of pancakes, the servings, the heat and the times are estimates, since the source gives none of them."
+  }
+}

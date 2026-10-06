@@ -44,7 +44,7 @@
     { "id": "mozzarella", "name": "Mozzarella", "category": "dairy", "aliases": ["pizza cheese", "mozarella"] },
     { "id": "parmesan", "name": "Parmesan", "category": "dairy", "aliases": ["parmigiano", "pecorino"] },
     { "id": "feta", "name": "Feta", "category": "dairy", "aliases": ["feta cheese"] },
-    { "id": "cream_cheese", "name": "Cream cheese", "category": "dairy", "aliases": [] },
+    { "id": "cream_cheese", "name": "Cream cheese", "category": "dairy", "aliases": ["philadelphia", "philly", "light cream cheese", "soft cheese"] },
 
     { "id": "onion", "name": "Onion", "category": "produce", "aliases": ["onions", "red onion", "white onion", "pyaz", "yellow onion"] },
     { "id": "spring_onion", "name": "Spring onion", "category": "produce", "aliases": ["scallion", "scallions", "green onion", "hara pyaz"] },
@@ -134,6 +134,7 @@
 
     { "id": "honey", "name": "Honey", "category": "sweetener", "aliases": ["shahad", "raw honey"] },
     { "id": "maple_syrup", "name": "Maple syrup", "category": "sweetener", "aliases": ["pure maple syrup"] },
+    { "id": "jam", "name": "Jam", "category": "sweetener", "aliases": ["strawberry jam", "fruit jam", "mixed fruit jam", "preserves", "fruit spread", "sugar free jam", "no added sugar jam", "chia jam"] },
     { "id": "sugar_free_caramel", "name": "Sugar-free caramel topping", "category": "sweetener", "aliases": ["sugar free caramel", "sugar free caramel sauce", "caramel topping", "skinny caramel syrup", "zero calorie caramel"] },
     { "id": "sugar_free_strawberry_syrup", "name": "Sugar-free strawberry syrup", "category": "sweetener", "aliases": ["zero calorie strawberry syrup", "zero cal strawberry syrup", "0 calorie strawberry syrup", "low calorie strawberry syrup", "skinny strawberry syrup", "sugar free strawberry sauce"] },
     { "id": "dates", "name": "Dates", "category": "sweetener", "aliases": ["khajoor", "medjool dates", "date paste"] },
@@ -155,6 +156,7 @@
     { "id": "mustard_seeds", "name": "Mustard seeds", "category": "spice", "aliases": ["rai", "sarson"] },
     { "id": "asafoetida", "name": "Asafoetida", "category": "spice", "aliases": ["hing"] },
     { "id": "cinnamon", "name": "Cinnamon", "category": "spice", "aliases": ["dalchini", "cinnamon powder", "cinnamon stick"] },
+    { "id": "nutmeg", "name": "Nutmeg", "category": "spice", "aliases": ["jaiphal", "jaifal", "ground nutmeg", "nutmeg powder"] },
     { "id": "cardamom", "name": "Cardamom", "category": "spice", "aliases": ["elaichi", "green cardamom"] },
     { "id": "cloves", "name": "Cloves", "category": "spice", "aliases": ["laung"] },
     { "id": "bay_leaf", "name": "Bay leaf", "category": "spice", "aliases": ["tej patta"] },
